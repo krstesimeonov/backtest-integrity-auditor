@@ -1,0 +1,108 @@
+{
+  "$id": "urn:backtest-integrity-auditor:schema:evidence-profile:1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audit_type": {
+      "enum": [
+        "experiment_family",
+        "single_run"
+      ]
+    },
+    "dimensions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "adverse_evidence_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "assumption_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "dimension": {
+            "enum": [
+              "benchmark_evidence",
+              "experiment_completeness",
+              "input_integrity",
+              "multiple_testing_evidence",
+              "parameter_robustness",
+              "reproducibility",
+              "resampling_robustness",
+              "return_methodology",
+              "sampling_eligibility",
+              "serial_robustness",
+              "statistical_evidence",
+              "temporal_robustness"
+            ]
+          },
+          "next_evidence_required": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "status": {
+            "enum": [
+              "fragile",
+              "ineligible",
+              "insufficient_evidence",
+              "supported_under_stated_assumptions"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "supporting_evidence_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "unavailable_evidence_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "adverse_evidence_codes",
+          "assumption_codes",
+          "dimension",
+          "next_evidence_required",
+          "status",
+          "summary",
+          "supporting_evidence_codes",
+          "unavailable_evidence_codes"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "interpretation_boundary": {
+      "type": "string"
+    },
+    "method": {
+      "const": "dimensioned_evidence_profile_v1"
+    },
+    "overall_status": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "audit_type",
+    "dimensions",
+    "interpretation_boundary",
+    "method",
+    "overall_status"
+  ],
+  "title": "Backtest Integrity Auditor Evidence Profile 1.0",
+  "type": "object"
+}

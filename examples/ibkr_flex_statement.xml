@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexQueryResponse queryName="illustrative-v1.3-contract">
+  <FlexStatements count="1">
+    <FlexStatement accountId="U-EXAMPLE">
+      <ChangeInNAV
+        accountId="U-EXAMPLE"
+        fromDate="20260101"
+        toDate="20260131"
+        twr="1.25"
+      />
+    </FlexStatement>
+  </FlexStatements>
+</FlexQueryResponse>

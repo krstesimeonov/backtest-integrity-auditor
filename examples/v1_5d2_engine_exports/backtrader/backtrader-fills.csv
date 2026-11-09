@@ -1,0 +1,2 @@
+fill_id,order_ref,timestamp,instrument,side,quantity,price,commission
+1-1,1,2026-01-03T00:00:00.000000Z,AAPL,Buy,2,102.0,0.20400000000000001

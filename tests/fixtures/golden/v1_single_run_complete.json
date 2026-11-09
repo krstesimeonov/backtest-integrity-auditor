@@ -1,0 +1,634 @@
+{
+  "advanced_risk_statistics": {
+    "annualized_sortino_ratio": 17.583414645291036,
+    "calmar_ratio": 276.83768261138954,
+    "downside_deviation": 0.0026076809620810596,
+    "downside_observation_count": 2,
+    "historical_expected_shortfall": 0.005,
+    "historical_value_at_risk": 0.005,
+    "minimum_acceptable_period_return": 0.0,
+    "observation_count": 5,
+    "omega_ratio": 2.5,
+    "period_sortino_ratio": 0.9203579866168445,
+    "return_basis": "simple",
+    "status": "eligible",
+    "tail_confidence_level": 0.95,
+    "ulcer_index": 0.0026076809620810618
+  },
+  "annualized_statistics": {
+    "annual_risk_free_rate": 0.0,
+    "annualized_arithmetic_mean_return": 0.8760000000000001,
+    "annualized_sample_volatility": 0.12370377924703836,
+    "annualized_sharpe_ratio": 7.081432801261587,
+    "period_risk_free_rate": 0.0,
+    "periods_per_year": 365,
+    "return_basis": "simple"
+  },
+  "audit_type": "single_run",
+  "benchmark": {
+    "alignment": {
+      "aligned_observation_count": 5,
+      "benchmark_observation_count": 5,
+      "benchmark_only_timestamps": [],
+      "eligible": true,
+      "status": "eligible",
+      "strategy_observation_count": 5,
+      "strategy_only_timestamps": []
+    },
+    "comparison": {
+      "annualized_arithmetic_alpha": 0.13780612244897975,
+      "annualized_information_ratio": 8.619150343866654,
+      "annualized_tracking_error": 0.05081707390238048,
+      "benchmark_cumulative_simple_return": 0.005984920084143974,
+      "benchmark_id": "market",
+      "beta": 1.6853741496598638,
+      "mean_period_active_return": 0.0012,
+      "observation_count": 5,
+      "period_arithmetic_alpha": 0.0003775510204081637,
+      "period_information_ratio": 0.4511469482381474,
+      "period_tracking_error": 0.002659887215654077,
+      "periods_per_year": 365,
+      "relative_wealth_return": 0.0059527410206283715,
+      "return_basis": "simple",
+      "return_correlation": 0.9979722381616027,
+      "strategy_cumulative_simple_return": 0.01197328778406237
+    },
+    "observation_calendar": {
+      "calendar_name": "24/7",
+      "calendar_timezone": "UTC",
+      "expected_session_count": 5,
+      "missing_session_dates": [],
+      "observation_count": 5,
+      "observed_session_count": 5,
+      "source": "built_in_24_7",
+      "status": "verified",
+      "timestamp_timezone": "UTC",
+      "unexpected_session_dates": [],
+      "verified": true
+    },
+    "return_construction": {
+      "completeness_ratio": 1.0,
+      "cost_basis": "net_of_all_declared_costs",
+      "currency": "USD",
+      "data_source": "synthetic-release-example",
+      "data_vintage": "2026-08-12",
+      "declared_field_count": 13,
+      "delisting_return_policy": "include terminal returns",
+      "execution_timing": "open t+1",
+      "fees_included": true,
+      "leverage_policy": "unlevered",
+      "lookahead_bias_controlled": true,
+      "price_adjustment_policy": "adjusted",
+      "required_field_count": 13,
+      "role": "benchmark",
+      "signal_timing": "close t",
+      "stale_price_policy": "reject stale prices",
+      "supplied": true,
+      "survivorship_bias_controlled": true,
+      "transaction_costs_included": true
+    }
+  },
+  "benchmark_alpha_inference": {
+    "beta": 1.6853741496598638,
+    "confidence_interval_lower": 6.067432398631443e-05,
+    "confidence_interval_upper": 0.0006944277168300119,
+    "confidence_level": 0.95,
+    "hac_standard_error": 0.0001616747547002556,
+    "maximum_lag": 1,
+    "observation_count": 5,
+    "period_alpha": 0.0003775510204081632,
+    "statistically_different_from_zero": true,
+    "status": "eligible",
+    "test_statistic": 2.335250306135558,
+    "two_sided_p_value": 0.01953034852689739
+  },
+  "bootstrap": {
+    "block_length": 2,
+    "blocks_per_replication": null,
+    "confidence_level": 0.9,
+    "eligible": true,
+    "hac_kernel": "bartlett",
+    "hac_maximum_lag": 1,
+    "interval_method": "percentile",
+    "lower_quantile": 0.04999999999999999,
+    "method": "stationary",
+    "metrics": [
+      {
+        "attempted_replications": 100,
+        "bootstrap_standard_error": 0.0016072748126043422,
+        "failed_replications": 0,
+        "interval_available": true,
+        "lower_bound": -0.00010500000000000007,
+        "metric": "period_mean_return",
+        "point_estimate": 0.0024000000000000002,
+        "status": "eligible",
+        "successful_replications": 100,
+        "upper_bound": 0.0054
+      },
+      {
+        "attempted_replications": 100,
+        "bootstrap_standard_error": 0.0010504692887621867,
+        "failed_replications": 0,
+        "interval_available": true,
+        "lower_bound": 0.00442137767149745,
+        "metric": "period_sample_volatility",
+        "point_estimate": 0.00647495173727187,
+        "status": "eligible",
+        "successful_replications": 100,
+        "upper_bound": 0.007582875444051551
+      },
+      {
+        "attempted_replications": 100,
+        "bootstrap_standard_error": 0.008128434029515992,
+        "failed_replications": 0,
+        "interval_available": true,
+        "lower_bound": -0.0006057070096359374,
+        "metric": "fixed_horizon_cumulative_simple_return",
+        "point_estimate": 0.0119732877840625,
+        "status": "eligible",
+        "successful_replications": 100,
+        "upper_bound": 0.027229166494375002
+      },
+      {
+        "attempted_replications": 100,
+        "bootstrap_standard_error": 0.586655306600585,
+        "failed_replications": 0,
+        "interval_available": true,
+        "lower_bound": -0.038325000000000026,
+        "metric": "annualized_arithmetic_mean_return",
+        "point_estimate": 0.8760000000000001,
+        "status": "eligible",
+        "successful_replications": 100,
+        "upper_bound": 1.971
+      },
+      {
+        "attempted_replications": 100,
+        "bootstrap_standard_error": 0.020069187582482634,
+        "failed_replications": 0,
+        "interval_available": true,
+        "lower_bound": 0.0844703018084813,
+        "metric": "iid_annualized_sample_volatility",
+        "point_estimate": 0.12370377924703836,
+        "status": "eligible",
+        "successful_replications": 100,
+        "upper_bound": 0.1448706319445042
+      },
+      {
+        "attempted_replications": 100,
+        "bootstrap_standard_error": 0.3720245577262929,
+        "failed_replications": 0,
+        "interval_available": true,
+        "lower_bound": -0.016731541367807384,
+        "metric": "period_sharpe_ratio",
+        "point_estimate": 0.37065913343953455,
+        "status": "eligible",
+        "successful_replications": 100,
+        "upper_bound": 0.9632879256405968
+      },
+      {
+        "attempted_replications": 100,
+        "bootstrap_standard_error": 7.107519195631974,
+        "failed_replications": 0,
+        "interval_available": true,
+        "lower_bound": -0.31965564900071325,
+        "metric": "iid_annualized_sharpe_ratio",
+        "point_estimate": 7.081432801261587,
+        "status": "eligible",
+        "successful_replications": 100,
+        "upper_bound": 18.403589978724582
+      },
+      {
+        "attempted_replications": 100,
+        "bootstrap_standard_error": 9.671758227465642,
+        "failed_replications": 0,
+        "interval_available": true,
+        "lower_bound": -0.5719196146448414,
+        "metric": "hac_adjusted_annualized_sharpe_ratio",
+        "point_estimate": 10.68275802586665,
+        "status": "eligible",
+        "successful_replications": 100,
+        "upper_bound": 25.514539855215535
+      }
+    ],
+    "observation_count": 5,
+    "overlapping_block_count": null,
+    "periods_per_year": 365,
+    "random_seed": 42,
+    "replications": 100,
+    "return_basis": "simple",
+    "status": "eligible",
+    "upper_quantile": 0.95
+  },
+  "descriptive_statistics": {
+    "cumulative_simple_return": 0.0119732877840625,
+    "end_timestamp": "2026-01-05T00:00:00",
+    "maximum_return": 0.01,
+    "mean_return": 0.0024000000000000002,
+    "minimum_return": -0.005,
+    "observation_count": 5,
+    "return_convention": "simple",
+    "sample_volatility": 0.00647495173727187,
+    "start_timestamp": "2026-01-01T00:00:00"
+  },
+  "distribution_statistics": {
+    "observation_count": 5,
+    "return_basis": "simple",
+    "sample_excess_kurtosis": -2.4091171409888377,
+    "sample_pearson_kurtosis": 0.5908828590111623,
+    "sample_skewness": 0.013721976466530013
+  },
+  "evidence_profile": {
+    "audit_type": "single_run",
+    "dimensions": [
+      {
+        "adverse_evidence_codes": [],
+        "assumption_codes": [
+          "BLOCKING_INPUT_ERRORS_REJECTED_BEFORE_AUDIT"
+        ],
+        "dimension": "input_integrity",
+        "next_evidence_required": [],
+        "status": "supported_under_stated_assumptions",
+        "summary": "The input passed the canonical blocking validation contract.",
+        "supporting_evidence_codes": [
+          "CANONICAL_INPUT_ACCEPTED"
+        ],
+        "unavailable_evidence_codes": []
+      },
+      {
+        "adverse_evidence_codes": [],
+        "assumption_codes": [
+          "RETURN_CONSTRUCTION_FIELDS_ARE_PRODUCER_DECLARATIONS"
+        ],
+        "dimension": "return_methodology",
+        "next_evidence_required": [],
+        "status": "supported_under_stated_assumptions",
+        "summary": "The return-construction declaration is complete without an explicit adverse flag.",
+        "supporting_evidence_codes": [
+          "RETURN_CONSTRUCTION_DECLARATION_COMPLETE"
+        ],
+        "unavailable_evidence_codes": []
+      },
+      {
+        "adverse_evidence_codes": [],
+        "assumption_codes": [
+          "PERIODS_PER_YEAR_EXPLICIT_OR_VERIFIED"
+        ],
+        "dimension": "sampling_eligibility",
+        "next_evidence_required": [],
+        "status": "supported_under_stated_assumptions",
+        "summary": "Sampling supports annualization under the explicit frequency scale.",
+        "supporting_evidence_codes": [
+          "SAMPLING_STATUS_CALENDAR_VERIFIED",
+          "ANNUALIZATION_ELIGIBLE"
+        ],
+        "unavailable_evidence_codes": []
+      },
+      {
+        "adverse_evidence_codes": [],
+        "assumption_codes": [
+          "ASYMPTOTIC_HIGHER_MOMENT_SHARPE_INFERENCE"
+        ],
+        "dimension": "statistical_evidence",
+        "next_evidence_required": [],
+        "status": "supported_under_stated_assumptions",
+        "summary": "The configured PSR confidence requirement is met.",
+        "supporting_evidence_codes": [
+          "PROBABILISTIC_SHARPE_RATIO_AVAILABLE",
+          "PSR_CONFIDENCE_REQUIREMENT_MET",
+          "ADVANCED_DOWNSIDE_TAIL_STATISTICS_AVAILABLE",
+          "TIME_VARYING_RISK_FREE_SERIES_ALIGNED"
+        ],
+        "unavailable_evidence_codes": []
+      },
+      {
+        "adverse_evidence_codes": [],
+        "assumption_codes": [
+          "BARTLETT_HAC_WITH_EXPLICIT_BANDWIDTH"
+        ],
+        "dimension": "serial_robustness",
+        "next_evidence_required": [],
+        "status": "supported_under_stated_assumptions",
+        "summary": "The configured HAC adjustment is available without a failed requirement.",
+        "supporting_evidence_codes": [
+          "HAC_ADJUSTMENT_ELIGIBLE",
+          "PARTIAL_AUTOCORRELATIONS_AVAILABLE",
+          "HAC_PSR_CONFIDENCE_REQUIREMENT_MET"
+        ],
+        "unavailable_evidence_codes": []
+      },
+      {
+        "adverse_evidence_codes": [
+          "BOOTSTRAP_PERIOD_SHARPE_LOWER_BOUND_NOT_POSITIVE"
+        ],
+        "assumption_codes": [
+          "MOVING_BLOCK_LENGTH_USER_SUPPLIED",
+          "ZERO_PERIOD_SHARPE_REFERENCE"
+        ],
+        "dimension": "resampling_robustness",
+        "next_evidence_required": [
+          "Treat resampling support as fragile under the configured interval."
+        ],
+        "status": "fragile",
+        "summary": "The bootstrap period-Sharpe interval is not strictly above zero.",
+        "supporting_evidence_codes": [
+          "BOOTSTRAP_PERIOD_SHARPE_INTERVAL_AVAILABLE"
+        ],
+        "unavailable_evidence_codes": []
+      },
+      {
+        "adverse_evidence_codes": [],
+        "assumption_codes": [
+          "BENCHMARK_COMPARABILITY_DECLARATIONS_APPLY"
+        ],
+        "dimension": "benchmark_evidence",
+        "next_evidence_required": [],
+        "status": "supported_under_stated_assumptions",
+        "summary": "Benchmark-relative evidence is available on exact timestamps.",
+        "supporting_evidence_codes": [
+          "BENCHMARK_EXACT_TIMESTAMP_ALIGNMENT",
+          "BENCHMARK_ALPHA_HAC_INFERENCE_AVAILABLE"
+        ],
+        "unavailable_evidence_codes": []
+      },
+      {
+        "adverse_evidence_codes": [],
+        "assumption_codes": [
+          "REGIME_LABELS_ARE_EXTERNAL_PRODUCER_DECLARATIONS",
+          "REGIMES_ARE_NOT_INFERRED_OR_OPTIMIZED"
+        ],
+        "dimension": "temporal_robustness",
+        "next_evidence_required": [],
+        "status": "supported_under_stated_assumptions",
+        "summary": "Conditional statistics are available for externally declared regimes.",
+        "supporting_evidence_codes": [
+          "DECLARED_REGIME_ANALYSIS_AVAILABLE"
+        ],
+        "unavailable_evidence_codes": []
+      },
+      {
+        "adverse_evidence_codes": [],
+        "assumption_codes": [],
+        "dimension": "reproducibility",
+        "next_evidence_required": [
+          "Supply an audit ID, timezone-aware audit timestamp, and Git revision together."
+        ],
+        "status": "insufficient_evidence",
+        "summary": "A deterministic audit-run manifest was not configured.",
+        "supporting_evidence_codes": [],
+        "unavailable_evidence_codes": [
+          "AUDIT_RUN_MANIFEST_NOT_CONFIGURED"
+        ]
+      }
+    ],
+    "interpretation_boundary": "Each dimension is independent. No numeric score or global pass/fail is calculated, and no status certifies skill, profit, or future performance.",
+    "method": "dimensioned_evidence_profile_v1",
+    "overall_status": null
+  },
+  "findings": [
+    {
+      "category": "methodological_risk",
+      "claim": "The bootstrap uses fewer than 1,000 replications.",
+      "code": "LOW_BOOTSTRAP_REPLICATION_COUNT",
+      "implication": "Estimated interval endpoints may have substantial Monte Carlo variation.",
+      "remediation": "Increase the explicit replication count and retain the seed so the analysis remains reproducible."
+    }
+  ],
+  "gross_net_cost_drag": {
+    "alignment": {
+      "aligned_observation_count": 5,
+      "paired_observation_count": 5,
+      "paired_only_timestamps": [],
+      "role": "gross_strategy",
+      "status": "eligible",
+      "strategy_observation_count": 5,
+      "strategy_only_timestamps": []
+    },
+    "annualized_arithmetic_cost_drag": 0.18250000000000008,
+    "cumulative_cost_drag": 0.0025264793991477408,
+    "cumulative_gross_return": 0.01449976718321011,
+    "cumulative_net_return": 0.01197328778406237,
+    "mean_period_cost_drag": 0.0005000000000000002,
+    "periods_with_negative_cost_drag": 0,
+    "periods_with_positive_cost_drag": 5
+  },
+  "input_issues": [],
+  "observation_calendar": {
+    "calendar_name": "24/7",
+    "calendar_timezone": "UTC",
+    "expected_session_count": 5,
+    "missing_session_dates": [],
+    "observation_count": 5,
+    "observed_session_count": 5,
+    "source": "built_in_24_7",
+    "status": "verified",
+    "timestamp_timezone": "UTC",
+    "unexpected_session_dates": [],
+    "verified": true
+  },
+  "performance_path": {
+    "cagr": 1.384188413056949,
+    "cumulative_simple_return": 0.01197328778406237,
+    "ending_wealth": 1.0119732877840624,
+    "longest_time_underwater_end_timestamp": "2026-01-02T00:00:00",
+    "longest_time_underwater_observations": 1,
+    "longest_time_underwater_start_timestamp": "2026-01-02T00:00:00",
+    "maximum_drawdown": -0.0050000000000000044,
+    "maximum_drawdown_duration_observations": 2,
+    "maximum_drawdown_peak_timestamp": "2026-01-01T00:00:00",
+    "maximum_drawdown_recovered": true,
+    "maximum_drawdown_recovery_timestamp": "2026-01-03T00:00:00",
+    "maximum_drawdown_trough_timestamp": "2026-01-02T00:00:00",
+    "observation_count": 5,
+    "periods_per_year": 365,
+    "return_basis": "simple",
+    "starting_wealth": 1.0
+  },
+  "regime_analysis": {
+    "observation_count": 5,
+    "regime_count": 2,
+    "regime_only_timestamps": [],
+    "slices": [
+      {
+        "cumulative_simple_return": -0.00798500000000002,
+        "mean_period_return": -0.004,
+        "observation_count": 2,
+        "period_sharpe_ratio": -2.8991378028648445,
+        "regime": "risk_off",
+        "sample_volatility": 0.001414213562373095
+      },
+      {
+        "cumulative_simple_return": 0.020118937500000156,
+        "mean_period_return": 0.006666666666666667,
+        "observation_count": 3,
+        "period_sharpe_ratio": 1.7158494217136,
+        "regime": "risk_on",
+        "sample_volatility": 0.003818813079129867
+      }
+    ],
+    "status": "eligible",
+    "strategy_only_timestamps": []
+  },
+  "return_construction": {
+    "completeness_ratio": 1.0,
+    "cost_basis": "net_of_all_declared_costs",
+    "currency": "USD",
+    "data_source": "synthetic-release-example",
+    "data_vintage": "2026-08-12",
+    "declared_field_count": 13,
+    "delisting_return_policy": "include terminal returns",
+    "execution_timing": "open t+1",
+    "fees_included": true,
+    "leverage_policy": "unlevered",
+    "lookahead_bias_controlled": true,
+    "price_adjustment_policy": "adjusted",
+    "required_field_count": 13,
+    "role": "strategy",
+    "signal_timing": "close t",
+    "stale_price_policy": "reject stale prices",
+    "supplied": true,
+    "survivorship_bias_controlled": true,
+    "transaction_costs_included": true
+  },
+  "risk_free_series": {
+    "alignment": {
+      "aligned_observation_count": 5,
+      "paired_observation_count": 5,
+      "paired_only_timestamps": [],
+      "role": "risk_free",
+      "status": "eligible",
+      "strategy_observation_count": 5,
+      "strategy_only_timestamps": []
+    },
+    "annualized_excess_sharpe_ratio": 6.77666990676362,
+    "cumulative_risk_free_return": 0.0005201081112307104,
+    "excess_return_sample_volatility": 0.0064729460062633,
+    "mean_period_excess_return": 0.002296,
+    "mean_period_risk_free_return": 0.00010400000000000001,
+    "period_excess_sharpe_ratio": 0.3547071144697272
+  },
+  "run_id": "golden-single-run",
+  "run_manifest": null,
+  "sampling_assessment": {
+    "annualization_eligible": true,
+    "declared_frequency": "D",
+    "inferred_frequency": "D",
+    "interval_count": 4,
+    "maximum_interval_seconds": 86400.0,
+    "minimum_interval_seconds": 86400.0,
+    "observation_count": 5,
+    "periods_per_year": 365,
+    "status": "calendar_verified"
+  },
+  "schema_version": "2.5",
+  "serial_adjustment": {
+    "benchmark_period_sharpe_ratio": 0.0,
+    "effective_observation_count": 10.496109532775735,
+    "eligible": true,
+    "full_lo_annual_horizon": false,
+    "hac_additional_observations_required": 0,
+    "hac_adjusted_annualized_sharpe_ratio": 10.68275802586665,
+    "hac_annualization_factor": 28.820976099350116,
+    "hac_confidence_requirement_met": true,
+    "hac_minimum_required_observations": 4,
+    "hac_minimum_track_record_length_observations": 2.368117566703165,
+    "hac_minimum_track_record_length_years": 0.006487993333433329,
+    "hac_observations_above_minimum": 1,
+    "hac_period_sharpe_standard_error": 0.3213890424584414,
+    "hac_probabilistic_sharpe_ratio": 0.8756070995090146,
+    "hac_sharpe_variance_adjustment": 0.4131636664494155,
+    "iid_annualization_factor": 19.1049731745428,
+    "iid_annualized_sharpe_ratio": 7.081432801261587,
+    "iid_period_sharpe_standard_error": 0.495192350983867,
+    "iid_probabilistic_sharpe_ratio": 0.7729253501168794,
+    "iid_sharpe_variance_adjustment": 0.9808618578917172,
+    "influence_autocorrelations": [
+      {
+        "autocorrelation": -0.5787748670975165,
+        "kernel_weight": 0.5,
+        "lag": 1,
+        "weighted_contribution": -0.28938743354875823
+      }
+    ],
+    "kernel": "bartlett",
+    "maximum_lag": 1,
+    "observation_count": 5,
+    "periods_per_year": 365,
+    "required_psr_confidence_level": 0.75,
+    "return_autocorrelations": [
+      {
+        "autocorrelation": -0.5605843768634466,
+        "kernel_weight": 0.5,
+        "lag": 1,
+        "weighted_contribution": -0.2802921884317233
+      }
+    ],
+    "return_basis": "simple",
+    "return_long_run_variance_ratio": 0.43941562313655336,
+    "sharpe_long_run_variance_ratio": 0.42122513290248353,
+    "status": "eligible"
+  },
+  "serial_dependence": {
+    "acf_confidence_bound": 0.8765225405765813,
+    "autocorrelations": [
+      {
+        "autocorrelation": -0.5605843768634466,
+        "lag": 1
+      }
+    ],
+    "degrees_of_freedom": 1,
+    "eligible": true,
+    "ljung_box_statistic": 2.7497298813545643,
+    "maximum_lag": 1,
+    "mean_effective_observation_count": 48.51307567692665,
+    "mean_long_run_variance_ratio": 0.10306499701848537,
+    "observation_count": 5,
+    "p_value": 0.0972708601717538,
+    "partial_autocorrelations": [
+      {
+        "lag": 1,
+        "partial_autocorrelation": -0.6785765843799625
+      }
+    ],
+    "return_basis": "simple",
+    "runs_test": {
+      "dependence_detected": false,
+      "expected_count": 3.0,
+      "observation_count": 4,
+      "p_value": 0.54029137460742,
+      "runs_count": 4,
+      "z_statistic": 0.6123724356957945
+    },
+    "serial_dependence_detected": false,
+    "significance_level": 0.05,
+    "status": "eligible",
+    "strongest_absolute_autocorrelation": 0.5605843768634466,
+    "strongest_absolute_autocorrelation_lag": 1,
+    "variance_ratios": []
+  },
+  "sharpe_uncertainty": {
+    "annualized_sharpe_ratio": 7.081432801261587,
+    "annualized_sharpe_standard_error": 9.460636581785561,
+    "benchmark_annualized_sharpe_ratio": 0.0,
+    "benchmark_period_sharpe_ratio": 0.0,
+    "observation_count": 5,
+    "period_sharpe_ratio": 0.37065913343953455,
+    "period_sharpe_standard_error": 0.495192350983867,
+    "periods_per_year": 365,
+    "probabilistic_sharpe_ratio": 0.7729253501168794,
+    "sharpe_variance_adjustment": 0.9808618578917172
+  },
+  "track_record_length": {
+    "additional_observations_required": 0,
+    "confidence_requirement_met": true,
+    "minimum_required_observations": 5,
+    "minimum_track_record_length_observations": 4.247948566781968,
+    "minimum_track_record_length_years": 0.011638215251457447,
+    "normal_critical_value": 0.6744897501960817,
+    "observation_count": 5,
+    "observations_above_minimum": 0,
+    "observed_period_sharpe_difference": 0.37065913343953455,
+    "observed_probabilistic_sharpe_ratio": 0.7729253501168794,
+    "periods_per_year": 365,
+    "required_psr_confidence_level": 0.75
+  }
+}

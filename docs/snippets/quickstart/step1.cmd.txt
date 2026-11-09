@@ -1,0 +1,9 @@
+backtest-auditor audit_returns.csv \
+  --run-id quickstart \
+  --declared-frequency B \
+  --periods-per-year 252 \
+  --audit-id quickstart \
+  --audit-timestamp 2026-11-02T09:00:00Z \
+  --git-commit synthetic-example \
+  --format markdown \
+  --output report.md

@@ -1,0 +1,9 @@
+| Property | Value |
+|---|---|
+| Audit ID | quickstart |
+| Audit timestamp UTC | 2026-11-02T09:00:00Z |
+| Package version | 1.6.0 |
+| Report schema | 2.5 |
+| Git commit | synthetic-example |
+| Normalized-data SHA-256 | `14036ec07e07bd908df79d239e40e9d9d98811d109380f967292c6b12951e28f` |
+| Configuration SHA-256 | `04ce2838df5b10cd74aa1bb888f2ee2824159ddb5081d99a463c9c29530b50df` |

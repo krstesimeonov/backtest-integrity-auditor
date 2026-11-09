@@ -1,0 +1,5 @@
+| Metric | Value |
+|---|---:|
+| Annualized Sharpe ratio | 0.549979069129 |
+| Annualized Sharpe standard error | 0.56970078703 |
+| Probabilistic Sharpe Ratio | 0.83282332394 |

@@ -1,0 +1,54 @@
+{
+  "declared_levels": [
+    "order",
+    "fill",
+    "trade",
+    "position",
+    "cash",
+    "cost"
+  ],
+  "engine": "nautilustrader",
+  "engine_version": "1.231.0",
+  "envelope_schema_version": "1.0",
+  "export_format_id": "backtest-auditor.nautilustrader",
+  "export_format_version": "1.0",
+  "files": [
+    {
+      "media_type": "application/json",
+      "path": "adapter-metadata.json",
+      "role": "adapter_metadata",
+      "sha256": "6580b8fccb7a50de046701a9132db819337b1cef4d501f7f13d1e2f0bb44ca1c",
+      "size_bytes": 71
+    },
+    {
+      "media_type": "text/csv",
+      "path": "nautilustrader-cash.csv",
+      "role": "cash",
+      "sha256": "044349af12047d76178f2f5041b443266c29b875c1b6fa637b8ed247dbe5ff0f",
+      "size_bytes": 68
+    },
+    {
+      "media_type": "text/csv",
+      "path": "nautilustrader-fills.csv",
+      "role": "fills",
+      "sha256": "e9e7391ec052190b284a97ad6f65d35bf3fe4a324cc3f07b52ca3967e3ae3270",
+      "size_bytes": 250
+    },
+    {
+      "media_type": "text/csv",
+      "path": "nautilustrader-orders.csv",
+      "role": "orders",
+      "sha256": "5c692a8d7342886a769e5755784e1128291470b94c66aa9c4389ed9d47a2f4a0",
+      "size_bytes": 241
+    },
+    {
+      "media_type": "text/csv",
+      "path": "nautilustrader-positions.csv",
+      "role": "positions",
+      "sha256": "30d27e7477325ecf910afff532119f4e7ec05b00cd9f3c6d12d727d38c117038",
+      "size_bytes": 275
+    }
+  ],
+  "run_id": "v1-5d3-nautilustrader-example",
+  "source_sha256": "9173a20d14eda51bed72ad4ecf6f500d86f3b91978c5e7b0f34053b949c6b237"
+}

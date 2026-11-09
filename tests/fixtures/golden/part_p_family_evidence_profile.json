@@ -1,0 +1,82 @@
+{
+  "audit_type": "experiment_family",
+  "dimensions": [
+    {
+      "adverse_evidence_codes": [],
+      "assumption_codes": ["BLOCKING_INPUT_ERRORS_REJECTED_BEFORE_AUDIT"],
+      "dimension": "input_integrity",
+      "next_evidence_required": [],
+      "status": "supported_under_stated_assumptions",
+      "summary": "The input passed the canonical blocking validation contract.",
+      "supporting_evidence_codes": ["CANONICAL_INPUT_ACCEPTED"],
+      "unavailable_evidence_codes": []
+    },
+    {
+      "adverse_evidence_codes": ["COMPLETED_TRIALS_EXCLUDED_FROM_SELECTION"],
+      "assumption_codes": ["SEARCH_COMPLETE_DECLARATION_IS_ACCURATE"],
+      "dimension": "experiment_completeness",
+      "next_evidence_required": [],
+      "status": "supported_under_stated_assumptions",
+      "summary": "The complete declared experiment family supports family-level methods.",
+      "supporting_evidence_codes": [
+        "COMPLETE_SEARCH_HISTORY",
+        "ALIGNED_SELECTION_ELIGIBLE_TRIAL_MATRIX"
+      ],
+      "unavailable_evidence_codes": []
+    },
+    {
+      "adverse_evidence_codes": [],
+      "assumption_codes": [],
+      "dimension": "multiple_testing_evidence",
+      "next_evidence_required": [
+        "Configure both complementary selection-bias methods."
+      ],
+      "status": "insufficient_evidence",
+      "summary": "Neither DSR nor CSCV/PBO was configured.",
+      "supporting_evidence_codes": [],
+      "unavailable_evidence_codes": [
+        "DSR_NOT_CONFIGURED",
+        "CSCV_PBO_NOT_CONFIGURED"
+      ]
+    },
+    {
+      "adverse_evidence_codes": [],
+      "assumption_codes": [],
+      "dimension": "parameter_robustness",
+      "next_evidence_required": [
+        "Supply explicit parameter scales, radius, density, and tolerance requirements."
+      ],
+      "status": "insufficient_evidence",
+      "summary": "Parameter-neighborhood robustness was not configured.",
+      "supporting_evidence_codes": [],
+      "unavailable_evidence_codes": ["PARAMETER_ROBUSTNESS_NOT_CONFIGURED"]
+    },
+    {
+      "adverse_evidence_codes": [],
+      "assumption_codes": [],
+      "dimension": "temporal_robustness",
+      "next_evidence_required": [
+        "Supply equal-window requirements and explicit tie policies."
+      ],
+      "status": "insufficient_evidence",
+      "summary": "Temporal robustness was not configured.",
+      "supporting_evidence_codes": [],
+      "unavailable_evidence_codes": ["TEMPORAL_ROBUSTNESS_NOT_CONFIGURED"]
+    },
+    {
+      "adverse_evidence_codes": [],
+      "assumption_codes": [],
+      "dimension": "reproducibility",
+      "next_evidence_required": [
+        "Supply an audit ID, timezone-aware audit timestamp, and Git revision together."
+      ],
+      "status": "insufficient_evidence",
+      "summary": "A deterministic audit-run manifest was not configured.",
+      "supporting_evidence_codes": [],
+      "unavailable_evidence_codes": ["AUDIT_RUN_MANIFEST_NOT_CONFIGURED"]
+    }
+  ],
+  "interpretation_boundary": "Each dimension is independent. No numeric score or global pass/fail is calculated, and no status certifies skill, profit, or future performance.",
+  "method": "dimensioned_evidence_profile_v1",
+  "overall_status": null
+}

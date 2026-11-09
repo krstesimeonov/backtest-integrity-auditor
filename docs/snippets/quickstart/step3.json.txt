@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.5",
+  "audit_type": "single_run",
+  "evidence_profile": {
+    "input_integrity": "supported_under_stated_assumptions",
+    "return_methodology": "insufficient_evidence",
+    "sampling_eligibility": "supported_under_stated_assumptions",
+    "statistical_evidence": "fragile",
+    "serial_robustness": "fragile",
+    "resampling_robustness": "fragile",
+    "benchmark_evidence": "insufficient_evidence",
+    "temporal_robustness": "insufficient_evidence",
+    "reproducibility": "supported_under_stated_assumptions"
+  }
+}

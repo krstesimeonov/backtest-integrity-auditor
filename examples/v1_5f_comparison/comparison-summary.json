@@ -1,0 +1,54 @@
+{
+  "candidates": [
+    {
+      "levels": [
+        {
+          "differences": [],
+          "exact_match": true,
+          "level": "strategy_specification",
+          "record_statuses": [
+            "matched_equal"
+          ],
+          "status": "compared"
+        },
+        {
+          "differences": [],
+          "exact_match": true,
+          "level": "market_data",
+          "record_statuses": [
+            "matched_equal"
+          ],
+          "status": "compared"
+        },
+        {
+          "differences": [
+            {
+              "decimal_delta": "-2.5",
+              "field": "total_equity",
+              "temporal_delta_microseconds": null
+            }
+          ],
+          "exact_match": false,
+          "level": "equity",
+          "record_statuses": [
+            "matched_different"
+          ],
+          "status": "compared"
+        },
+        {
+          "differences": [],
+          "exact_match": true,
+          "level": "return",
+          "record_statuses": [
+            "matched_equal"
+          ],
+          "status": "compared"
+        }
+      ],
+      "run_id": "engine-b-run"
+    }
+  ],
+  "comparison_policy_sha256": "86009dded772ebf4d03a95672f35215506f380221acfe60449211e902e52fc1f",
+  "normalization_plan_sha256": "544d35eb60ea3cb612ccf675de5decb4e9eb0d359d9203d4b906f29fd3f4d840",
+  "reconciliation_id": "v1-5e-example"
+}

@@ -1,0 +1,2 @@
+$ python -c "import backtest_auditor as b; print(b.__version__)"
+1.6.0

@@ -1,0 +1,346 @@
+{
+  "candidates": [
+    {
+      "attributions": [
+        {
+          "hypothesis_code": "cost_may_explain_return",
+          "rationale": "Co-occurrence supports investigation, not causal proof.",
+          "source_family": "transaction_cost",
+          "status": "supported_cooccurrence",
+          "target_family": "return"
+        }
+      ],
+      "candidate_run": {
+        "engine_name": "Engine B",
+        "engine_version": "2.0",
+        "run_id": "candidate-run",
+        "source_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "comparison_levels": [
+        {
+          "alignment_mode": "semantic",
+          "exact_match": false,
+          "level": "order",
+          "record_counts": {
+            "ambiguous": 0,
+            "candidate_only": 0,
+            "matched_different": 1,
+            "matched_equal": 0,
+            "reference_only": 0
+          },
+          "status": "compared"
+        },
+        {
+          "alignment_mode": "semantic",
+          "exact_match": false,
+          "level": "cost",
+          "record_counts": {
+            "ambiguous": 0,
+            "candidate_only": 0,
+            "matched_different": 1,
+            "matched_equal": 0,
+            "reference_only": 0
+          },
+          "status": "compared"
+        },
+        {
+          "alignment_mode": "semantic",
+          "exact_match": false,
+          "level": "equity",
+          "record_counts": {
+            "ambiguous": 0,
+            "candidate_only": 0,
+            "matched_different": 1,
+            "matched_equal": 0,
+            "reference_only": 0
+          },
+          "status": "compared"
+        },
+        {
+          "alignment_mode": "semantic",
+          "exact_match": false,
+          "level": "return",
+          "record_counts": {
+            "ambiguous": 0,
+            "candidate_only": 0,
+            "matched_different": 1,
+            "matched_equal": 0,
+            "reference_only": 0
+          },
+          "status": "compared"
+        }
+      ],
+      "families": [
+        {
+          "assessments": [
+            {
+              "absolute_delta": "0.25",
+              "alignment_key": "{\"kind\":\"cost\",\"mode\":\"semantic\",\"values\":[{\"type\":\"datetime\",\"value\":\"2026-01-02T14:30:00.000000Z\"},{\"type\":\"string\",\"value\":\"USD\"}]}",
+              "candidate_value": "{\"type\":\"decimal\",\"value\":\"-1.25\"}",
+              "decimal_delta": "-0.25",
+              "field": "pnl_impact",
+              "level": "cost",
+              "materiality": "extreme",
+              "reference_value": "{\"type\":\"decimal\",\"value\":\"-1\"}",
+              "threshold": "0.1",
+              "threshold_ratio": "2.5"
+            }
+          ],
+          "evidence_counts": {
+            "ambiguous_records": 0,
+            "equal_records": 0,
+            "non_numeric_differences": 0,
+            "one_sided_records": 0,
+            "unavailable_levels": 0
+          },
+          "family": "transaction_cost",
+          "maximum_threshold_ratio": "2.5",
+          "score_contribution": "25",
+          "status": "measured"
+        },
+        {
+          "assessments": [
+            {
+              "absolute_delta": "2",
+              "alignment_key": "{\"kind\":\"order\",\"mode\":\"semantic\",\"values\":[{\"type\":\"datetime\",\"value\":\"2026-01-02T14:30:00.000000Z\"},{\"type\":\"string\",\"value\":\"AAPL\"},{\"type\":\"enum\",\"value\":\"buy\"}]}",
+              "candidate_value": "{\"type\":\"decimal\",\"value\":\"12\"}",
+              "decimal_delta": "2",
+              "field": "quantity",
+              "level": "order",
+              "materiality": "material",
+              "reference_value": "{\"type\":\"decimal\",\"value\":\"10\"}",
+              "threshold": "1",
+              "threshold_ratio": "2"
+            }
+          ],
+          "evidence_counts": {
+            "ambiguous_records": 0,
+            "equal_records": 0,
+            "non_numeric_differences": 0,
+            "one_sided_records": 0,
+            "unavailable_levels": 0
+          },
+          "family": "sizing",
+          "maximum_threshold_ratio": "2",
+          "score_contribution": "25",
+          "status": "measured"
+        },
+        {
+          "assessments": [
+            {
+              "absolute_delta": "2.5",
+              "alignment_key": "{\"kind\":\"equity\",\"mode\":\"semantic\",\"values\":[{\"type\":\"datetime\",\"value\":\"2026-01-02T14:30:00.000000Z\"},{\"type\":\"string\",\"value\":\"USD\"}]}",
+              "candidate_value": "{\"type\":\"decimal\",\"value\":\"99997.5\"}",
+              "decimal_delta": "-2.5",
+              "field": "total_equity",
+              "level": "equity",
+              "materiality": "below_threshold",
+              "reference_value": "{\"type\":\"decimal\",\"value\":\"100000\"}",
+              "threshold": "5",
+              "threshold_ratio": "0.5"
+            }
+          ],
+          "evidence_counts": {
+            "ambiguous_records": 0,
+            "equal_records": 0,
+            "non_numeric_differences": 0,
+            "one_sided_records": 0,
+            "unavailable_levels": 0
+          },
+          "family": "accounting",
+          "maximum_threshold_ratio": "0.5",
+          "score_contribution": "12.5",
+          "status": "measured"
+        },
+        {
+          "assessments": [
+            {
+              "absolute_delta": "0.000025",
+              "alignment_key": "{\"kind\":\"return\",\"mode\":\"semantic\",\"values\":[{\"type\":\"datetime\",\"value\":\"2026-01-01T14:30:00.000000Z\"},{\"type\":\"datetime\",\"value\":\"2026-01-02T14:30:00.000000Z\"}]}",
+              "candidate_value": "{\"type\":\"decimal\",\"value\":\"0.009975\"}",
+              "decimal_delta": "-0.000025",
+              "field": "value",
+              "level": "return",
+              "materiality": "extreme",
+              "reference_value": "{\"type\":\"decimal\",\"value\":\"0.01\"}",
+              "threshold": "0.00001",
+              "threshold_ratio": "2.5"
+            }
+          ],
+          "evidence_counts": {
+            "ambiguous_records": 0,
+            "equal_records": 0,
+            "non_numeric_differences": 0,
+            "one_sided_records": 0,
+            "unavailable_levels": 0
+          },
+          "family": "return",
+          "maximum_threshold_ratio": "2.5",
+          "score_contribution": "25",
+          "status": "measured"
+        }
+      ],
+      "implementation_risk_score": "87.5",
+      "score_withheld_reason": null,
+      "uncertainty": "low"
+    }
+  ],
+  "findings": [
+    {
+      "candidate_run_id": "candidate-run",
+      "code": "IMPLEMENTATION_DIVERGENCE_EXTREME",
+      "evidence_path": "/candidates/candidate-run/families/transaction_cost/assessments/0",
+      "family": "transaction_cost",
+      "kind": "adverse",
+      "limitation": "The classification is conditional on the supplied field-specific threshold.",
+      "recommended_action": "Review the canonical records and the declared materiality threshold.",
+      "summary": "transaction_cost pnl_impact divergence is extreme at 2.5× threshold."
+    },
+    {
+      "candidate_run_id": "candidate-run",
+      "code": "IMPLEMENTATION_DIVERGENCE_MATERIAL",
+      "evidence_path": "/candidates/candidate-run/families/sizing/assessments/0",
+      "family": "sizing",
+      "kind": "adverse",
+      "limitation": "The classification is conditional on the supplied field-specific threshold.",
+      "recommended_action": "Review the canonical records and the declared materiality threshold.",
+      "summary": "sizing quantity divergence is material at 2× threshold."
+    },
+    {
+      "candidate_run_id": "candidate-run",
+      "code": "IMPLEMENTATION_DIVERGENCE_BELOW_THRESHOLD",
+      "evidence_path": "/candidates/candidate-run/families/accounting/assessments/0",
+      "family": "accounting",
+      "kind": "supporting",
+      "limitation": "The classification is conditional on the supplied field-specific threshold.",
+      "recommended_action": null,
+      "summary": "accounting total_equity divergence is below_threshold at 0.5× threshold."
+    },
+    {
+      "candidate_run_id": "candidate-run",
+      "code": "IMPLEMENTATION_DIVERGENCE_EXTREME",
+      "evidence_path": "/candidates/candidate-run/families/return/assessments/0",
+      "family": "return",
+      "kind": "adverse",
+      "limitation": "The classification is conditional on the supplied field-specific threshold.",
+      "recommended_action": "Review the canonical records and the declared materiality threshold.",
+      "summary": "return value divergence is extreme at 2.5× threshold."
+    },
+    {
+      "candidate_run_id": "candidate-run",
+      "code": "IMPLEMENTATION_ATTRIBUTION_SUPPORTED_COOCCURRENCE",
+      "evidence_path": "/candidates/candidate-run/attributions/0",
+      "family": null,
+      "kind": "attribution_hypothesis",
+      "limitation": "Co-occurrence is not causal proof, and non-support does not disprove causation.",
+      "recommended_action": "Investigate the hypothesis with independent causal evidence.",
+      "summary": "Attribution hypothesis cost_may_explain_return is supported_cooccurrence."
+    }
+  ],
+  "interpretation_boundary": "The report identifies implementation divergence against a declared reference baseline. It does not establish that any engine is correct, prove causation, certify strategy skill, or predict future performance.",
+  "normalization": {
+    "runs": [
+      {
+        "canonical_bundle_sha256": "5b041407836d524397d761d1eb4be506c557d4e596cb91bbce00c96059328d54",
+        "canonical_frequency": {
+          "calendar": null,
+          "calendar_timezone": null,
+          "frequency_id": "P1D",
+          "interval_microseconds": 86400000000,
+          "kind": "fixed"
+        },
+        "changes": [
+          {
+            "dimension": "currency",
+            "level": null,
+            "normalized_value": "USD",
+            "rationale": "No FX conversion; denomination identifiers are identical.",
+            "source_value": "USD"
+          },
+          {
+            "dimension": "frequency",
+            "level": null,
+            "normalized_value": "P1D",
+            "rationale": "Explicit 24-hour return interval for the example.",
+            "source_value": "explicit interval evidence"
+          },
+          {
+            "dimension": "instrument_identity",
+            "level": null,
+            "normalized_value": "AAPL",
+            "rationale": "Explicit identity mapping for the example instrument.",
+            "source_value": "AAPL"
+          }
+        ],
+        "run_id": "reference-run"
+      },
+      {
+        "canonical_bundle_sha256": "58aea735462a46c0de042b5907989d736af5e6d122070bf407664422dd587041",
+        "canonical_frequency": {
+          "calendar": null,
+          "calendar_timezone": null,
+          "frequency_id": "P1D",
+          "interval_microseconds": 86400000000,
+          "kind": "fixed"
+        },
+        "changes": [
+          {
+            "dimension": "currency",
+            "level": null,
+            "normalized_value": "USD",
+            "rationale": "No FX conversion; denomination identifiers are identical.",
+            "source_value": "USD"
+          },
+          {
+            "dimension": "frequency",
+            "level": null,
+            "normalized_value": "P1D",
+            "rationale": "Explicit 24-hour return interval for the example.",
+            "source_value": "explicit interval evidence"
+          },
+          {
+            "dimension": "instrument_identity",
+            "level": null,
+            "normalized_value": "AAPL",
+            "rationale": "Explicit identity mapping for the example instrument.",
+            "source_value": "AAPL"
+          }
+        ],
+        "run_id": "candidate-run"
+      }
+    ]
+  },
+  "overall_status": null,
+  "policy_identity": {
+    "assessment_policy_sha256": "358e05e54d492f18f79602988209ee53ac64852b149fa13295bead41fcd61eb7",
+    "comparison_policy_sha256": "60539a5e6e4445d646ddaa90ef74f4dbea8c2d0f34f8f19c46d99b0fcd967114",
+    "measurement_policy_sha256": "89677f35f9c778f28991cb25fa36e819f3e5e3e04051397fb82c2771d50c612d",
+    "normalization_plan_sha256": "98bafebb3b17adc056de382c5f5400b3d79dd0a8b7604a37ffc92b62f402a87f"
+  },
+  "reconciliation": {
+    "candidate_runs": [
+      {
+        "engine_name": "Engine B",
+        "engine_version": "2.0",
+        "run_id": "candidate-run",
+        "source_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    ],
+    "reconciliation_id": "v1-5j-golden-divergent",
+    "reference_run": {
+      "engine_name": "Engine A",
+      "engine_version": "1.0",
+      "run_id": "reference-run",
+      "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "requested_levels": [
+      "order",
+      "cost",
+      "equity",
+      "return"
+    ]
+  },
+  "report_type": "implementation_risk",
+  "run_manifest": null,
+  "schema_version": "1.0"
+}

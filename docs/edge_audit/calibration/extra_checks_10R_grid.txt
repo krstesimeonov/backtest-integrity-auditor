@@ -1,0 +1,8 @@
+interpolation rolling_expectancy: interpolated 3.5465, direct 3.5313, share above 4.78 %
+interpolation cusum: interpolated 27.9826, direct 27.6854, share above 4.81 %
+interpolation page_hinkley: interpolated 23.2673, direct 23.4564, share above 5.24 %
+interpolation mixture_sprt: interpolated 4.0917, direct 3.9708, share above 4.66 %
+edge SR 0.1: rolling_expectancy 5.62 % (111/1975), cusum 5.25 % (101/1923), page_hinkley 4.21 % (81/1923), mixture_sprt 5.56 % (107/1923); not run 25
+edge SR 0.6: rolling_expectancy 4.90 % (98/2000), cusum 4.90 % (98/2000), page_hinkley 3.65 % (73/2000), mixture_sprt 3.75 % (75/2000); not run 0
+wrote docs/edge_audit/calibration/extra_checks.json
+.venv/bin/python docs/edge_audit/calibration/extra_checks.py  29.53s user 0.74s system 93% cpu 32.219 total

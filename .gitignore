@@ -1,0 +1,71 @@
+# macOS
+.DS_Store
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing, coverage, linting, and type-checking
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Python build output
+build/
+dist/
+*.egg-info/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local databases
+# SQLite writes sidecars beside the file: *.db does not match bta.db-wal.
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Editors
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Web app
+apps/web/node_modules/
+apps/web/.next/
+apps/web/out/
+apps/web/.env*.local
+apps/web/next-env.d.ts
+apps/web/test-results/
+apps/web/playwright-report/
+apps/web/blob-report/
+
+# Wave-5 job runner and temporary worktrees/venvs (W5-J6)
+runner.pid
+_tmp/
+
+# Example notebook outputs (examples/notebooks/run_notebooks.sh)
+examples/notebooks/_output/
+# MkDocs build output
+site/

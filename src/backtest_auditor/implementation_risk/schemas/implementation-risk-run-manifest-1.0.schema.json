@@ -1,0 +1,87 @@
+{
+  "$id": "urn:backtest-integrity-auditor:schema:implementation-risk-run-manifest:1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audit_id": {"minLength": 1, "type": "string"},
+    "audit_timestamp_utc": {"format": "date-time", "pattern": "Z$", "type": "string"},
+    "environment": {
+      "additionalProperties": false,
+      "properties": {
+        "platform_machine": {"minLength": 1, "type": "string"},
+        "platform_system": {"minLength": 1, "type": "string"},
+        "python_implementation": {"minLength": 1, "type": "string"},
+        "python_version": {"minLength": 1, "type": "string"}
+      },
+      "required": ["platform_machine", "platform_system", "python_implementation", "python_version"],
+      "type": "object"
+    },
+    "findings_sha256": {"$ref": "#/$defs/sha256"},
+    "git_commit": {"minLength": 1, "type": "string"},
+    "input_artifacts": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "canonical_bundle_sha256": {"$ref": "#/$defs/sha256"},
+          "role": {"enum": ["reference", "candidate"]},
+          "run_id": {"minLength": 1, "type": "string"},
+          "source_sha256": {"$ref": "#/$defs/sha256"}
+        },
+        "required": ["role", "run_id", "source_sha256", "canonical_bundle_sha256"],
+        "type": "object"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "manifest_schema_version": {"const": "1.0"},
+    "manifest_sha256": {"$ref": "#/$defs/sha256"},
+    "method_versions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {"minLength": 1, "type": "string"},
+          "version": {"minLength": 1, "type": "string"}
+        },
+        "required": ["name", "version"],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "package_version": {"minLength": 1, "type": "string"},
+    "policy_identity": {"$ref": "#/$defs/policyIdentity"},
+    "reconciliation_id": {"minLength": 1, "type": "string"},
+    "report_schema_version": {"const": "1.0"}
+  },
+  "required": [
+    "manifest_schema_version",
+    "audit_id",
+    "audit_timestamp_utc",
+    "reconciliation_id",
+    "package_version",
+    "report_schema_version",
+    "git_commit",
+    "input_artifacts",
+    "policy_identity",
+    "findings_sha256",
+    "method_versions",
+    "environment",
+    "manifest_sha256"
+  ],
+  "title": "Backtest Integrity Auditor Implementation-Risk Run Manifest 1.0",
+  "type": "object",
+  "$defs": {
+    "policyIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment_policy_sha256": {"$ref": "#/$defs/sha256"},
+        "comparison_policy_sha256": {"$ref": "#/$defs/sha256"},
+        "measurement_policy_sha256": {"$ref": "#/$defs/sha256"},
+        "normalization_plan_sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "required": ["normalization_plan_sha256", "comparison_policy_sha256", "measurement_policy_sha256", "assessment_policy_sha256"],
+      "type": "object"
+    },
+    "sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"}
+  }
+}

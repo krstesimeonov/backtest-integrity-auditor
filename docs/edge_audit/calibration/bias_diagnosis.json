@@ -1,0 +1,129 @@
+{
+ "grid_declared": {
+  "detectors": {
+   "cusum": {
+    "false_alarms": 193,
+    "logs": 4000,
+    "rate": 0.04825,
+    "wilson95": [
+     0.04203155996755503,
+     0.05533529704469027
+    ]
+   },
+   "mixture_sprt": {
+    "false_alarms": 202,
+    "logs": 4000,
+    "rate": 0.0505,
+    "wilson95": [
+     0.044134869278676186,
+     0.05772767023876546
+    ]
+   },
+   "page_hinkley": {
+    "false_alarms": 220,
+    "logs": 4000,
+    "rate": 0.055,
+    "wilson95": [
+     0.04835239551328616,
+     0.06250150901454818
+    ]
+   },
+   "rolling_expectancy": {
+    "false_alarms": 188,
+    "logs": 4000,
+    "rate": 0.047,
+    "wilson95": [
+     0.04086474761936001,
+     0.05400450800110956
+    ]
+   }
+  },
+  "reference_trades": 400,
+  "shift": 0.3
+ },
+ "grid_estimated": {
+  "detectors": {
+   "cusum": {
+    "false_alarms": 217,
+    "logs": 4000,
+    "rate": 0.05425,
+    "wilson95": [
+     0.04764851826236749,
+     0.0617068254304014
+    ]
+   },
+   "mixture_sprt": {
+    "false_alarms": 218,
+    "logs": 4000,
+    "rate": 0.0545,
+    "wilson95": [
+     0.04788310299269288,
+     0.061971760978431156
+    ]
+   },
+   "page_hinkley": {
+    "false_alarms": 218,
+    "logs": 4000,
+    "rate": 0.0545,
+    "wilson95": [
+     0.04788310299269288,
+     0.061971760978431156
+    ]
+   },
+   "rolling_expectancy": {
+    "false_alarms": 204,
+    "logs": 4000,
+    "rate": 0.051,
+    "wilson95": [
+     0.044602783312247256,
+     0.05825879676190469
+    ]
+   }
+  },
+  "reference_trades": 400,
+  "shift": "estimated SR0"
+ },
+ "off_grid_estimated": {
+  "detectors": {
+   "cusum": {
+    "false_alarms": 158,
+    "logs": 4000,
+    "rate": 0.0395,
+    "wilson95": [
+     0.033892340460716965,
+     0.04599130680909811
+    ]
+   },
+   "mixture_sprt": {
+    "false_alarms": 191,
+    "logs": 4000,
+    "rate": 0.04775,
+    "wilson95": [
+     0.041564686010040916,
+     0.05480313044549409
+    ]
+   },
+   "page_hinkley": {
+    "false_alarms": 181,
+    "logs": 4000,
+    "rate": 0.04525,
+    "wilson95": [
+     0.03923334996233639,
+     0.052139263709647124
+    ]
+   },
+   "rolling_expectancy": {
+    "false_alarms": 176,
+    "logs": 4000,
+    "rate": 0.044,
+    "wilson95": [
+     0.03806966237940812,
+     0.05080534990079964
+    ]
+   }
+  },
+  "reference_trades": 500,
+  "shift": "estimated SR0"
+ },
+ "seconds": 140.0
+}

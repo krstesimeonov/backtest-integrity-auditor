@@ -1,0 +1,4 @@
+grid_declared (R = 400, δ = 0.3): rolling_expectancy 4.70 % (188/4000; 4.09-5.40), cusum 4.83 % (193/4000; 4.20-5.53), page_hinkley 5.50 % (220/4000; 4.84-6.25), mixture_sprt 5.05 % (202/4000; 4.41-5.77)
+grid_estimated (R = 400, δ = estimated SR0): rolling_expectancy 5.10 % (204/4000; 4.46-5.83), cusum 5.42 % (217/4000; 4.76-6.17), page_hinkley 5.45 % (218/4000; 4.79-6.20), mixture_sprt 5.45 % (218/4000; 4.79-6.20)
+off_grid_estimated (R = 500, δ = estimated SR0): rolling_expectancy 4.38 % (175/4000; 3.78-5.05), cusum 3.82 % (153/4000; 3.27-4.47), page_hinkley 4.47 % (179/4000; 3.88-5.16), mixture_sprt 4.75 % (190/4000; 4.13-5.45)
+.venv/bin/python docs/edge_audit/calibration/bias_diagnosis.py  82.63s user 0.54s system 88% cpu 1:33.85 total

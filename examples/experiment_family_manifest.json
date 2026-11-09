@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "market",
+  "benchmark_return_convention": "simple",
+  "declared_frequency": "D",
+  "declared_total_attempted_trials": 4,
+  "family_id": "example-family",
+  "parameter_names": [
+    "lookback",
+    "threshold"
+  ],
+  "periods_per_year": 365,
+  "return_convention": "simple",
+  "schema_version": "1.0",
+  "search_complete": true,
+  "selected_trial_id": "trial-003",
+  "selection_direction": "maximize",
+  "selection_metric": "validation_sharpe",
+  "selection_rule": "Maximize validation Sharpe among predeclared eligible trials",
+  "source": "examples/experiment_family_returns.csv",
+  "timezone": "UTC"
+}

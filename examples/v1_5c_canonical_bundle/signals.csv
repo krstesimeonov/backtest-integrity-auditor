@@ -1,0 +1,2 @@
+signal_id,timestamp,instrument_id,signal_type,value,source_data_timestamp
+signal-1,2026-01-02T14:30:00.000000Z,AAPL.XNAS,target_quantity,10,2026-01-02T14:30:00.000000Z

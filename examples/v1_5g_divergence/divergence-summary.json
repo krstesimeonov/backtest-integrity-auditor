@@ -1,0 +1,52 @@
+{
+  "comparison_policy_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "families": [
+    {
+      "family": "transaction_cost",
+      "observations": [
+        {
+          "decimal_delta": "0.25",
+          "field": "amount",
+          "level": "cost"
+        }
+      ],
+      "status": "measured"
+    },
+    {
+      "family": "sizing",
+      "observations": [
+        {
+          "decimal_delta": "2",
+          "field": "quantity",
+          "level": "order"
+        }
+      ],
+      "status": "measured"
+    },
+    {
+      "family": "accounting",
+      "observations": [
+        {
+          "decimal_delta": "-2.50",
+          "field": "total_equity",
+          "level": "equity"
+        }
+      ],
+      "status": "measured"
+    },
+    {
+      "family": "return",
+      "observations": [
+        {
+          "decimal_delta": "-0.000025",
+          "field": "value",
+          "level": "return"
+        }
+      ],
+      "status": "measured"
+    }
+  ],
+  "measurement_policy_sha256": "3135432a0384bc83e66f05fe096c46f169caa0258a865b2962dcfe295ee757db",
+  "normalization_plan_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "reconciliation_id": "v1-5g-example"
+}

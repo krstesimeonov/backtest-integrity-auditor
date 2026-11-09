@@ -1,0 +1,2 @@
+position_id,instrument,size,entry_timestamp,avg_entry_price,entry_fees,exit_timestamp,avg_exit_price,exit_fees,pnl,return,direction,status
+0,AAPL,1.0,2026-01-02T00:00:00.000000Z,100.0,0.1,2026-01-05T00:00:00.000000Z,105.0,0.105,4.795,0.04795,Long,Closed

@@ -1,0 +1,99 @@
+{
+  "divergent": {
+    "attribution_statuses": [
+      "supported_cooccurrence"
+    ],
+    "comparison_exact_match": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "family_score_contributions": [
+      "25",
+      "25",
+      "12.5",
+      "25"
+    ],
+    "finding_kind_counts": {
+      "adverse": 3,
+      "attribution_hypothesis": 1,
+      "supporting": 1
+    },
+    "implementation_risk_score": "87.5",
+    "materialities": [
+      "extreme",
+      "material",
+      "below_threshold",
+      "extreme"
+    ],
+    "score_withheld_reason": null,
+    "threshold_ratios": [
+      "2.5",
+      "2",
+      "0.5",
+      "2.5"
+    ],
+    "uncertainty": "low"
+  },
+  "exact": {
+    "attribution_statuses": [
+      "not_supported"
+    ],
+    "comparison_exact_match": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "family_score_contributions": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "finding_kind_counts": {
+      "supporting": 1
+    },
+    "implementation_risk_score": null,
+    "materialities": [],
+    "score_withheld_reason": null,
+    "threshold_ratios": [],
+    "uncertainty": "not_assessed"
+  },
+  "incomplete": {
+    "attribution_statuses": [
+      "supported_cooccurrence"
+    ],
+    "comparison_exact_match": [
+      false,
+      false,
+      null,
+      false
+    ],
+    "family_score_contributions": [
+      "25",
+      "25",
+      null,
+      "25"
+    ],
+    "finding_kind_counts": {
+      "adverse": 3,
+      "attribution_hypothesis": 1,
+      "evidence_gap": 3
+    },
+    "implementation_risk_score": null,
+    "materialities": [
+      "extreme",
+      "material",
+      "extreme"
+    ],
+    "score_withheld_reason": "score withheld because selected divergence evidence is incomplete",
+    "threshold_ratios": [
+      "2.5",
+      "2",
+      "2.5"
+    ],
+    "uncertainty": "high"
+  }
+}

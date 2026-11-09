@@ -1,0 +1,7 @@
+| Code | Remediation |
+| --- | --- |
+| OBSERVATION_CALENDAR_NOT_DECLARED | Declare a calendar and timezone; provide an authoritative session file for named exchanges. |
+| RETURN_CONSTRUCTION_METADATA_NOT_SUPPLIED | Declare cost treatment, leverage, currency, price adjustment, data provenance, stale/delisting treatment, bias controls, and timing. |
+| SERIAL_DEPENDENCE_DIAGNOSTIC_NOT_CONFIGURED | Supply an explicit maximum lag and significance level for the Ljung-Box diagnostic. |
+| ANNUAL_RISK_FREE_RATE_NOT_SUPPLIED | Supply the intended effective annual risk-free rate explicitly. |
+| BOOTSTRAP_ANALYSIS_NOT_CONFIGURED | Supply the bootstrap method, interval method, replication count, confidence level, block length, and random seed explicitly. |

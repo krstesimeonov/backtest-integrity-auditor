@@ -1,0 +1,11 @@
+| Dimension | Status | Summary |
+| --- | --- | --- |
+| input_integrity | supported_under_stated_assumptions | The input passed the canonical blocking validation contract. |
+| return_methodology | insufficient_evidence | No return-construction evidence was declared. |
+| sampling_eligibility | supported_under_stated_assumptions | Sampling supports annualization under the explicit frequency scale. |
+| statistical_evidence | insufficient_evidence | A point estimate exists, but PSR-style Sharpe uncertainty is unavailable. |
+| serial_robustness | insufficient_evidence | Serial-dependence evidence was not configured. |
+| resampling_robustness | insufficient_evidence | Time-series bootstrap evidence was not configured. |
+| benchmark_evidence | insufficient_evidence | No benchmark-relative evidence was supplied. |
+| temporal_robustness | insufficient_evidence | No externally declared regime labels were supplied. |
+| reproducibility | supported_under_stated_assumptions | The report includes a content-hashed deterministic audit-run manifest. |

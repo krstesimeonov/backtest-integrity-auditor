@@ -1,0 +1,2 @@
+position_id,instrument,opened_at,last_updated_at,closed_at,entry_side,side,peak_quantity,quantity,entry_price,exit_price,realized_pnl,realized_pnl_currency,is_snapshot
+001,AUD/USD.SIM,1970-01-01T00:00:00.000000Z,1970-01-01T00:00:00.000000Z,,BUY,LONG,100,100,1.0,,0,USD,false

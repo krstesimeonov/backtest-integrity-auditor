@@ -1,0 +1,5 @@
+trial_id,attempt_index,outcome,included_in_selection,selected,selection_score,parameters,source,reason
+trial-001,1,completed,true,true,0.50401613,"{""lookback"":5}",grid-search,
+trial-002,2,completed,true,false,0.41663293,"{""lookback"":10}",grid-search,
+trial-003,3,completed,true,false,0.29288959,"{""lookback"":20}",grid-search,
+trial-004,4,completed,true,false,0.33303978,"{""lookback"":40}",grid-search,

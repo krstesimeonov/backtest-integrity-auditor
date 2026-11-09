@@ -1,0 +1,10 @@
+# Documentation site (mkdocs.yml, `mkdocs build --strict`), on top of
+# `pip install -e .`. Pinned to the versions W5-J6 built the site with
+# (macOS arm64, Python 3.13.13).
+mkdocs==1.6.1
+mkdocs-material==9.8.0
+mkdocstrings==1.0.8
+mkdocstrings-python==2.0.10
+griffelib==2.4.1
+mkdocs-autorefs==1.4.5
+pymdown-extensions==12.3

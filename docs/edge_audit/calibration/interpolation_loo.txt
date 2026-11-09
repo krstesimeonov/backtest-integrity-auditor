@@ -1,0 +1,17 @@
+detector | axis | interior points | rms h | rms log h | max h | max log h
+rolling_expectancy | R (1/√R) | 9288 | 0.3 % | 0.2 % | 1.7 % | 1.3 %
+rolling_expectancy | δ or w (ln) | 7980 | 1.2 % | 1.5 % | 11.1 % | 16.7 %
+rolling_expectancy | N (ln) | 9492 | 1.1 % | 1.5 % | 9.9 % | 15.6 %
+rolling_expectancy | α (ln) | 7224 | 0.7 % | 1.4 % | 3.8 % | 9.0 %
+cusum | R (1/√R) | 14688 | 7.3 % | 2.8 % | 348.4 % | 74.2 %
+cusum | δ or w (ln) | 14280 | 28.1 % | 9.4 % | 1127.2 % | 310.1 %
+cusum | N (ln) | 15120 | 3.1 % | 0.6 % | 12.5 % | 7.2 %
+cusum | α (ln) | 11424 | 6.3 % | 4.0 % | 251.7 % | 66.1 %
+page_hinkley | R (1/√R) | 14688 | 0.2 % | 0.2 % | 2.5 % | 1.8 %
+page_hinkley | δ or w (ln) | 14280 | 3.0 % | 1.8 % | 9.5 % | 6.4 %
+page_hinkley | N (ln) | 15120 | 0.8 % | 0.6 % | 3.9 % | 2.8 %
+page_hinkley | α (ln) | 11424 | 0.4 % | 1.2 % | 1.4 % | 2.9 %
+mixture_sprt | R (1/√R) | 14688 | 3.9 % | 2.5 % | 42.4 % | 34.0 %
+mixture_sprt | δ or w (ln) | 14280 | 3.4 % | 2.8 % | 21.4 % | 11.1 %
+mixture_sprt | N (ln) | 15120 | 5.1 % | 1.2 % | 21.1 % | 10.4 %
+mixture_sprt | α (ln) | 11424 | 2.1 % | 6.4 % | 16.7 % | 23.9 %

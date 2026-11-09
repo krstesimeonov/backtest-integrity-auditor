@@ -1,0 +1,1 @@
+adapter warnings: ['nautilustrader.position_fill_links_unavailable', 'nautilustrader.position_snapshots_quantity_only']

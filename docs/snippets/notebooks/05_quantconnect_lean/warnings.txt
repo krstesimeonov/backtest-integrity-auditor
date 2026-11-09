@@ -1,0 +1,1 @@
+adapter warnings: ['quantconnect_lean.engine_version_producer_declared', 'quantconnect_lean.order_submission_time_uses_creation', 'quantconnect_lean.positions_derived_from_fills', 'quantconnect_lean.returns_derived_from_equity']

@@ -1,0 +1,1 @@
+J9 control seeds 70000-70199, alarms out of 200: {'cusum': 15, 'page_hinkley': 7, 'sprt': 37}

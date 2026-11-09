@@ -1,0 +1,56 @@
+{
+  "declared_levels": [
+    "order",
+    "fill",
+    "trade",
+    "position",
+    "cash",
+    "cost",
+    "equity",
+    "return"
+  ],
+  "engine": "vectorbt",
+  "engine_version": "1.1.0",
+  "envelope_schema_version": "1.0",
+  "export_format_id": "backtest-auditor.vectorbt",
+  "export_format_version": "1.0",
+  "files": [
+    {
+      "media_type": "application/json",
+      "path": "adapter-metadata.json",
+      "role": "adapter_metadata",
+      "sha256": "6580b8fccb7a50de046701a9132db819337b1cef4d501f7f13d1e2f0bb44ca1c",
+      "size_bytes": 71
+    },
+    {
+      "media_type": "text/csv",
+      "path": "portfolio-series.csv",
+      "role": "portfolio",
+      "sha256": "4ba2d2273daedaf7bd726a05cfe7e7a14a695899b138e4da28b7622e2a2fb071",
+      "size_bytes": 460
+    },
+    {
+      "media_type": "text/csv",
+      "path": "position-snapshots.csv",
+      "role": "positions",
+      "sha256": "420a40ea3a991cebf8778db2d52f48c5ac52ecd75ab2098cd66022ad299d92bf",
+      "size_bytes": 332
+    },
+    {
+      "media_type": "text/csv",
+      "path": "vectorbt-orders.csv",
+      "role": "orders",
+      "sha256": "2d3a76bdb4b415b42a1500c88e22e1dff4e06d613469fc623456decdaec0536d",
+      "size_bytes": 160
+    },
+    {
+      "media_type": "text/csv",
+      "path": "vectorbt-positions.csv",
+      "role": "trades",
+      "sha256": "a327c12054f07525b654bf3f78082ac9c01109d2110eec21a4dfc715b2198874",
+      "size_bytes": 254
+    }
+  ],
+  "run_id": "v1-5d2-vectorbt-example",
+  "source_sha256": "e0cf015662a9b1fd0d41cdb12d8195b4ebc79f8bca9db1b86bf58cc1d8d51035"
+}

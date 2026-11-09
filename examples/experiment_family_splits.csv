@@ -1,0 +1,11 @@
+split_id,timestamp,role
+fold-01,2026-01-01,in_sample
+fold-01,2026-01-02,in_sample
+fold-01,2026-01-03,in_sample
+fold-01,2026-01-04,out_of_sample
+fold-01,2026-01-05,out_of_sample
+fold-02,2026-01-03,in_sample
+fold-02,2026-01-04,in_sample
+fold-02,2026-01-05,in_sample
+fold-02,2026-01-01,out_of_sample
+fold-02,2026-01-02,out_of_sample

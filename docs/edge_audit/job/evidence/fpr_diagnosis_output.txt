@@ -1,0 +1,4 @@
+fat-tailed, seeds 0..499:       plug-in 41/500 = 0.0820; Student t 36/500 = 0.0720; null-SE 36/500 = 0.0720; corr(SR, skew) = 0.45
+seeds 0..499, verdict vs Student t: 36 and 36 rejections, 36 in common
+normal moves, seeds 0..499:     plug-in 24/500 = 0.0480; Student t 25/500 = 0.0500; null-SE 25/500 = 0.0500; corr(SR, skew) = 0.39
+fat-tailed, seeds 10000..13999: plug-in 249/4000 = 0.0622; Student t 212/4000 = 0.0530; null-SE 215/4000 = 0.0537; corr(SR, skew) = 0.43

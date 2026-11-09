@@ -1,0 +1,6 @@
+| Metric | Value |
+|---|---:|
+| Ljung-Box statistic | 20.47195086 |
+| p-value | 0.0250919072192 |
+| Serial dependence detected | true |
+| Runs dependence detected | false |

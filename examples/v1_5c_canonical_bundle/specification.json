@@ -1,0 +1,58 @@
+{
+  "simulation": {
+    "accounting_model": {
+      "implementation_sha256": null,
+      "name": "average cost",
+      "parameters": [],
+      "version": null
+    },
+    "base_currency": "USD",
+    "calendar": "XNYS",
+    "calendar_timezone": "America/New_York",
+    "cost_models": [],
+    "data_adjustment_policy": "split adjusted",
+    "execution_model": {
+      "implementation_sha256": null,
+      "name": "next-bar market fill",
+      "parameters": [],
+      "version": null
+    },
+    "execution_timing": "next bar",
+    "fractional_quantity_allowed": false,
+    "initial_cash": "100000",
+    "shorting_allowed": false
+  },
+  "specification_schema_version": "1.0",
+  "strategy": {
+    "data_frequency": "one minute",
+    "logic_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "name": "One-asset momentum example",
+    "parameters": [],
+    "signal_model": {
+      "implementation_sha256": null,
+      "name": "positive score enters",
+      "parameters": [],
+      "version": null
+    },
+    "signal_timing": "after bar availability",
+    "sizing_model": {
+      "implementation_sha256": null,
+      "name": "fixed quantity",
+      "parameters": [],
+      "version": null
+    },
+    "strategy_id": "momentum-example",
+    "universe": [
+      {
+        "asset_class": "equity",
+        "attributes": [],
+        "contract_multiplier": "1",
+        "currency": "USD",
+        "instrument_id": "AAPL.XNAS",
+        "symbol": "AAPL",
+        "venue": "XNAS"
+      }
+    ],
+    "version": "1"
+  }
+}

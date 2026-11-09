@@ -1,0 +1,113 @@
+{
+  "artifact_schema_version": "1.0",
+  "bundle_content_sha256": "4996fec52b52adb28514f66f8b4e2f82be2db9a89c8fea93874c6ee23b54e611",
+  "bundle_schema_version": "1.0",
+  "files": [
+    {
+      "media_type": "text/csv; charset=utf-8",
+      "path": "equity.csv",
+      "record_count": 1,
+      "sha256": "dda00b424e675a07ad55278626d58c47b0691ee64d707b35c69ae00ed934907f",
+      "size_bytes": 107
+    },
+    {
+      "media_type": "text/csv; charset=utf-8",
+      "path": "fills.csv",
+      "record_count": 1,
+      "sha256": "03b164dc3dac7cdf7024ad7e8c28cff7b26a171bdabc149f5005a59cee2ec6f6",
+      "size_bytes": 175
+    },
+    {
+      "media_type": "text/csv; charset=utf-8",
+      "path": "orders.csv",
+      "record_count": 1,
+      "sha256": "0bb0d151418fced5f0dc926f408e6641685fce556d356b320015e274fa29118f",
+      "size_bytes": 309
+    },
+    {
+      "media_type": "text/csv; charset=utf-8",
+      "path": "returns.csv",
+      "record_count": 1,
+      "sha256": "cdd3ca235e231a4546e8d393580740be41b626d762cd9b10d297de4787a903d5",
+      "size_bytes": 112
+    },
+    {
+      "media_type": "text/csv; charset=utf-8",
+      "path": "signals.csv",
+      "record_count": 1,
+      "sha256": "55df1f434e74c8fbc9f9e42fdc6c50c9eb487a75e13b9b2f7ec3e11af95d4656",
+      "size_bytes": 168
+    },
+    {
+      "media_type": "application/json",
+      "path": "specification.json",
+      "record_count": 1,
+      "sha256": "321d364769a1b9b79cb642e350997fdee1c6ebf71ef3037b932cf49bce98e22b",
+      "size_bytes": 1532
+    }
+  ],
+  "levels": {
+    "cash": {
+      "files": [],
+      "status": "unavailable"
+    },
+    "cost": {
+      "files": [],
+      "status": "unavailable"
+    },
+    "equity": {
+      "files": [
+        "equity.csv"
+      ],
+      "status": "available"
+    },
+    "fill": {
+      "files": [
+        "fills.csv"
+      ],
+      "status": "available"
+    },
+    "market_data": {
+      "files": [],
+      "status": "unavailable"
+    },
+    "order": {
+      "files": [
+        "orders.csv"
+      ],
+      "status": "available"
+    },
+    "position": {
+      "files": [],
+      "status": "unavailable"
+    },
+    "return": {
+      "files": [
+        "returns.csv"
+      ],
+      "status": "available"
+    },
+    "signal": {
+      "files": [
+        "signals.csv"
+      ],
+      "status": "available"
+    },
+    "strategy_specification": {
+      "files": [
+        "specification.json"
+      ],
+      "status": "available"
+    },
+    "trade": {
+      "files": [],
+      "status": "unavailable"
+    }
+  },
+  "run": {
+    "engine_name": "example-engine",
+    "engine_version": "1.0",
+    "run_id": "example-run",
+    "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  }
+}

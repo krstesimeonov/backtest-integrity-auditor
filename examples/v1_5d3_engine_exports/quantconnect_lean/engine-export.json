@@ -1,0 +1,47 @@
+{
+  "declared_levels": [
+    "order",
+    "fill",
+    "position",
+    "cost",
+    "equity",
+    "return"
+  ],
+  "engine": "quantconnect_lean",
+  "engine_version": "2.5.17999",
+  "envelope_schema_version": "1.0",
+  "export_format_id": "backtest-auditor.quantconnect-lean",
+  "export_format_version": "1.0",
+  "files": [
+    {
+      "media_type": "application/json",
+      "path": "adapter-metadata.json",
+      "role": "adapter_metadata",
+      "sha256": "6580b8fccb7a50de046701a9132db819337b1cef4d501f7f13d1e2f0bb44ca1c",
+      "size_bytes": 71
+    },
+    {
+      "media_type": "text/csv",
+      "path": "lean-fills.csv",
+      "role": "fills",
+      "sha256": "3d0ce3e774523a48243997784fd2dc7a6adf6735da8af1d3470fb00b5ec8112d",
+      "size_bytes": 151
+    },
+    {
+      "media_type": "text/csv",
+      "path": "lean-orders.csv",
+      "role": "orders",
+      "sha256": "5db56300b2b730091837bc49eb2127e4a406adf98ab47cca4ce14d08f2feecbb",
+      "size_bytes": 199
+    },
+    {
+      "media_type": "text/csv",
+      "path": "portfolio-series.csv",
+      "role": "portfolio",
+      "sha256": "91adce99d3efc3c619d321fdecf39818bc80a5634e3d86541286018a7fa7bf8c",
+      "size_bytes": 89
+    }
+  ],
+  "run_id": "v1-5d3-lean-example",
+  "source_sha256": "c669eec27dd994cdf5a30d399b6fa935e66db224612723bfd1a7e708a331099f"
+}

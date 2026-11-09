@@ -1,0 +1,17 @@
+split_id,timestamp,role
+fold-01,2026-01-01,in_sample
+fold-01,2026-01-02,in_sample
+fold-01,2026-01-05,in_sample
+fold-01,2026-01-06,in_sample
+fold-01,2026-01-07,out_of_sample
+fold-01,2026-01-08,out_of_sample
+fold-01,2026-01-09,out_of_sample
+fold-01,2026-01-12,out_of_sample
+fold-02,2026-01-01,out_of_sample
+fold-02,2026-01-02,out_of_sample
+fold-02,2026-01-05,out_of_sample
+fold-02,2026-01-06,out_of_sample
+fold-02,2026-01-07,in_sample
+fold-02,2026-01-08,in_sample
+fold-02,2026-01-09,in_sample
+fold-02,2026-01-12,in_sample

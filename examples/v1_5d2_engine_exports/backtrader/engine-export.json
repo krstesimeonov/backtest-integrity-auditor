@@ -1,0 +1,55 @@
+{
+  "declared_levels": [
+    "order",
+    "fill",
+    "position",
+    "cash",
+    "cost",
+    "equity",
+    "return"
+  ],
+  "engine": "backtrader",
+  "engine_version": "1.9.78.123",
+  "envelope_schema_version": "1.0",
+  "export_format_id": "backtest-auditor.backtrader",
+  "export_format_version": "1.0",
+  "files": [
+    {
+      "media_type": "application/json",
+      "path": "adapter-metadata.json",
+      "role": "adapter_metadata",
+      "sha256": "6580b8fccb7a50de046701a9132db819337b1cef4d501f7f13d1e2f0bb44ca1c",
+      "size_bytes": 71
+    },
+    {
+      "media_type": "text/csv",
+      "path": "backtrader-fills.csv",
+      "role": "fills",
+      "sha256": "dd844f898f5a96fea7ef8fd62d752413dd239994266988aa032c833b39595906",
+      "size_bytes": 141
+    },
+    {
+      "media_type": "text/csv",
+      "path": "backtrader-orders.csv",
+      "role": "orders",
+      "sha256": "2b40a729ec22e39bf2b0f49ede8a0fe86eabd92a0be86bd3ee40ff5b7547b236",
+      "size_bytes": 288
+    },
+    {
+      "media_type": "text/csv",
+      "path": "portfolio-series.csv",
+      "role": "portfolio",
+      "sha256": "c931ea11107e8db670623cbfc81285e995573f9d8228618fd8724c79e6da0b61",
+      "size_bytes": 385
+    },
+    {
+      "media_type": "text/csv",
+      "path": "position-snapshots.csv",
+      "role": "positions",
+      "sha256": "4cd064fda3c943eb651983f4a675abb91795c80f1d8a1471eba0eb962aa018e4",
+      "size_bytes": 334
+    }
+  ],
+  "run_id": "v1-5d2-backtrader-example",
+  "source_sha256": "97675d097267b7156ab531db5974233d7cd58a42694411d598ed439c31ec4414"
+}

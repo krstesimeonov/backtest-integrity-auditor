@@ -1,0 +1,4 @@
+| Metric | Status | Point estimate | Lower bound | Upper bound |
+|---|---|---:|---:|---:|
+| iid_annualized_sharpe_ratio | eligible | 0.549979069129 | -0.447239273431 | 1.57838136443 |
+| hac_adjusted_annualized_sharpe_ratio | eligible | 0.614684708521 | -0.493288395625 | 1.76628835629 |

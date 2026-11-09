@@ -1,0 +1,46 @@
+{
+  "assessment_policy_sha256": "2023490301447d40401f879f7820a1cbbadea2e509cc86bb5c451a67c1ba986f",
+  "attributions": [
+    {
+      "hypothesis_code": "cost_may_explain_return",
+      "status": "supported_cooccurrence"
+    }
+  ],
+  "families": [
+    {
+      "family": "transaction_cost",
+      "materiality": [
+        "extreme"
+      ],
+      "maximum_threshold_ratio": "2.5",
+      "score_contribution": "25"
+    },
+    {
+      "family": "sizing",
+      "materiality": [
+        "material"
+      ],
+      "maximum_threshold_ratio": "2",
+      "score_contribution": "25"
+    },
+    {
+      "family": "accounting",
+      "materiality": [
+        "below_threshold"
+      ],
+      "maximum_threshold_ratio": "0.5",
+      "score_contribution": "12.5"
+    },
+    {
+      "family": "return",
+      "materiality": [
+        "extreme"
+      ],
+      "maximum_threshold_ratio": "2.5",
+      "score_contribution": "25"
+    }
+  ],
+  "implementation_risk_score": "87.5",
+  "reconciliation_id": "v1-5h-example",
+  "uncertainty": "low"
+}

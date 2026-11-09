@@ -1,0 +1,1866 @@
+{
+  "$id": "edge-audit-report/1.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "answers": {
+      "additionalProperties": false,
+      "properties": {
+        "how_sensitive_to_costs": {
+          "type": "string"
+        },
+        "is_it_decaying": {
+          "type": "string"
+        },
+        "is_there_evidence_of_an_edge": {
+          "type": "string"
+        },
+        "where_does_it_come_from": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "how_sensitive_to_costs",
+        "is_it_decaying",
+        "is_there_evidence_of_an_edge",
+        "where_does_it_come_from"
+      ],
+      "type": "object"
+    },
+    "conditional": {
+      "additionalProperties": false,
+      "properties": {
+        "holding_period": {
+          "additionalProperties": false,
+          "properties": {
+            "between_tercile_sum_of_squares": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "permutation_draws": {
+              "type": "integer"
+            },
+            "permutation_p_value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "reason": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "rows": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "count": {
+                    "type": "integer"
+                  },
+                  "expectancy": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "confidence_level": {
+                        "type": "number"
+                      },
+                      "lower": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "point": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "point_unbounded": {
+                        "type": "boolean"
+                      },
+                      "replications": {
+                        "type": "integer"
+                      },
+                      "standard_error": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "upper": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "upper_unbounded": {
+                        "type": "boolean"
+                      },
+                      "valid_replications": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "confidence_level",
+                      "lower",
+                      "point",
+                      "point_unbounded",
+                      "replications",
+                      "standard_error",
+                      "upper",
+                      "upper_unbounded",
+                      "valid_replications"
+                    ],
+                    "type": "object"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "variable_max": {
+                    "type": "number"
+                  },
+                  "variable_min": {
+                    "type": "number"
+                  },
+                  "win_rate": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "count",
+                  "expectancy",
+                  "label",
+                  "variable_max",
+                  "variable_min",
+                  "win_rate"
+                ],
+                "type": "object"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source": {
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "computed",
+                "unavailable"
+              ]
+            },
+            "top_minus_bottom": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "trades_with_value": {
+              "type": "integer"
+            },
+            "variable": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "between_tercile_sum_of_squares",
+            "permutation_draws",
+            "permutation_p_value",
+            "reason",
+            "rows",
+            "source",
+            "status",
+            "top_minus_bottom",
+            "trades_with_value",
+            "variable"
+          ],
+          "type": "object"
+        },
+        "volatility_regime": {
+          "additionalProperties": false,
+          "properties": {
+            "between_tercile_sum_of_squares": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "permutation_draws": {
+              "type": "integer"
+            },
+            "permutation_p_value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "reason": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "rows": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "count": {
+                    "type": "integer"
+                  },
+                  "expectancy": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "confidence_level": {
+                        "type": "number"
+                      },
+                      "lower": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "point": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "point_unbounded": {
+                        "type": "boolean"
+                      },
+                      "replications": {
+                        "type": "integer"
+                      },
+                      "standard_error": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "upper": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "upper_unbounded": {
+                        "type": "boolean"
+                      },
+                      "valid_replications": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "confidence_level",
+                      "lower",
+                      "point",
+                      "point_unbounded",
+                      "replications",
+                      "standard_error",
+                      "upper",
+                      "upper_unbounded",
+                      "valid_replications"
+                    ],
+                    "type": "object"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "variable_max": {
+                    "type": "number"
+                  },
+                  "variable_min": {
+                    "type": "number"
+                  },
+                  "win_rate": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "count",
+                  "expectancy",
+                  "label",
+                  "variable_max",
+                  "variable_min",
+                  "win_rate"
+                ],
+                "type": "object"
+              },
+              "maxItems": 3,
+              "type": "array"
+            },
+            "source": {
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "computed",
+                "unavailable"
+              ]
+            },
+            "top_minus_bottom": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "trades_with_value": {
+              "type": "integer"
+            },
+            "variable": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "between_tercile_sum_of_squares",
+            "permutation_draws",
+            "permutation_p_value",
+            "reason",
+            "rows",
+            "source",
+            "status",
+            "top_minus_bottom",
+            "trades_with_value",
+            "variable"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "holding_period",
+        "volatility_regime"
+      ],
+      "type": "object"
+    },
+    "costs": {
+      "additionalProperties": false,
+      "properties": {
+        "break_even_added_cost_bps": {
+          "additionalProperties": false,
+          "properties": {
+            "confidence_level": {
+              "type": "number"
+            },
+            "lower": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point_unbounded": {
+              "type": "boolean"
+            },
+            "replications": {
+              "type": "integer"
+            },
+            "standard_error": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper_unbounded": {
+              "type": "boolean"
+            },
+            "valid_replications": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "confidence_level",
+            "lower",
+            "point",
+            "point_unbounded",
+            "replications",
+            "standard_error",
+            "upper",
+            "upper_unbounded",
+            "valid_replications"
+          ],
+          "type": "object"
+        },
+        "curve": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "added_cost_bps": {
+                "type": "number"
+              },
+              "dsr": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "expectancy": {
+                "type": "number"
+              },
+              "expectancy_lower": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "expectancy_upper": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "verdict": {
+                "enum": [
+                  "evidence_of_edge",
+                  "no_evidence_of_edge",
+                  "insufficient_data"
+                ]
+              }
+            },
+            "required": [
+              "added_cost_bps",
+              "dsr",
+              "expectancy",
+              "expectancy_lower",
+              "expectancy_upper",
+              "verdict"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "evidence_lost_at_added_cost_bps": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "evidence_note": {
+          "type": "string"
+        },
+        "fees_paid_bps": {
+          "type": "number"
+        },
+        "gross_break_even_cost_bps": {
+          "type": "number"
+        },
+        "mean_notional": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "break_even_added_cost_bps",
+        "curve",
+        "evidence_lost_at_added_cost_bps",
+        "evidence_note",
+        "fees_paid_bps",
+        "gross_break_even_cost_bps",
+        "mean_notional",
+        "unit"
+      ],
+      "type": "object"
+    },
+    "decay": {
+      "additionalProperties": false,
+      "properties": {
+        "calibration_null": {
+          "enum": [
+            "iid_normal"
+          ]
+        },
+        "calibration_table": {
+          "type": "string"
+        },
+        "detectors": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "alarm_exit_time": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "alarm_trade_number": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "calibration_null": {
+                "enum": [
+                  "iid_normal"
+                ]
+              },
+              "extra": {
+                "additionalProperties": {
+                  "type": "number"
+                },
+                "type": "object"
+              },
+              "false_alarm_probability": {
+                "type": "number"
+              },
+              "false_alarm_probability_over_monitored": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "horizon": {
+                "type": "integer"
+              },
+              "max_statistic": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "name": {
+                "enum": [
+                  "rolling_expectancy",
+                  "cusum",
+                  "page_hinkley",
+                  "mixture_sprt"
+                ]
+              },
+              "parameters": {
+                "additionalProperties": {
+                  "type": "number"
+                },
+                "type": "object"
+              },
+              "reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "statistic_at_alarm": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "status": {
+                "enum": [
+                  "computed",
+                  "unavailable"
+                ]
+              },
+              "threshold": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "alarm_exit_time",
+              "alarm_trade_number",
+              "calibration_null",
+              "extra",
+              "false_alarm_probability",
+              "false_alarm_probability_over_monitored",
+              "horizon",
+              "max_statistic",
+              "name",
+              "parameters",
+              "reason",
+              "statistic_at_alarm",
+              "status",
+              "threshold"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "false_alarm_probability": {
+          "type": "number"
+        },
+        "horizon": {
+          "type": "integer"
+        },
+        "horizon_requested": {
+          "type": "integer"
+        },
+        "monitored_minus_reference": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "confidence_level": {
+                  "type": "number"
+                },
+                "lower": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "point": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "point_unbounded": {
+                  "type": "boolean"
+                },
+                "replications": {
+                  "type": "integer"
+                },
+                "standard_error": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "upper": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "upper_unbounded": {
+                  "type": "boolean"
+                },
+                "valid_replications": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "confidence_level",
+                "lower",
+                "point",
+                "point_unbounded",
+                "replications",
+                "standard_error",
+                "upper",
+                "upper_unbounded",
+                "valid_replications"
+              ],
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "monitored_trades": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference_mean": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "reference_sharpe": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "reference_std": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "reference_trades": {
+          "type": "integer"
+        },
+        "rolling_expectancy": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "rolling_window": {
+          "type": "integer"
+        },
+        "shift_sigma": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "shift_source": {
+          "enum": [
+            "declared",
+            "reference_sharpe"
+          ]
+        },
+        "status": {
+          "enum": [
+            "computed",
+            "no_reference_edge",
+            "unavailable"
+          ]
+        },
+        "trade_count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "calibration_null",
+        "calibration_table",
+        "detectors",
+        "false_alarm_probability",
+        "horizon",
+        "horizon_requested",
+        "monitored_minus_reference",
+        "monitored_trades",
+        "reason",
+        "reference_mean",
+        "reference_sharpe",
+        "reference_std",
+        "reference_trades",
+        "rolling_expectancy",
+        "rolling_window",
+        "shift_sigma",
+        "shift_source",
+        "status",
+        "trade_count"
+      ],
+      "type": "object"
+    },
+    "generated_by": {
+      "additionalProperties": false,
+      "properties": {
+        "component": {
+          "type": "string"
+        },
+        "package": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "component",
+        "package",
+        "version"
+      ],
+      "type": "object"
+    },
+    "input": {
+      "additionalProperties": false,
+      "properties": {
+        "prices": {
+          "additionalProperties": false,
+          "properties": {
+            "file": {
+              "type": "string"
+            },
+            "schema": {
+              "const": "edge-audit-prices/1.0"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "file",
+            "schema",
+            "sha256"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "trades": {
+          "additionalProperties": false,
+          "properties": {
+            "file": {
+              "type": "string"
+            },
+            "rows": {
+              "type": "integer"
+            },
+            "schema": {
+              "const": "edge-audit-trades/1.0"
+            },
+            "schema_declared_in_file": {
+              "type": "boolean"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "file",
+            "rows",
+            "schema",
+            "schema_declared_in_file",
+            "sha256"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "prices",
+        "trades"
+      ],
+      "type": "object"
+    },
+    "luck_vs_skill": {
+      "additionalProperties": false,
+      "properties": {
+        "annualized_sharpe": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "confidence_level": {
+          "type": "number"
+        },
+        "declared_trials": {
+          "type": "integer"
+        },
+        "deflated_min_track_record_trades": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "dsr": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "dsr_plug_in": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "dsr_test_statistic": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "expected_max_sharpe_per_trade": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "expected_max_standard_normal": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "mean": {
+          "type": "number"
+        },
+        "min_track_record_trades": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "null_standard_error": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "periods_per_year": {
+          "type": "integer"
+        },
+        "psr_vs_zero": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sample_pearson_kurtosis": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sample_skewness": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sharpe_per_trade": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sharpe_standard_error": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sharpe_variance_adjustment": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "span_years": {
+          "type": "number"
+        },
+        "standard_deviation": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "t_p_value_one_sided": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "t_statistic": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "trade_count": {
+          "type": "integer"
+        },
+        "trades_per_year": {
+          "type": "number"
+        },
+        "trial_sharpe_std": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "trial_sharpe_std_source": {
+          "enum": [
+            "null_default",
+            "declared"
+          ]
+        },
+        "verdict": {
+          "enum": [
+            "evidence_of_edge",
+            "no_evidence_of_edge",
+            "insufficient_data"
+          ]
+        },
+        "verdict_reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "annualized_sharpe",
+        "confidence_level",
+        "declared_trials",
+        "deflated_min_track_record_trades",
+        "dsr",
+        "dsr_plug_in",
+        "dsr_test_statistic",
+        "expected_max_sharpe_per_trade",
+        "expected_max_standard_normal",
+        "mean",
+        "min_track_record_trades",
+        "null_standard_error",
+        "periods_per_year",
+        "psr_vs_zero",
+        "sample_pearson_kurtosis",
+        "sample_skewness",
+        "sharpe_per_trade",
+        "sharpe_standard_error",
+        "sharpe_variance_adjustment",
+        "span_years",
+        "standard_deviation",
+        "t_p_value_one_sided",
+        "t_statistic",
+        "trade_count",
+        "trades_per_year",
+        "trial_sharpe_std",
+        "trial_sharpe_std_source",
+        "verdict",
+        "verdict_reason"
+      ],
+      "type": "object"
+    },
+    "performance": {
+      "additionalProperties": false,
+      "properties": {
+        "average_loss": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "average_win": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expectancy": {
+          "additionalProperties": false,
+          "properties": {
+            "confidence_level": {
+              "type": "number"
+            },
+            "lower": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point_unbounded": {
+              "type": "boolean"
+            },
+            "replications": {
+              "type": "integer"
+            },
+            "standard_error": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper_unbounded": {
+              "type": "boolean"
+            },
+            "valid_replications": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "confidence_level",
+            "lower",
+            "point",
+            "point_unbounded",
+            "replications",
+            "standard_error",
+            "upper",
+            "upper_unbounded",
+            "valid_replications"
+          ],
+          "type": "object"
+        },
+        "first_entry": {
+          "type": "string"
+        },
+        "flat_trades": {
+          "type": "integer"
+        },
+        "instruments": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "lag_one_autocorrelation": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "last_exit": {
+          "type": "string"
+        },
+        "losing_trades": {
+          "type": "integer"
+        },
+        "max_concurrent_trades": {
+          "type": "integer"
+        },
+        "mean_net_return_bps": {
+          "type": "number"
+        },
+        "median_holding_hours": {
+          "type": "number"
+        },
+        "payoff_ratio": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "profit_factor": {
+          "additionalProperties": false,
+          "properties": {
+            "confidence_level": {
+              "type": "number"
+            },
+            "lower": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point_unbounded": {
+              "type": "boolean"
+            },
+            "replications": {
+              "type": "integer"
+            },
+            "standard_error": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper_unbounded": {
+              "type": "boolean"
+            },
+            "valid_replications": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "confidence_level",
+            "lower",
+            "point",
+            "point_unbounded",
+            "replications",
+            "standard_error",
+            "upper",
+            "upper_unbounded",
+            "valid_replications"
+          ],
+          "type": "object"
+        },
+        "serial_dependence_p_value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "span_years": {
+          "type": "number"
+        },
+        "total_fees": {
+          "type": "number"
+        },
+        "total_gross_pnl": {
+          "type": "number"
+        },
+        "total_net_pnl": {
+          "type": "number"
+        },
+        "trade_count": {
+          "type": "integer"
+        },
+        "win_rate": {
+          "additionalProperties": false,
+          "properties": {
+            "confidence_level": {
+              "type": "number"
+            },
+            "lower": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point_unbounded": {
+              "type": "boolean"
+            },
+            "replications": {
+              "type": "integer"
+            },
+            "standard_error": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper_unbounded": {
+              "type": "boolean"
+            },
+            "valid_replications": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "confidence_level",
+            "lower",
+            "point",
+            "point_unbounded",
+            "replications",
+            "standard_error",
+            "upper",
+            "upper_unbounded",
+            "valid_replications"
+          ],
+          "type": "object"
+        },
+        "winning_trades": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "average_loss",
+        "average_win",
+        "currency",
+        "expectancy",
+        "first_entry",
+        "flat_trades",
+        "instruments",
+        "lag_one_autocorrelation",
+        "last_exit",
+        "losing_trades",
+        "max_concurrent_trades",
+        "mean_net_return_bps",
+        "median_holding_hours",
+        "payoff_ratio",
+        "profit_factor",
+        "serial_dependence_p_value",
+        "span_years",
+        "total_fees",
+        "total_gross_pnl",
+        "total_net_pnl",
+        "trade_count",
+        "win_rate",
+        "winning_trades"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "const": "edge-audit-report/1.1"
+    },
+    "settings": {
+      "additionalProperties": false,
+      "properties": {
+        "bootstrap_replications": {
+          "type": "integer"
+        },
+        "confidence_level": {
+          "type": "number"
+        },
+        "cost_grid_bps": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "day_timezone": {
+          "type": "string"
+        },
+        "decay_false_alarm_probability": {
+          "type": "number"
+        },
+        "decay_horizon": {
+          "type": "integer"
+        },
+        "decay_shift_sigma": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "declared_trials": {
+          "type": "integer"
+        },
+        "mean_block_length": {
+          "type": "integer"
+        },
+        "permutation_draws": {
+          "type": "integer"
+        },
+        "reference_trades": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "rolling_window": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "timing_draws": {
+          "type": "integer"
+        },
+        "timing_mode": {
+          "enum": [
+            "day",
+            "holding"
+          ]
+        },
+        "trial_sharpe_std": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "volatility_lookback_bars": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "bootstrap_replications",
+        "confidence_level",
+        "cost_grid_bps",
+        "day_timezone",
+        "decay_false_alarm_probability",
+        "decay_horizon",
+        "decay_shift_sigma",
+        "declared_trials",
+        "mean_block_length",
+        "permutation_draws",
+        "reference_trades",
+        "rolling_window",
+        "seed",
+        "timing_draws",
+        "timing_mode",
+        "trial_sharpe_std",
+        "volatility_lookback_bars"
+      ],
+      "type": "object"
+    },
+    "sizing": {
+      "additionalProperties": false,
+      "properties": {
+        "actual_expectancy": {
+          "additionalProperties": false,
+          "properties": {
+            "confidence_level": {
+              "type": "number"
+            },
+            "lower": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point_unbounded": {
+              "type": "boolean"
+            },
+            "replications": {
+              "type": "integer"
+            },
+            "standard_error": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper_unbounded": {
+              "type": "boolean"
+            },
+            "valid_replications": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "confidence_level",
+            "lower",
+            "point",
+            "point_unbounded",
+            "replications",
+            "standard_error",
+            "upper",
+            "upper_unbounded",
+            "valid_replications"
+          ],
+          "type": "object"
+        },
+        "finding": {
+          "type": "string"
+        },
+        "fixed_size_dsr": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "fixed_size_expectancy": {
+          "additionalProperties": false,
+          "properties": {
+            "confidence_level": {
+              "type": "number"
+            },
+            "lower": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point_unbounded": {
+              "type": "boolean"
+            },
+            "replications": {
+              "type": "integer"
+            },
+            "standard_error": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper_unbounded": {
+              "type": "boolean"
+            },
+            "valid_replications": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "confidence_level",
+            "lower",
+            "point",
+            "point_unbounded",
+            "replications",
+            "standard_error",
+            "upper",
+            "upper_unbounded",
+            "valid_replications"
+          ],
+          "type": "object"
+        },
+        "fixed_size_verdict": {
+          "enum": [
+            "evidence_of_edge",
+            "no_evidence_of_edge",
+            "insufficient_data"
+          ]
+        },
+        "mean_notional": {
+          "type": "number"
+        },
+        "notional_cv": {
+          "type": "number"
+        },
+        "permutation_draws": {
+          "type": "integer"
+        },
+        "permutation_p_value": {
+          "type": "number"
+        },
+        "size_return_correlation": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sizing_contribution_per_trade": {
+          "additionalProperties": false,
+          "properties": {
+            "confidence_level": {
+              "type": "number"
+            },
+            "lower": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "point_unbounded": {
+              "type": "boolean"
+            },
+            "replications": {
+              "type": "integer"
+            },
+            "standard_error": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "upper_unbounded": {
+              "type": "boolean"
+            },
+            "valid_replications": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "confidence_level",
+            "lower",
+            "point",
+            "point_unbounded",
+            "replications",
+            "standard_error",
+            "upper",
+            "upper_unbounded",
+            "valid_replications"
+          ],
+          "type": "object"
+        },
+        "sizing_contribution_total": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "actual_expectancy",
+        "finding",
+        "fixed_size_dsr",
+        "fixed_size_expectancy",
+        "fixed_size_verdict",
+        "mean_notional",
+        "notional_cv",
+        "permutation_draws",
+        "permutation_p_value",
+        "size_return_correlation",
+        "sizing_contribution_per_trade",
+        "sizing_contribution_total"
+      ],
+      "type": "object"
+    },
+    "timing": {
+      "additionalProperties": false,
+      "properties": {
+        "components": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "finding": {
+                "type": "string"
+              },
+              "mean_per_trade": {
+                "additionalProperties": false,
+                "properties": {
+                  "confidence_level": {
+                    "type": "number"
+                  },
+                  "lower": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "point": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "point_unbounded": {
+                    "type": "boolean"
+                  },
+                  "replications": {
+                    "type": "integer"
+                  },
+                  "standard_error": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "upper": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "upper_unbounded": {
+                    "type": "boolean"
+                  },
+                  "valid_replications": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "confidence_level",
+                  "lower",
+                  "point",
+                  "point_unbounded",
+                  "replications",
+                  "standard_error",
+                  "upper",
+                  "upper_unbounded",
+                  "valid_replications"
+                ],
+                "type": "object"
+              },
+              "name": {
+                "enum": [
+                  "holding",
+                  "entry_timing",
+                  "exit_timing",
+                  "execution"
+                ]
+              },
+              "p_value_negative": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "p_value_positive": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "share_of_gross": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "test": {
+                "type": "string"
+              },
+              "total": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "finding",
+              "mean_per_trade",
+              "name",
+              "p_value_negative",
+              "p_value_positive",
+              "share_of_gross",
+              "test",
+              "total"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "counterfactual_quantiles": {
+          "additionalProperties": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object"
+          },
+          "type": "object"
+        },
+        "covered_trades": {
+          "type": "integer"
+        },
+        "day_timezone": {
+          "type": "string"
+        },
+        "draws": {
+          "type": "integer"
+        },
+        "excluded": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "type": "object"
+        },
+        "gross_pnl_covered": {
+          "type": "number"
+        },
+        "mode": {
+          "enum": [
+            "day",
+            "holding"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "significance_level": {
+          "type": "number"
+        },
+        "status": {
+          "enum": [
+            "computed",
+            "unavailable"
+          ]
+        }
+      },
+      "required": [
+        "components",
+        "counterfactual_quantiles",
+        "covered_trades",
+        "day_timezone",
+        "draws",
+        "excluded",
+        "gross_pnl_covered",
+        "mode",
+        "reason",
+        "significance_level",
+        "status"
+      ],
+      "type": "object"
+    },
+    "verdict": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence_level": {
+          "type": "number"
+        },
+        "declared_trials": {
+          "type": "integer"
+        },
+        "dsr": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "edge": {
+          "enum": [
+            "evidence_of_edge",
+            "no_evidence_of_edge",
+            "insufficient_data"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "test": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "confidence_level",
+        "declared_trials",
+        "dsr",
+        "edge",
+        "reason",
+        "test"
+      ],
+      "type": "object"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "answers",
+    "conditional",
+    "costs",
+    "decay",
+    "generated_by",
+    "input",
+    "luck_vs_skill",
+    "performance",
+    "schema",
+    "settings",
+    "sizing",
+    "timing",
+    "verdict",
+    "warnings"
+  ],
+  "title": "V4 Edge Audit report",
+  "type": "object"
+}

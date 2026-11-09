@@ -1,0 +1,2 @@
+order_id,created_at,instrument_id,side,quantity,order_type,time_in_force,status,signal_id,parent_order_id,submitted_at,last_updated_at,expires_at,limit_price,stop_price
+order-1,2026-01-02T14:31:00.000000Z,AAPL.XNAS,buy,10,market,day,filled,signal-1,,2026-01-02T14:31:00.000000Z,2026-01-02T14:31:00.000000Z,,,

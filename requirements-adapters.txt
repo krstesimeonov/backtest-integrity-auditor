@@ -1,0 +1,25 @@
+# Engine SDKs for tests/e2e (W3-J12). Install on top of the package:
+#
+#   python -m venv .venv
+#   .venv/bin/pip install -e ".[dev]" -r requirements-dev.txt -r requirements-adapters.txt
+#
+# The four engine pins equal pyproject's `engine-exporters` extra, which equals
+# the adapters' frozen tested versions (docs/V1_5D3_LEAN_NAUTILUS_AND_HARDENING.md).
+# Resolved and run on macOS arm64, Python 3.13.13, numpy 2.4.6, pandas 3.1.0.
+vectorbt==1.1.0
+bt==1.2.0
+backtrader==1.9.78.123
+nautilus_trader==1.231.0; python_version >= "3.12"
+# vectorbt 1.1.0 does not import with plotly 7.x (plotly 7 removed the
+# `scattermapbox` trace that vectorbt registers at import time), and vectorbt
+# leaves plotly unpinned, so pip picks 7.1.0 by default.
+plotly==6.9.0
+# Resolved transitively; pinned so a fresh install reproduces this run.
+numba==0.68.0
+llvmlite==0.50.0
+ffn==1.4.1
+jsonschema==4.26.0
+# QuantConnect LEAN is not a pip package. tests/e2e/test_lean.py maps LEAN's
+# own result files, checked in under tests/e2e/data/lean/; to regenerate them,
+# build LEAN 278fcb3 with a .NET 10 SDK (no Docker needed) and run
+# tests/e2e/lean/run_lean.py (docs/history/w3-j12/ASSUMPTIONS.md J9).

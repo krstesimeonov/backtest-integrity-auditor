@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://backtest-integrity-auditor.local/schemas/implementation-risk/engine-export-envelope-1.0.schema.json",
+  "title": "Engine export envelope 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "declared_levels",
+    "engine",
+    "engine_version",
+    "envelope_schema_version",
+    "export_format_id",
+    "export_format_version",
+    "files",
+    "run_id",
+    "source_sha256"
+  ],
+  "properties": {
+    "declared_levels": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/comparisonLevel"}
+    },
+    "engine": {
+      "enum": [
+        "vectorbt",
+        "bt",
+        "backtrader",
+        "quantconnect_lean",
+        "nautilustrader"
+      ]
+    },
+    "engine_version": {
+      "oneOf": [{"$ref": "#/$defs/nonEmptyString"}, {"type": "null"}]
+    },
+    "envelope_schema_version": {"const": "1.0"},
+    "export_format_id": {"$ref": "#/$defs/code"},
+    "export_format_version": {"$ref": "#/$defs/nonEmptyString"},
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {"$ref": "#/$defs/file"}
+    },
+    "run_id": {"$ref": "#/$defs/nonEmptyString"},
+    "source_sha256": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "code": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+    },
+    "comparisonLevel": {
+      "enum": [
+        "strategy_specification",
+        "market_data",
+        "signal",
+        "order",
+        "fill",
+        "trade",
+        "position",
+        "cash",
+        "cost",
+        "equity",
+        "return"
+      ]
+    },
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["media_type", "path", "role", "sha256", "size_bytes"],
+      "properties": {
+        "media_type": {"$ref": "#/$defs/nonEmptyString"},
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))(?!.*\\\\)(?!.*//).+[^/]$"
+        },
+        "role": {"$ref": "#/$defs/code"},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 512000000
+        }
+      }
+    },
+    "nonEmptyString": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

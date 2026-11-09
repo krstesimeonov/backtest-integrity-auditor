@@ -1,0 +1,2 @@
+fill_id,order_id,instrument,timestamp,side,quantity,price,currency,fee_amount,fee_currency
+11,1,AAPL,2026-01-02T14:31:00.000000Z,Buy,2,100,USD,0.2,USD

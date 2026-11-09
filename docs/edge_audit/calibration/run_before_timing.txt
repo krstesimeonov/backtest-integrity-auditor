@@ -1,0 +1,2 @@
+wrote docs/edge_audit/calibration/results_before.json
+.venv/bin/python docs/edge_audit/calibration/evaluate_detectors.py run before  1002.65s user 288.89s system 395% cpu 5:26.81 total

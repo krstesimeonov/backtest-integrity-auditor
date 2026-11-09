@@ -1,0 +1,5 @@
+| Metric | Value |
+|---|---:|
+| Required PSR confidence level | 0.95 |
+| Observed Probabilistic Sharpe Ratio | 0.83282332394 |
+| Minimum required whole observations | 2272 |

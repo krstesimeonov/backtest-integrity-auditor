@@ -1,0 +1,254 @@
+{
+  "candidates": [
+    {
+      "attributions": [
+        {
+          "hypothesis_code": "cost_may_explain_return",
+          "rationale": "Co-occurrence supports investigation, not causal proof.",
+          "source_family": "transaction_cost",
+          "status": "not_supported",
+          "target_family": "return"
+        }
+      ],
+      "candidate_run": {
+        "engine_name": "Engine B",
+        "engine_version": "2.0",
+        "run_id": "candidate-run",
+        "source_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "comparison_levels": [
+        {
+          "alignment_mode": "semantic",
+          "exact_match": true,
+          "level": "order",
+          "record_counts": {
+            "ambiguous": 0,
+            "candidate_only": 0,
+            "matched_different": 0,
+            "matched_equal": 1,
+            "reference_only": 0
+          },
+          "status": "compared"
+        },
+        {
+          "alignment_mode": "semantic",
+          "exact_match": true,
+          "level": "cost",
+          "record_counts": {
+            "ambiguous": 0,
+            "candidate_only": 0,
+            "matched_different": 0,
+            "matched_equal": 1,
+            "reference_only": 0
+          },
+          "status": "compared"
+        },
+        {
+          "alignment_mode": "semantic",
+          "exact_match": true,
+          "level": "equity",
+          "record_counts": {
+            "ambiguous": 0,
+            "candidate_only": 0,
+            "matched_different": 0,
+            "matched_equal": 1,
+            "reference_only": 0
+          },
+          "status": "compared"
+        },
+        {
+          "alignment_mode": "semantic",
+          "exact_match": true,
+          "level": "return",
+          "record_counts": {
+            "ambiguous": 0,
+            "candidate_only": 0,
+            "matched_different": 0,
+            "matched_equal": 1,
+            "reference_only": 0
+          },
+          "status": "compared"
+        }
+      ],
+      "families": [
+        {
+          "assessments": [],
+          "evidence_counts": {
+            "ambiguous_records": 0,
+            "equal_records": 1,
+            "non_numeric_differences": 0,
+            "one_sided_records": 0,
+            "unavailable_levels": 0
+          },
+          "family": "transaction_cost",
+          "maximum_threshold_ratio": null,
+          "score_contribution": null,
+          "status": "measured"
+        },
+        {
+          "assessments": [],
+          "evidence_counts": {
+            "ambiguous_records": 0,
+            "equal_records": 1,
+            "non_numeric_differences": 0,
+            "one_sided_records": 0,
+            "unavailable_levels": 0
+          },
+          "family": "sizing",
+          "maximum_threshold_ratio": null,
+          "score_contribution": null,
+          "status": "measured"
+        },
+        {
+          "assessments": [],
+          "evidence_counts": {
+            "ambiguous_records": 0,
+            "equal_records": 1,
+            "non_numeric_differences": 0,
+            "one_sided_records": 0,
+            "unavailable_levels": 0
+          },
+          "family": "accounting",
+          "maximum_threshold_ratio": null,
+          "score_contribution": null,
+          "status": "measured"
+        },
+        {
+          "assessments": [],
+          "evidence_counts": {
+            "ambiguous_records": 0,
+            "equal_records": 1,
+            "non_numeric_differences": 0,
+            "one_sided_records": 0,
+            "unavailable_levels": 0
+          },
+          "family": "return",
+          "maximum_threshold_ratio": null,
+          "score_contribution": null,
+          "status": "measured"
+        }
+      ],
+      "implementation_risk_score": null,
+      "score_withheld_reason": null,
+      "uncertainty": "not_assessed"
+    }
+  ],
+  "findings": [
+    {
+      "candidate_run_id": "candidate-run",
+      "code": "IMPLEMENTATION_ATTRIBUTION_NOT_SUPPORTED",
+      "evidence_path": "/candidates/candidate-run/attributions/0",
+      "family": null,
+      "kind": "supporting",
+      "limitation": "Co-occurrence is not causal proof, and non-support does not disprove causation.",
+      "recommended_action": null,
+      "summary": "Attribution hypothesis cost_may_explain_return is not_supported."
+    }
+  ],
+  "interpretation_boundary": "The report identifies implementation divergence against a declared reference baseline. It does not establish that any engine is correct, prove causation, certify strategy skill, or predict future performance.",
+  "normalization": {
+    "runs": [
+      {
+        "canonical_bundle_sha256": "5b041407836d524397d761d1eb4be506c557d4e596cb91bbce00c96059328d54",
+        "canonical_frequency": {
+          "calendar": null,
+          "calendar_timezone": null,
+          "frequency_id": "P1D",
+          "interval_microseconds": 86400000000,
+          "kind": "fixed"
+        },
+        "changes": [
+          {
+            "dimension": "currency",
+            "level": null,
+            "normalized_value": "USD",
+            "rationale": "No FX conversion; denomination identifiers are identical.",
+            "source_value": "USD"
+          },
+          {
+            "dimension": "frequency",
+            "level": null,
+            "normalized_value": "P1D",
+            "rationale": "Explicit 24-hour return interval for the example.",
+            "source_value": "explicit interval evidence"
+          },
+          {
+            "dimension": "instrument_identity",
+            "level": null,
+            "normalized_value": "AAPL",
+            "rationale": "Explicit identity mapping for the example instrument.",
+            "source_value": "AAPL"
+          }
+        ],
+        "run_id": "reference-run"
+      },
+      {
+        "canonical_bundle_sha256": "6001f26ec94365697365935050a8beee3432c140b5da87734fe1c7f36e524971",
+        "canonical_frequency": {
+          "calendar": null,
+          "calendar_timezone": null,
+          "frequency_id": "P1D",
+          "interval_microseconds": 86400000000,
+          "kind": "fixed"
+        },
+        "changes": [
+          {
+            "dimension": "currency",
+            "level": null,
+            "normalized_value": "USD",
+            "rationale": "No FX conversion; denomination identifiers are identical.",
+            "source_value": "USD"
+          },
+          {
+            "dimension": "frequency",
+            "level": null,
+            "normalized_value": "P1D",
+            "rationale": "Explicit 24-hour return interval for the example.",
+            "source_value": "explicit interval evidence"
+          },
+          {
+            "dimension": "instrument_identity",
+            "level": null,
+            "normalized_value": "AAPL",
+            "rationale": "Explicit identity mapping for the example instrument.",
+            "source_value": "AAPL"
+          }
+        ],
+        "run_id": "candidate-run"
+      }
+    ]
+  },
+  "overall_status": null,
+  "policy_identity": {
+    "assessment_policy_sha256": "2f8058173d469c862cdc649ed5d32c85e171b022320a574d3a66e4bbf8f50451",
+    "comparison_policy_sha256": "b0e91d04ed875cc3f9867a36582ebca375f69564251d95abaa2856df27136efa",
+    "measurement_policy_sha256": "c71221f9b00ee535a49154202d8a3c53b8e9ec3c392dcf266dd2ef2009574af3",
+    "normalization_plan_sha256": "d3afda8bab5604e0e396933419c43e4148cbc2ea2fdce316e319d178a07683a6"
+  },
+  "reconciliation": {
+    "candidate_runs": [
+      {
+        "engine_name": "Engine B",
+        "engine_version": "2.0",
+        "run_id": "candidate-run",
+        "source_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    ],
+    "reconciliation_id": "v1-5j-golden-exact",
+    "reference_run": {
+      "engine_name": "Engine A",
+      "engine_version": "1.0",
+      "run_id": "reference-run",
+      "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "requested_levels": [
+      "order",
+      "cost",
+      "equity",
+      "return"
+    ]
+  },
+  "report_type": "implementation_risk",
+  "run_manifest": null,
+  "schema_version": "1.0"
+}

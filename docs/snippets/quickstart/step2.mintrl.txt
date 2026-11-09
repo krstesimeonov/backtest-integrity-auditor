@@ -1,0 +1,7 @@
+| Metric | Value |
+|---|---:|
+| Observation count | 783 |
+| Required PSR confidence level | 0.95 |
+| Confidence requirement met | false |
+| Minimum required whole observations | 2272 |
+| Equivalent track-record length (years) | 9.01266652882 |

@@ -1,0 +1,48 @@
+{
+  "declared_levels": [
+    "order",
+    "fill",
+    "position",
+    "cash",
+    "cost",
+    "equity",
+    "return"
+  ],
+  "engine": "bt",
+  "engine_version": "1.2.0",
+  "envelope_schema_version": "1.0",
+  "export_format_id": "backtest-auditor.bt",
+  "export_format_version": "1.0",
+  "files": [
+    {
+      "media_type": "application/json",
+      "path": "adapter-metadata.json",
+      "role": "adapter_metadata",
+      "sha256": "6580b8fccb7a50de046701a9132db819337b1cef4d501f7f13d1e2f0bb44ca1c",
+      "size_bytes": 71
+    },
+    {
+      "media_type": "text/csv",
+      "path": "bt-transactions.csv",
+      "role": "transactions",
+      "sha256": "278180d4137163a5ebfea39121a533aaa9a4a67f829ef4bb36bd25edcb91e49c",
+      "size_bytes": 103
+    },
+    {
+      "media_type": "text/csv",
+      "path": "portfolio-series.csv",
+      "role": "portfolio",
+      "sha256": "f890527ace4beaa564887c88d653d5a9de0c8a8f8e22a168a46cdd7c760598ff",
+      "size_bytes": 648
+    },
+    {
+      "media_type": "text/csv",
+      "path": "position-snapshots.csv",
+      "role": "positions",
+      "sha256": "4213c446c631be4f69d586e3fdb36e83b3fb793dda290ed1b5b8ad26e958d19a",
+      "size_bytes": 388
+    }
+  ],
+  "run_id": "v1-5d2-bt-example",
+  "source_sha256": "4cb5a10cd799f745f8d4c9dfaa478a1d8e1f0c8559748519904a3d200ba8b4f4"
+}

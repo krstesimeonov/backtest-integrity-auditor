@@ -1,0 +1,22 @@
+backtest-auditor audit_returns.csv \
+  --run-id quickstart \
+  --declared-frequency B \
+  --periods-per-year 252 \
+  --annual-risk-free-rate 0.0 \
+  --benchmark-annualized-sharpe-ratio 0.0 \
+  --required-psr-confidence-level 0.95 \
+  --serial-max-lag 10 \
+  --serial-significance-level 0.05 \
+  --hac-max-lag 10 \
+  --hac-kernel bartlett \
+  --bootstrap-method stationary \
+  --bootstrap-interval-method percentile \
+  --bootstrap-replications 2000 \
+  --bootstrap-confidence-level 0.95 \
+  --bootstrap-block-length 5 \
+  --bootstrap-seed 7 \
+  --audit-id quickstart \
+  --audit-timestamp 2026-11-02T09:00:00Z \
+  --git-commit synthetic-example \
+  --format json \
+  --output report.json

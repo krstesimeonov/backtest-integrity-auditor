@@ -1,0 +1,154 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backtest-integrity-auditor"
+# Single source: backtest_auditor.PACKAGE_VERSION (src/backtest_auditor/__init__.py).
+dynamic = ["version"]
+description = "Evidence-first integrity auditing for backtest results."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Krste Simeonov" }]
+keywords = [
+    "backtesting",
+    "audit",
+    "reproducibility",
+    "statistics",
+    "deflated-sharpe-ratio",
+    "backtest-overfitting",
+    "implementation-risk",
+    "quantitative-finance",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy>=1.26,<2.5",
+    "pandas>=2.1",
+    "scipy>=1.12",
+]
+
+[project.optional-dependencies]
+ui = [
+    "streamlit>=1.40,<2",
+    "sqlalchemy>=2.0,<3",
+]
+database = ["sqlalchemy>=2.0,<3"]
+postgres = ["sqlalchemy>=2.0,<3", "psycopg[binary]>=3.2,<4"]
+# One extra per engine adapter, pinned to the single engine version each
+# exporter was tested with (it refuses any other installed version). Mapping an
+# existing export needs no extra at all.
+vectorbt = [
+    "vectorbt==1.1.0",
+    # vectorbt 1.1.0 fails to import under plotly 7 and does not pin it.
+    "plotly<7",
+]
+bt = ["bt==1.2.0"]
+backtrader = ["backtrader==1.9.78.123"]
+nautilustrader = [
+    "nautilus_trader==1.231.0; python_version >= '3.12'",
+]
+# QuantConnect LEAN is not a pip package: its exporter reads LEAN's own result
+# JSON with the standard library, so this extra installs nothing. It exists so
+# that every adapter has an extra of its own name.
+quantconnect-lean = []
+# Aggregate and pre-1.5.2 names, kept because docs and scripts use them.
+engine-exporters = [
+    "vectorbt==1.1.0",
+    "plotly<7",
+    "bt==1.2.0",
+    "backtrader==1.9.78.123",
+    "nautilus_trader==1.231.0; python_version >= '3.12'",
+]
+nautilustrader-exporter = [
+    "nautilus_trader==1.231.0; python_version >= '3.12'",
+]
+docs = [
+    "mkdocs>=1.6,<2",
+    "mkdocs-material>=9.5,<10",
+    "mkdocstrings[python]>=0.26",
+]
+dev = [
+    "build>=1.2",
+    "jsonschema>=4.23",
+    "mypy>=1.11,<2",
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.8",
+    "streamlit>=1.40,<2",
+    "sqlalchemy>=2.0,<3",
+    "psycopg[binary]>=3.2,<4",
+    "twine>=5.1",
+    "types-pytz",
+]
+
+[project.scripts]
+backtest-auditor = "backtest_auditor.cli:main"
+backtest-auditor-ui = "backtest_auditor.presentation.streamlit_launcher:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "backtest_auditor.PACKAGE_VERSION" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+backtest_auditor = [
+    "py.typed",
+    "schemas/*.json",
+    "implementation_risk/schemas/*.json",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["backtest_auditor"]
+
+[tool.coverage.report]
+fail_under = 95
+show_missing = true
+skip_covered = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.mypy]
+python_version = "3.11"
+# The whole package. Five known errors whose fixes need code changes rather
+# than annotations carry line-level `# type: ignore[<code>]  # QUALITY.md`.
+files = ["src/backtest_auditor"]
+follow_imports = "silent"
+check_untyped_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+strict_equality = true
+warn_unused_ignores = true
+
+# One of the two ignores here depends on numpy's stubs (np.corrcoef's return
+# type), so it may be unnecessary under another numpy version.
+[[tool.mypy.overrides]]
+module = ["backtest_auditor.statistics.deflated_sharpe"]
+warn_unused_ignores = false

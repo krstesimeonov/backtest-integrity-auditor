@@ -1,0 +1,9 @@
+backtest-auditor examples/quickstart/audit_returns.csv \
+  --run-id quickstart \
+  --declared-frequency B \
+  --periods-per-year 252 \
+  --annual-risk-free-rate 0.0 \
+  --benchmark-annualized-sharpe-ratio 0.0 \
+  --required-psr-confidence-level 0.95 \
+  --format markdown \
+  --output report.md

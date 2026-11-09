@@ -1,0 +1,178 @@
+{
+  "a_best_of_ten_selection": {
+    "dsr_clopper_pearson_95": [
+      0.0008083864127997911,
+      0.02387349757217365
+    ],
+    "dsr_trials_10_false_positive_rate": 0.006666666666666667,
+    "family_size": 10,
+    "naive_trials_1_false_positive_rate": 0.42333333333333334,
+    "seeds": 300,
+    "theory_naive": 0.4012630607616213
+  },
+  "a_extended_4000_held_out_seeds": {
+    "acceptance_band_counts": [
+      165,
+      236
+    ],
+    "classical_plug_in_dsr_false_positive_rate": 0.0575,
+    "plug_in_clopper_pearson_95": [
+      0.050486126200309046,
+      0.06516858009021428
+    ],
+    "seed_range": [
+      1000000,
+      1003999
+    ],
+    "seeds": 4000,
+    "verdict_clopper_pearson_95": [
+      0.0427505571977223,
+      0.05641746727502458
+    ],
+    "verdict_false_positive_rate": 0.04925
+  },
+  "a_noise_500_fresh_seeds": {
+    "acceptance_band_counts": [
+      13,
+      38
+    ],
+    "classical_plug_in_dsr_false_positive_rate": 0.076,
+    "clopper_pearson_95": [
+      0.044184210946713244,
+      0.08915062755086343
+    ],
+    "evidence_verdicts": 32,
+    "false_positive_rate": 0.064,
+    "seed_range": [
+      2000000,
+      2000499
+    ],
+    "seeds": 500
+  },
+  "a_noise_false_positive_rate": {
+    "acceptance_band_counts": [
+      13,
+      38
+    ],
+    "classical_plug_in_dsr_false_positive_rate": 0.082,
+    "clopper_pearson_95": [
+      0.05093433312513294,
+      0.09828743733685696
+    ],
+    "declared_trials": 1,
+    "evidence_verdicts": 36,
+    "false_positive_rate": 0.072,
+    "insufficient_data_verdicts": 0,
+    "seeds": 500,
+    "trades_per_log": 250
+  },
+  "b_entry_alpha_attribution": {
+    "control_flag_counts": {
+      "entry_timing": 4,
+      "exit_timing": 5,
+      "holding": 10,
+      "median_entry_share": 0.018159461712076
+    },
+    "false_flag_upper_band": 11,
+    "seeds": 100,
+    "skill": "entry bar = best of 2 random bars of the entry day",
+    "skilled_flag_counts": {
+      "entry_timing": 100,
+      "exit_timing": 6,
+      "holding": 4,
+      "median_entry_share": 0.9864549189738573
+    }
+  },
+  "c_decay_detection": {
+    "change_after_trade": 300,
+    "control_acceptance_band_counts": [
+      3,
+      19
+    ],
+    "decay": {
+      "cusum": {
+        "delay_median": 110.5,
+        "delay_p10": 37.900000000000006,
+        "delay_p25": 69.75,
+        "delay_p75": 175.5,
+        "delay_p90": 224.1,
+        "detected_after_change": 0.9,
+        "false_alarm_before_change": 0.0,
+        "missed": 0.1,
+        "post_change_trades": 300
+      },
+      "mixture_sprt": {
+        "delay_median": 149.0,
+        "delay_p10": 41.7,
+        "delay_p25": 91.0,
+        "delay_p75": 202.0,
+        "delay_p90": 263.80000000000007,
+        "detected_after_change": 0.79,
+        "false_alarm_before_change": 0.005,
+        "missed": 0.205,
+        "post_change_trades": 300
+      },
+      "page_hinkley": {
+        "delay_median": 80.0,
+        "delay_p10": 30.800000000000004,
+        "delay_p25": 49.5,
+        "delay_p75": 128.5,
+        "delay_p90": 177.60000000000002,
+        "detected_after_change": 0.535,
+        "false_alarm_before_change": 0.005,
+        "missed": 0.46,
+        "post_change_trades": 300
+      },
+      "rolling_expectancy": {
+        "delay_median": 89.0,
+        "delay_p10": 31.6,
+        "delay_p25": 47.0,
+        "delay_p75": 156.0,
+        "delay_p90": 237.00000000000003,
+        "detected_after_change": 0.785,
+        "false_alarm_before_change": 0.0,
+        "missed": 0.215,
+        "post_change_trades": 300
+      }
+    },
+    "false_alarm_probability_target": 0.05,
+    "horizon": 400,
+    "no_change_control_any_alarm": {
+      "cusum": 0.075,
+      "mixture_sprt": 0.06,
+      "page_hinkley": 0.035,
+      "rolling_expectancy": 0.085
+    },
+    "reference_trades": 200,
+    "seeds": 200,
+    "sharpe_per_trade_before_after": [
+      0.3,
+      0.0
+    ],
+    "trades": 600
+  },
+  "d_break_even_recovery": {
+    "acceptance_band_counts": [
+      181,
+      197
+    ],
+    "coverage_95_interval": 0.945,
+    "mean_error_bps": -0.09735054167617915,
+    "median_absolute_error_bps": 1.347118078786476,
+    "seeds": 200,
+    "true_added_break_even_bps": 6.0
+  },
+  "e_sizing_counterfactual": {
+    "actual_evidence_rate": 1.0,
+    "coverage_acceptance_band_counts": [
+      181,
+      197
+    ],
+    "fixed_size_evidence_rate": 0.07,
+    "fixed_size_interval_covers_zero": 0.955,
+    "seeds": 200,
+    "sizing_interval_covers_truth": 0.945,
+    "true_fixed_size_expectancy": 0.0,
+    "true_sizing_contribution_per_trade": 7.98
+  }
+}

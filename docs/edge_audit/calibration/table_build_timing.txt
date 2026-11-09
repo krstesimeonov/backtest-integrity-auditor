@@ -1,0 +1,2 @@
+wrote src/backtest_auditor/edge_audit/decay_thresholds.py in 991 s
+.venv/bin/python -m backtest_auditor.edge_audit.decay_calibration --write  4   1984.13s user 608.87s system 261% cpu 16:32.60 total

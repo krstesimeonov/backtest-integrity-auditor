@@ -1,0 +1,5 @@
+| Metric | Value |
+|---|---:|
+| Annualized arithmetic mean return | 0.0853182528736 |
+| Annualized sample volatility | 0.155129999781 |
+| Annualized Sharpe ratio | undefined |

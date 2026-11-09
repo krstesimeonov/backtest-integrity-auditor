@@ -1,0 +1,5 @@
+trial_id,attempt_index,outcome,included_in_selection,selected,selection_score,parameters,source,reason
+trial-001,1,completed,true,false,0.80,"{""lookback"":10,""threshold"":0.5}",grid-search,
+trial-002,2,completed,false,false,0.70,"{""lookback"":10,""threshold"":1.0}",grid-search,Failed predeclared turnover constraint
+trial-003,3,completed,true,true,1.10,"{""lookback"":20,""threshold"":0.5}",grid-search,
+trial-004,4,failed,false,false,,"{""lookback"":20,""threshold"":1.0}",grid-search,Backtest engine rejected invalid position size

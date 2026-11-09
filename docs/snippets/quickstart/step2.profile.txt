@@ -1,0 +1,11 @@
+| Dimension | Status | Summary |
+| --- | --- | --- |
+| input_integrity | supported_under_stated_assumptions | The input passed the canonical blocking validation contract. |
+| return_methodology | insufficient_evidence | No return-construction evidence was declared. |
+| sampling_eligibility | supported_under_stated_assumptions | Sampling supports annualization under the explicit frequency scale. |
+| statistical_evidence | fragile | The configured PSR confidence requirement is not met. |
+| serial_robustness | fragile | HAC-adjusted Sharpe evidence fails the configured confidence requirement. |
+| resampling_robustness | fragile | The bootstrap period-Sharpe interval is not strictly above zero. |
+| benchmark_evidence | insufficient_evidence | No benchmark-relative evidence was supplied. |
+| temporal_robustness | insufficient_evidence | No externally declared regime labels were supplied. |
+| reproducibility | supported_under_stated_assumptions | The report includes a content-hashed deterministic audit-run manifest. |

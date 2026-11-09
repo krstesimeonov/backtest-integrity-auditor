@@ -1,0 +1,9 @@
+# Test-only extras beyond `pip install -e ".[dev]"`, pinned to the versions the
+# 1.5.1 reconciliation ran with (W1-J2's TEST_RESULTS.txt). tests/adversarial uses them
+# as independent references; without them those modules skip themselves
+# (pytest.importorskip), so CI that installs only ".[dev]" stays green.
+statsmodels==0.15.0
+arch==8.0.0
+
+# Figures: scripts/make_readme_figure.py and docs/edge_audit/calibration/report_tables.py.
+matplotlib==3.11.2

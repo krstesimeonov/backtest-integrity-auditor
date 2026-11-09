@@ -1,0 +1,21 @@
+{
+  "declared_levels": [
+    "return"
+  ],
+  "engine": "vectorbt",
+  "engine_version": "example-only",
+  "envelope_schema_version": "1.0",
+  "export_format_id": "backtest-auditor.vectorbt",
+  "export_format_version": "1.0",
+  "files": [
+    {
+      "media_type": "text/csv; charset=utf-8",
+      "path": "returns.csv",
+      "role": "returns",
+      "sha256": "14093030dc495f1502933a974ec9adec13b7bff3a978a052ccf8157bfedd322a",
+      "size_bytes": 71
+    }
+  ],
+  "run_id": "example-vectorbt-export",
+  "source_sha256": "e83df435c302af317180d7fe26e36767268a8cf3ac64280f7e265406e2b80e68"
+}

@@ -1,0 +1,157 @@
+{
+ "edge_size": [
+  {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 102,
+     "ran": 1923,
+     "rate": 0.0530421216848674,
+     "wilson95": [
+      0.04388667623411188,
+      0.06397972754770295
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 107,
+     "ran": 1923,
+     "rate": 0.05564222568902756,
+     "wilson95": [
+      0.046254671415139614,
+      0.06680157294967805
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 81,
+     "ran": 1923,
+     "rate": 0.0421216848673947,
+     "wilson95": [
+      0.034019425643432945,
+      0.052049647689770044
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 111,
+     "ran": 1975,
+     "rate": 0.05620253164556962,
+     "wilson95": [
+      0.04688003397427509,
+      0.06724808771733637
+     ]
+    }
+   },
+   "logs": 2000,
+   "no_reference_edge": 25,
+   "sharpe_per_trade": 0.1
+  },
+  {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 99,
+     "ran": 2000,
+     "rate": 0.0495,
+     "wilson95": [
+      0.040827254610808245,
+      0.059900004989600644
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 76,
+     "ran": 2000,
+     "rate": 0.038,
+     "wilson95": [
+      0.030467599928741894,
+      0.04730375175913581
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 73,
+     "ran": 2000,
+     "rate": 0.0365,
+     "wilson95": [
+      0.02912975228047479,
+      0.045647350549246665
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 99,
+     "ran": 2000,
+     "rate": 0.0495,
+     "wilson95": [
+      0.040827254610808245,
+      0.059900004989600644
+     ]
+    }
+   },
+   "logs": 2000,
+   "no_reference_edge": 0,
+   "sharpe_per_trade": 0.6
+  }
+ ],
+ "interpolation": {
+  "cusum": {
+   "direct_threshold_fresh_paths": 27.685378130075293,
+   "fresh_paths": 40000,
+   "interpolated_threshold": 27.86828691094042,
+   "point": {
+    "alpha": 0.05,
+    "horizon": 850,
+    "parameter": 0.25,
+    "reference_trades": 500.0
+   },
+   "share_above_interpolated": 0.048875,
+   "wilson95": [
+    0.04680507117715815,
+    0.051031569407710156
+   ]
+  },
+  "mixture_sprt": {
+   "direct_threshold_fresh_paths": 3.9708099177981357,
+   "fresh_paths": 40000,
+   "interpolated_threshold": 4.059247249912788,
+   "point": {
+    "alpha": 0.05,
+    "horizon": 850,
+    "parameter": 0.25,
+    "reference_trades": 500.0
+   },
+   "share_above_interpolated": 0.047475,
+   "wilson95": [
+    0.04543414466322973,
+    0.0496027647979341
+   ]
+  },
+  "page_hinkley": {
+   "direct_threshold_fresh_paths": 23.456375413979696,
+   "fresh_paths": 40000,
+   "interpolated_threshold": 23.265347999333414,
+   "point": {
+    "alpha": 0.05,
+    "horizon": 850,
+    "parameter": 0.25,
+    "reference_trades": 500.0
+   },
+   "share_above_interpolated": 0.05245,
+   "wilson95": [
+    0.050307958688408594,
+    0.054677995301633656
+   ]
+  },
+  "rolling_expectancy": {
+   "direct_threshold_fresh_paths": 3.531254685709357,
+   "fresh_paths": 40000,
+   "interpolated_threshold": 3.544281594558154,
+   "point": {
+    "alpha": 0.05,
+    "horizon": 850,
+    "parameter": 45.0,
+    "reference_trades": 500.0
+   },
+   "share_above_interpolated": 0.04805,
+   "wilson95": [
+    0.04599714455611,
+    0.05018965447371817
+   ]
+  }
+ },
+ "seconds": 116.3
+}

@@ -1,0 +1,243 @@
+{
+  "$id": "urn:backtest-integrity-auditor:schema:implementation-risk-report:1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidates": {
+      "items": {"$ref": "#/$defs/candidate"},
+      "minItems": 1,
+      "type": "array"
+    },
+    "findings": {
+      "items": {"$ref": "#/$defs/finding"},
+      "type": "array"
+    },
+    "interpretation_boundary": {"minLength": 1, "type": "string"},
+    "normalization": {
+      "additionalProperties": false,
+      "properties": {
+        "runs": {
+          "items": {"$ref": "#/$defs/normalizedRun"},
+          "minItems": 2,
+          "type": "array"
+        }
+      },
+      "required": ["runs"],
+      "type": "object"
+    },
+    "overall_status": {"type": "null"},
+    "policy_identity": {"$ref": "#/$defs/policyIdentity"},
+    "reconciliation": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_runs": {
+          "items": {"$ref": "#/$defs/run"},
+          "minItems": 1,
+          "type": "array"
+        },
+        "reconciliation_id": {"minLength": 1, "type": "string"},
+        "reference_run": {"$ref": "#/$defs/run"},
+        "requested_levels": {
+          "items": {"$ref": "#/$defs/comparisonLevel"},
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": ["reconciliation_id", "reference_run", "candidate_runs", "requested_levels"],
+      "type": "object"
+    },
+    "report_type": {"const": "implementation_risk"},
+    "run_manifest": {
+      "oneOf": [
+        {"type": "null"},
+        {"$ref": "urn:backtest-integrity-auditor:schema:implementation-risk-run-manifest:1.0"}
+      ]
+    },
+    "schema_version": {"const": "1.0"}
+  },
+  "required": [
+    "schema_version",
+    "report_type",
+    "interpretation_boundary",
+    "reconciliation",
+    "policy_identity",
+    "normalization",
+    "run_manifest",
+    "candidates",
+    "findings",
+    "overall_status"
+  ],
+  "title": "Backtest Integrity Auditor Implementation-Risk Report 1.0",
+  "type": "object",
+  "$defs": {
+    "assessment": {
+      "additionalProperties": false,
+      "properties": {
+        "absolute_delta": {"$ref": "#/$defs/decimal"},
+        "alignment_key": {"minLength": 1, "type": "string"},
+        "candidate_value": {"minLength": 1, "type": "string"},
+        "decimal_delta": {"$ref": "#/$defs/decimal"},
+        "field": {"minLength": 1, "type": "string"},
+        "level": {"$ref": "#/$defs/comparisonLevel"},
+        "materiality": {"enum": ["exact_zero", "below_threshold", "material", "extreme"]},
+        "reference_value": {"minLength": 1, "type": "string"},
+        "threshold": {"$ref": "#/$defs/decimal"},
+        "threshold_ratio": {"$ref": "#/$defs/decimal"}
+      },
+      "required": ["level", "alignment_key", "field", "reference_value", "candidate_value", "decimal_delta", "absolute_delta", "threshold", "threshold_ratio", "materiality"],
+      "type": "object"
+    },
+    "attribution": {
+      "additionalProperties": false,
+      "properties": {
+        "hypothesis_code": {"minLength": 1, "type": "string"},
+        "rationale": {"minLength": 1, "type": "string"},
+        "source_family": {"$ref": "#/$defs/familyName"},
+        "status": {"enum": ["supported_cooccurrence", "not_supported", "insufficient_evidence"]},
+        "target_family": {"$ref": "#/$defs/familyName"}
+      },
+      "required": ["hypothesis_code", "source_family", "target_family", "status", "rationale"],
+      "type": "object"
+    },
+    "candidate": {
+      "additionalProperties": false,
+      "properties": {
+        "attributions": {"items": {"$ref": "#/$defs/attribution"}, "type": "array"},
+        "candidate_run": {"$ref": "#/$defs/run"},
+        "comparison_levels": {"items": {"$ref": "#/$defs/levelSummary"}, "minItems": 1, "type": "array"},
+        "families": {"items": {"$ref": "#/$defs/family"}, "maxItems": 4, "minItems": 4, "type": "array"},
+        "implementation_risk_score": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/decimal"}]},
+        "score_withheld_reason": {"type": ["string", "null"]},
+        "uncertainty": {"enum": ["low", "moderate", "high", "not_assessed"]}
+      },
+      "required": ["candidate_run", "comparison_levels", "families", "implementation_risk_score", "uncertainty", "score_withheld_reason", "attributions"],
+      "type": "object"
+    },
+    "change": {
+      "additionalProperties": false,
+      "properties": {
+        "dimension": {"enum": ["strategy_identity", "instrument_identity", "symbol", "currency", "timestamp", "frequency"]},
+        "level": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/comparisonLevel"}]},
+        "normalized_value": {"minLength": 1, "type": "string"},
+        "rationale": {"minLength": 1, "type": "string"},
+        "source_value": {"minLength": 1, "type": "string"}
+      },
+      "required": ["dimension", "level", "source_value", "normalized_value", "rationale"],
+      "type": "object"
+    },
+    "comparisonLevel": {
+      "enum": ["strategy_specification", "market_data", "signal", "order", "fill", "trade", "position", "cash", "cost", "equity", "return"]
+    },
+    "decimal": {"pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$", "type": "string"},
+    "family": {
+      "additionalProperties": false,
+      "properties": {
+        "assessments": {"items": {"$ref": "#/$defs/assessment"}, "type": "array"},
+        "evidence_counts": {
+          "additionalProperties": false,
+          "properties": {
+            "ambiguous_records": {"minimum": 0, "type": "integer"},
+            "equal_records": {"minimum": 0, "type": "integer"},
+            "non_numeric_differences": {"minimum": 0, "type": "integer"},
+            "one_sided_records": {"minimum": 0, "type": "integer"},
+            "unavailable_levels": {"minimum": 0, "type": "integer"}
+          },
+          "required": ["equal_records", "non_numeric_differences", "one_sided_records", "ambiguous_records", "unavailable_levels"],
+          "type": "object"
+        },
+        "family": {"$ref": "#/$defs/familyName"},
+        "maximum_threshold_ratio": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/decimal"}]},
+        "score_contribution": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/decimal"}]},
+        "status": {"enum": ["measured", "partial", "unavailable", "not_requested"]}
+      },
+      "required": ["family", "status", "evidence_counts", "maximum_threshold_ratio", "score_contribution", "assessments"],
+      "type": "object"
+    },
+    "familyName": {"enum": ["transaction_cost", "sizing", "accounting", "return"]},
+    "finding": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_run_id": {"minLength": 1, "type": "string"},
+        "code": {"minLength": 1, "type": "string"},
+        "evidence_path": {"minLength": 1, "type": "string"},
+        "family": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/familyName"}]},
+        "kind": {"enum": ["supporting", "adverse", "evidence_gap", "attribution_hypothesis"]},
+        "limitation": {"minLength": 1, "type": "string"},
+        "recommended_action": {"type": ["string", "null"]},
+        "summary": {"minLength": 1, "type": "string"}
+      },
+      "required": ["code", "kind", "candidate_run_id", "family", "summary", "evidence_path", "limitation", "recommended_action"],
+      "type": "object"
+    },
+    "frequency": {
+      "additionalProperties": false,
+      "properties": {
+        "calendar": {"type": ["string", "null"]},
+        "calendar_timezone": {"type": ["string", "null"]},
+        "frequency_id": {"minLength": 1, "type": "string"},
+        "interval_microseconds": {"type": ["integer", "null"]},
+        "kind": {"enum": ["fixed", "calendar"]}
+      },
+      "required": ["frequency_id", "kind", "interval_microseconds", "calendar", "calendar_timezone"],
+      "type": "object"
+    },
+    "levelSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "alignment_mode": {"enum": ["semantic", "source_id"]},
+        "exact_match": {"type": ["boolean", "null"]},
+        "level": {"$ref": "#/$defs/comparisonLevel"},
+        "record_counts": {
+          "additionalProperties": false,
+          "properties": {
+            "ambiguous": {"minimum": 0, "type": "integer"},
+            "candidate_only": {"minimum": 0, "type": "integer"},
+            "matched_different": {"minimum": 0, "type": "integer"},
+            "matched_equal": {"minimum": 0, "type": "integer"},
+            "reference_only": {"minimum": 0, "type": "integer"}
+          },
+          "required": ["matched_equal", "matched_different", "reference_only", "candidate_only", "ambiguous"],
+          "type": "object"
+        },
+        "status": {"enum": ["compared", "reference_unavailable", "candidate_unavailable", "both_unavailable"]}
+      },
+      "required": ["level", "status", "alignment_mode", "exact_match", "record_counts"],
+      "type": "object"
+    },
+    "normalizedRun": {
+      "additionalProperties": false,
+      "properties": {
+        "canonical_bundle_sha256": {"$ref": "#/$defs/sha256"},
+        "canonical_frequency": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/frequency"}]},
+        "changes": {"items": {"$ref": "#/$defs/change"}, "type": "array"},
+        "run_id": {"minLength": 1, "type": "string"}
+      },
+      "required": ["run_id", "canonical_bundle_sha256", "canonical_frequency", "changes"],
+      "type": "object"
+    },
+    "policyIdentity": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment_policy_sha256": {"$ref": "#/$defs/sha256"},
+        "comparison_policy_sha256": {"$ref": "#/$defs/sha256"},
+        "measurement_policy_sha256": {"$ref": "#/$defs/sha256"},
+        "normalization_plan_sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "required": ["normalization_plan_sha256", "comparison_policy_sha256", "measurement_policy_sha256", "assessment_policy_sha256"],
+      "type": "object"
+    },
+    "run": {
+      "additionalProperties": false,
+      "properties": {
+        "engine_name": {"minLength": 1, "type": "string"},
+        "engine_version": {"type": ["string", "null"]},
+        "run_id": {"minLength": 1, "type": "string"},
+        "source_sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "required": ["run_id", "engine_name", "engine_version", "source_sha256"],
+      "type": "object"
+    },
+    "sha256": {"pattern": "^[0-9a-f]{64}$", "type": "string"}
+  }
+}

@@ -1,0 +1,146 @@
+# Documentation site. Build: `mkdocs build --strict` (requirements-docs.txt).
+# New pages are the top of the nav; the design records that already lived in
+# docs/ are served unchanged further down. docs/review/ (internal review notes)
+# and docs/history/ (earlier jobs' run notes, kept by the release candidate)
+# are not published.
+site_name: Backtest Integrity Auditor
+site_description: Evidence-first integrity auditing for backtest results.
+site_author: Krste Simeonov
+docs_dir: docs
+site_dir: site
+strict: true
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+
+exclude_docs: |
+  review/
+  history/
+  snippets/
+  edge_audit/
+  learning/
+  kat/
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_source: false
+            show_root_heading: true
+            show_root_full_path: false
+            show_signature_annotations: true
+            separate_signature: true
+            heading_level: 3
+            members_order: source
+            show_if_no_docstring: true
+            filters: ["!^_"]
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: [docs/snippets]
+      check_paths: true
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Concepts: concepts.md
+  - How-to guides:
+      - vectorbt: how-to/vectorbt.md
+      - bt: how-to/bt.md
+      - Backtrader: how-to/backtrader.md
+      - QuantConnect LEAN: how-to/quantconnect-lean.md
+      - NautilusTrader: how-to/nautilustrader.md
+      - Implementation-risk policies: how-to/implementation-risk-policies.md
+      - Full CLI usage (1.5.2 README): guide/usage.md
+  - API reference:
+      - Overview: reference/index.md
+      - Single-run audit: reference/single-run.md
+      - Experiment-family audit: reference/experiment-family.md
+      - V1 reports: reference/reporting.md
+      - Engine exporters: reference/exporters.md
+      - Implementation-risk audit: reference/implementation-risk.md
+      - Canonical artifacts: reference/artifacts.md
+  - FAQ and limits: faq.md
+  - Methods:
+      - V1.4 statistical methods: V1_4_STATISTICAL_METHODS.md
+      - Deflated Sharpe ratio: DEFLATED_SHARPE_RATIO_METHODOLOGY.md
+      - CSCV and PBO: CSCV_PBO_METHODOLOGY.md
+      - Parameter and temporal robustness: PARAMETER_TEMPORAL_ROBUSTNESS_METHODOLOGY.md
+      - Evidence profile and run manifest: EVIDENCE_PROFILE_AND_RUN_MANIFEST.md
+      - Numerical reference and benchmarks: NUMERICAL_REFERENCE_AND_BENCHMARKS.md
+  - Contracts:
+      - Public report schemas: PUBLIC_REPORT_SCHEMAS.md
+      - Experiment-family input: EXPERIMENT_FAMILY_INPUT_SCHEMA.md
+      - Canonical contracts (V1.5B): V1_5B_CANONICAL_CONTRACTS.md
+      - File bundle (V1.5C): V1_5C_FILE_BUNDLE_CONTRACT.md
+  - Implementation-risk design:
+      - V1.5A architecture: V1_5A_ARCHITECTURE.md
+      - V1.5D1 adapter foundation: V1_5D1_SHARED_ADAPTER_FOUNDATION.md
+      - V1.5D2 vectorbt, bt, Backtrader: V1_5D2_CONCRETE_ENGINE_ADAPTERS.md
+      - V1.5D3 LEAN, NautilusTrader: V1_5D3_LEAN_NAUTILUS_AND_HARDENING.md
+      - V1.5E normalization: V1_5E_CROSS_ENGINE_NORMALIZATION.md
+      - V1.5F alignment and comparison: V1_5F_DETERMINISTIC_ALIGNMENT_AND_COMPARISON.md
+      - V1.5G divergence measurement: V1_5G_DIVERGENCE_MEASUREMENT.md
+      - V1.5H risk assessment: V1_5H_RISK_ASSESSMENT.md
+      - V1.5I reporting: V1_5I_REPORTING_AND_INTEGRATION.md
+      - V1.5J release hardening: V1_5J_RELEASE_HARDENING.md
+      - Decision records:
+          - ADR-001 boundary: adr/ADR-001-V1_5_IMPLEMENTATION_RISK_BOUNDARY.md
+          - ADR-002 canonical contracts: adr/ADR-002-V1_5_CANONICAL_CONTRACTS.md
+          - ADR-003 hybrid file bundle: adr/ADR-003-V1_5_HYBRID_FILE_BUNDLE.md
+          - ADR-004 adapter boundary: adr/ADR-004-V1_5_SHARED_ENGINE_ADAPTER_BOUNDARY.md
+          - ADR-005 engine exporters: adr/ADR-005-V1_5_CONCRETE_ENGINE_EXPORTERS.md
+          - ADR-006 engine roadmap: adr/ADR-006-V1_5_COMPLETE_ENGINE_ROADMAP.md
+          - ADR-007 normalization: adr/ADR-007-V1_5_EXPLICIT_NORMALIZATION.md
+          - ADR-008 alignment: adr/ADR-008-V1_5_DETERMINISTIC_ALIGNMENT.md
+          - ADR-009 divergence: adr/ADR-009-V1_5_DIVERGENCE_MEASUREMENT.md
+          - ADR-010 bounded risk: adr/ADR-010-V1_5_EVIDENCE_BOUNDED_RISK.md
+          - ADR-011 report and manifest: adr/ADR-011-V1_5_SEPARATE_REPORT_AND_MANIFEST.md
+          - ADR-012 release hardening: adr/ADR-012-V1_5_RELEASE_HARDENING_WITHOUT_SCHEMA_CHANGE.md
+  - Other interfaces:
+      - Streamlit interface: STREAMLIT_INTERFACE.md
+      - Database persistence: DATABASE_PERSISTENCE.md
+      - IBKR Flex import: IBKR_FLEX_IMPORT.md
+  - Project:
+      - Status and roadmap: V1_STATUS_AND_ROADMAP.md
+      - Release checklist: RELEASE_CHECKLIST.md

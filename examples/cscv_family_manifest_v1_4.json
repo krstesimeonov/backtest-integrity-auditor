@@ -1,0 +1,18 @@
+{
+  "benchmark_id": "market",
+  "benchmark_return_convention": "simple",
+  "declared_frequency": "B",
+  "declared_total_attempted_trials": 4,
+  "family_id": "cscv-example-family",
+  "parameter_names": ["lookback"],
+  "periods_per_year": 252,
+  "return_convention": "simple",
+  "schema_version": "1.0",
+  "search_complete": true,
+  "selected_trial_id": "trial-001",
+  "selection_direction": "maximize",
+  "selection_metric": "period_sharpe_ratio",
+  "selection_rule": "Maximize period Sharpe among all predeclared trials",
+  "source": "examples/cscv_family_returns.csv",
+  "timezone": "UTC"
+}

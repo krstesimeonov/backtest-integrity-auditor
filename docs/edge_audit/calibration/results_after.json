@@ -1,0 +1,1819 @@
+{
+ "geometry": "R = N/2 reference trades, N monitored trades; changes after N/4",
+ "horizons": [
+  100,
+  400,
+  1000,
+  4000
+ ],
+ "scenarios": {
+  "ar1_t3/100": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 422,
+     "logs": 1883,
+     "rate": 0.22411046202867765,
+     "unavailable": 24,
+     "wilson95": [
+      0.20584845809991503,
+      0.24349584417686904
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 639,
+     "logs": 1907,
+     "rate": 0.3350812794965915,
+     "unavailable": 0,
+     "wilson95": [
+      0.3142463549836402,
+      0.3565792924836294
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 448,
+     "logs": 1907,
+     "rate": 0.23492396434189827,
+     "unavailable": 0,
+     "wilson95": [
+      0.2164407219007368,
+      0.2544729976372752
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 169,
+     "logs": 1907,
+     "rate": 0.0886208704771893,
+     "unavailable": 0,
+     "wilson95": [
+      0.07667861592577199,
+      0.10221715653232977
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 1096,
+     "logs": 1907,
+     "rate": 0.5747246984792869,
+     "unavailable": 0,
+     "wilson95": [
+      0.5524072804532066,
+      0.5967416710123389
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 322,
+     "logs": 1883,
+     "rate": 0.17100371747211895,
+     "unavailable": 24,
+     "wilson95": [
+      0.15467165569759564,
+      0.1886753996642286
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 576,
+     "logs": 1883,
+     "rate": 0.30589484864577804,
+     "unavailable": 24,
+     "wilson95": [
+      0.2854950977092019,
+      0.3270849648166202
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 415,
+     "logs": 1907,
+     "rate": 0.21761929732564236,
+     "unavailable": 0,
+     "wilson95": [
+      0.19967734506933696,
+      0.23669661728718025
+     ]
+    }
+   },
+   "detectors_not_run": 93,
+   "detectors_run": 1907,
+   "logs": 2000
+  },
+  "ar1_t3/1000": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 753,
+     "logs": 2000,
+     "rate": 0.3765,
+     "unavailable": 0,
+     "wilson95": [
+      0.3555216996238141,
+      0.39795181105465527
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 948,
+     "logs": 2000,
+     "rate": 0.474,
+     "unavailable": 0,
+     "wilson95": [
+      0.45218735524878717,
+      0.4959123312098378
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 483,
+     "logs": 2000,
+     "rate": 0.2415,
+     "unavailable": 0,
+     "wilson95": [
+      0.22324973094448866,
+      0.260741382499919
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 287,
+     "logs": 2000,
+     "rate": 0.1435,
+     "unavailable": 0,
+     "wilson95": [
+      0.1288183031801205,
+      0.15954855153141279
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 1966,
+     "logs": 2000,
+     "rate": 0.983,
+     "unavailable": 0,
+     "wilson95": [
+      0.9763388128481535,
+      0.987809319478156
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 348,
+     "logs": 2000,
+     "rate": 0.174,
+     "unavailable": 0,
+     "wilson95": [
+      0.1580142296987531,
+      0.19123568512862374
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 971,
+     "logs": 2000,
+     "rate": 0.4855,
+     "unavailable": 0,
+     "wilson95": [
+      0.46364493782474786,
+      0.5074106565464084
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 828,
+     "logs": 2000,
+     "rate": 0.414,
+     "unavailable": 0,
+     "wilson95": [
+      0.39259844495741614,
+      0.43573128717495924
+     ]
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "ar1_t3/400": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 544,
+     "logs": 1994,
+     "rate": 0.2728184553660983,
+     "unavailable": 2,
+     "wilson95": [
+      0.2537193339080467,
+      0.2927912282790035
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 777,
+     "logs": 1996,
+     "rate": 0.38927855711422843,
+     "unavailable": 0,
+     "wilson95": [
+      0.36812029915884203,
+      0.41086218065200897
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 489,
+     "logs": 1996,
+     "rate": 0.24498997995991983,
+     "unavailable": 0,
+     "wilson95": [
+      0.22662391727900671,
+      0.26433573079213873
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 254,
+     "logs": 1996,
+     "rate": 0.12725450901803606,
+     "unavailable": 0,
+     "wilson95": [
+      0.11334698993163606,
+      0.1425940280741247
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 1663,
+     "logs": 1996,
+     "rate": 0.8331663326653307,
+     "unavailable": 0,
+     "wilson95": [
+      0.8161736077062762,
+      0.848879111414919
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 339,
+     "logs": 1994,
+     "rate": 0.17001003009027083,
+     "unavailable": 2,
+     "wilson95": [
+      0.15416051191888022,
+      0.18712856075016845
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 747,
+     "logs": 1994,
+     "rate": 0.37462387161484456,
+     "unavailable": 2,
+     "wilson95": [
+      0.35363915035507004,
+      0.39609074047663545
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 582,
+     "logs": 1996,
+     "rate": 0.29158316633266534,
+     "unavailable": 0,
+     "wilson95": [
+      0.2720601008048476,
+      0.3119069200155779
+     ]
+    }
+   },
+   "detectors_not_run": 4,
+   "detectors_run": 1996,
+   "logs": 2000
+  },
+  "ar1_t3/4000": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 1208,
+     "logs": 2000,
+     "rate": 0.604,
+     "unavailable": 0,
+     "wilson95": [
+      0.582386454521585,
+      0.6252147996439142
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 1317,
+     "logs": 2000,
+     "rate": 0.6585,
+     "unavailable": 0,
+     "wilson95": [
+      0.6374309462181689,
+      0.678961349793674
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 525,
+     "logs": 2000,
+     "rate": 0.2625,
+     "unavailable": 0,
+     "wilson95": [
+      0.24368522688101532,
+      0.28222537057757985
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 334,
+     "logs": 2000,
+     "rate": 0.167,
+     "unavailable": 0,
+     "wilson95": [
+      0.15129549177258156,
+      0.18398126171673285
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 2000,
+     "logs": 2000,
+     "rate": 1.0,
+     "unavailable": 0,
+     "wilson95": [
+      0.9980829527187469,
+      0.9999999999999998
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 382,
+     "logs": 2000,
+     "rate": 0.191,
+     "unavailable": 0,
+     "wilson95": [
+      0.1743711269973035,
+      0.20881360822251077
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 1360,
+     "logs": 2000,
+     "rate": 0.68,
+     "unavailable": 0,
+     "wilson95": [
+      0.6592277789546314,
+      0.7000820840241176
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 1363,
+     "logs": 2000,
+     "rate": 0.6815,
+     "unavailable": 0,
+     "wilson95": [
+      0.6607503149487152,
+      0.7015537968881901
+     ]
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "halving/100": {
+   "detectors": {
+    "cusum": {
+     "alarm_before_change": 4,
+     "alarm_before_change_rate": 0.0020470829068577278,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 295,
+     "detected_rate_among_no_early_alarm": 0.15128205128205127,
+     "logs": 1954,
+     "post_change_trades": 75,
+     "unavailable": 12
+    },
+    "formula_cusum_siegmund": {
+     "alarm_before_change": 22,
+     "alarm_before_change_rate": 0.011190233977619531,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 526,
+     "detected_rate_among_no_early_alarm": 0.2705761316872428,
+     "logs": 1966,
+     "post_change_trades": 75,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville": {
+     "alarm_before_change": 48,
+     "alarm_before_change_rate": 0.024415055951169887,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 343,
+     "detected_rate_among_no_early_alarm": 0.17883211678832117,
+     "logs": 1966,
+     "post_change_trades": 75,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "alarm_before_change": 7,
+     "alarm_before_change_rate": 0.003560528992878942,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 153,
+     "detected_rate_among_no_early_alarm": 0.0781010719754977,
+     "logs": 1966,
+     "post_change_trades": 75,
+     "unavailable": 0
+    },
+    "formula_rolling_per_window_5pct": {
+     "alarm_before_change": 0,
+     "alarm_before_change_rate": 0.0,
+     "delay_median": 38.0,
+     "delay_p90": null,
+     "detected_after_change": 1339,
+     "detected_rate_among_no_early_alarm": 0.6810783316378434,
+     "logs": 1966,
+     "post_change_trades": 75,
+     "unavailable": 0
+    },
+    "mixture_sprt": {
+     "alarm_before_change": 11,
+     "alarm_before_change_rate": 0.005629477993858751,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 225,
+     "detected_rate_among_no_early_alarm": 0.11580030880082347,
+     "logs": 1954,
+     "post_change_trades": 75,
+     "unavailable": 12
+    },
+    "page_hinkley": {
+     "alarm_before_change": 5,
+     "alarm_before_change_rate": 0.00255885363357216,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 256,
+     "detected_rate_among_no_early_alarm": 0.13134940995382247,
+     "logs": 1954,
+     "post_change_trades": 75,
+     "unavailable": 12
+    },
+    "rolling_expectancy": {
+     "alarm_before_change": 0,
+     "alarm_before_change_rate": 0.0,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 282,
+     "detected_rate_among_no_early_alarm": 0.14343845371312308,
+     "logs": 1966,
+     "post_change_trades": 75,
+     "unavailable": 0
+    }
+   },
+   "detectors_not_run": 34,
+   "detectors_run": 1966,
+   "logs": 2000
+  },
+  "halving/1000": {
+   "detectors": {
+    "cusum": {
+     "alarm_before_change": 15,
+     "alarm_before_change_rate": 0.0075,
+     "delay_median": 493.0,
+     "delay_p90": null,
+     "detected_after_change": 1269,
+     "detected_rate_among_no_early_alarm": 0.6392947103274559,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "formula_cusum_siegmund": {
+     "alarm_before_change": 22,
+     "alarm_before_change_rate": 0.011,
+     "delay_median": 378.0,
+     "delay_p90": null,
+     "detected_after_change": 1451,
+     "detected_rate_among_no_early_alarm": 0.7335692618806876,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville": {
+     "alarm_before_change": 82,
+     "alarm_before_change_rate": 0.041,
+     "delay_median": 549.0,
+     "delay_p90": null,
+     "detected_after_change": 1225,
+     "detected_rate_among_no_early_alarm": 0.6386861313868614,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "alarm_before_change": 53,
+     "alarm_before_change_rate": 0.0265,
+     "delay_median": 529.0,
+     "delay_p90": null,
+     "detected_after_change": 1449,
+     "detected_rate_among_no_early_alarm": 0.7442218798151001,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "formula_rolling_per_window_5pct": {
+     "alarm_before_change": 1098,
+     "alarm_before_change_rate": 0.549,
+     "delay_median": 63.0,
+     "delay_p90": 184.0,
+     "detected_after_change": 901,
+     "detected_rate_among_no_early_alarm": 0.9988913525498891,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "mixture_sprt": {
+     "alarm_before_change": 37,
+     "alarm_before_change_rate": 0.0185,
+     "delay_median": 666.0,
+     "delay_p90": null,
+     "detected_after_change": 1077,
+     "detected_rate_among_no_early_alarm": 0.5486500254712176,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "page_hinkley": {
+     "alarm_before_change": 13,
+     "alarm_before_change_rate": 0.0065,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 578,
+     "detected_rate_among_no_early_alarm": 0.29089079013588326,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "rolling_expectancy": {
+     "alarm_before_change": 15,
+     "alarm_before_change_rate": 0.0075,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 824,
+     "detected_rate_among_no_early_alarm": 0.4151133501259446,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "halving/400": {
+   "detectors": {
+    "cusum": {
+     "alarm_before_change": 8,
+     "alarm_before_change_rate": 0.004,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 749,
+     "detected_rate_among_no_early_alarm": 0.37600401606425704,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "formula_cusum_siegmund": {
+     "alarm_before_change": 29,
+     "alarm_before_change_rate": 0.0145,
+     "delay_median": 277.0,
+     "delay_p90": null,
+     "detected_after_change": 1047,
+     "detected_rate_among_no_early_alarm": 0.5312024353120244,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville": {
+     "alarm_before_change": 72,
+     "alarm_before_change_rate": 0.036,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 747,
+     "detected_rate_among_no_early_alarm": 0.387448132780083,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "alarm_before_change": 36,
+     "alarm_before_change_rate": 0.018,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 678,
+     "detected_rate_among_no_early_alarm": 0.34521384928716903,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "formula_rolling_per_window_5pct": {
+     "alarm_before_change": 542,
+     "alarm_before_change_rate": 0.271,
+     "delay_median": 58.0,
+     "delay_p90": 221.0,
+     "detected_after_change": 1366,
+     "detected_rate_among_no_early_alarm": 0.9368998628257887,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "mixture_sprt": {
+     "alarm_before_change": 20,
+     "alarm_before_change_rate": 0.01,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 601,
+     "detected_rate_among_no_early_alarm": 0.30353535353535355,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "page_hinkley": {
+     "alarm_before_change": 8,
+     "alarm_before_change_rate": 0.004,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 418,
+     "detected_rate_among_no_early_alarm": 0.20983935742971888,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "rolling_expectancy": {
+     "alarm_before_change": 16,
+     "alarm_before_change_rate": 0.008,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 564,
+     "detected_rate_among_no_early_alarm": 0.2842741935483871,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "halving/4000": {
+   "detectors": {
+    "cusum": {
+     "alarm_before_change": 24,
+     "alarm_before_change_rate": 0.012,
+     "delay_median": 607.0,
+     "delay_p90": 1943.0,
+     "detected_after_change": 1916,
+     "detected_rate_among_no_early_alarm": 0.9696356275303644,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "formula_cusum_siegmund": {
+     "alarm_before_change": 32,
+     "alarm_before_change_rate": 0.016,
+     "delay_median": 542.0,
+     "delay_p90": 1797.0,
+     "detected_after_change": 1924,
+     "detected_rate_among_no_early_alarm": 0.9776422764227642,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville": {
+     "alarm_before_change": 93,
+     "alarm_before_change_rate": 0.0465,
+     "delay_median": 914.0,
+     "delay_p90": 1801.0,
+     "detected_after_change": 1889,
+     "detected_rate_among_no_early_alarm": 0.9905610907184059,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "alarm_before_change": 65,
+     "alarm_before_change_rate": 0.0325,
+     "delay_median": 887.0,
+     "delay_p90": 1454.0,
+     "detected_after_change": 1935,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "formula_rolling_per_window_5pct": {
+     "alarm_before_change": 1943,
+     "alarm_before_change_rate": 0.9715,
+     "delay_median": 63.0,
+     "delay_p90": 142.0,
+     "detected_after_change": 57,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "mixture_sprt": {
+     "alarm_before_change": 31,
+     "alarm_before_change_rate": 0.0155,
+     "delay_median": 1024.0,
+     "delay_p90": 1972.0,
+     "detected_after_change": 1935,
+     "detected_rate_among_no_early_alarm": 0.9827323514474352,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "page_hinkley": {
+     "alarm_before_change": 25,
+     "alarm_before_change_rate": 0.0125,
+     "delay_median": 2079.0,
+     "delay_p90": null,
+     "detected_after_change": 1058,
+     "detected_rate_among_no_early_alarm": 0.5356962025316455,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "rolling_expectancy": {
+     "alarm_before_change": 28,
+     "alarm_before_change_rate": 0.014,
+     "delay_median": 2196.0,
+     "delay_p90": null,
+     "detected_after_change": 1193,
+     "detected_rate_among_no_early_alarm": 0.6049695740365112,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "iid_normal/100": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 91,
+     "logs": 1949,
+     "rate": 0.04669061056952283,
+     "unavailable": 11,
+     "wilson95": [
+      0.038182720084390304,
+      0.05698192217639125
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 222,
+     "logs": 1960,
+     "rate": 0.11326530612244898,
+     "unavailable": 0,
+     "wilson95": [
+      0.09998487674547189,
+      0.12805871445645092
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 189,
+     "logs": 1960,
+     "rate": 0.09642857142857143,
+     "unavailable": 0,
+     "wilson95": [
+      0.08413908563078752,
+      0.11029690466040105
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 37,
+     "logs": 1960,
+     "rate": 0.018877551020408164,
+     "unavailable": 0,
+     "wilson95": [
+      0.013726472043408688,
+      0.025910871628640413
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 854,
+     "logs": 1960,
+     "rate": 0.4357142857142857,
+     "unavailable": 0,
+     "wilson95": [
+      0.4139093370582255,
+      0.4577707321916983
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 95,
+     "logs": 1949,
+     "rate": 0.04874294510005131,
+     "unavailable": 11,
+     "wilson95": [
+      0.04003910102390845,
+      0.059222135952161026
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 94,
+     "logs": 1949,
+     "rate": 0.04822986146741919,
+     "unavailable": 11,
+     "wilson95": [
+      0.03957456275174585,
+      0.058662525545501644
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 93,
+     "logs": 1960,
+     "rate": 0.047448979591836735,
+     "unavailable": 0,
+     "wilson95": [
+      0.03888993611190456,
+      0.05777848789351172
+     ]
+    }
+   },
+   "detectors_not_run": 40,
+   "detectors_run": 1960,
+   "logs": 2000
+  },
+  "iid_normal/1000": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 82,
+     "logs": 2000,
+     "rate": 0.041,
+     "unavailable": 0,
+     "wilson95": [
+      0.03315349074927443,
+      0.05060635865491575
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 154,
+     "logs": 2000,
+     "rate": 0.077,
+     "unavailable": 0,
+     "wilson95": [
+      0.06611031084545657,
+      0.08951151115448341
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 180,
+     "logs": 2000,
+     "rate": 0.09,
+     "unavailable": 0,
+     "wilson95": [
+      0.07823115160665478,
+      0.10334082716397261
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 71,
+     "logs": 2000,
+     "rate": 0.0355,
+     "unavailable": 0,
+     "wilson95": [
+      0.028239876230264,
+      0.04454106069401996
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 1887,
+     "logs": 2000,
+     "rate": 0.9435,
+     "unavailable": 0,
+     "wilson95": [
+      0.9325050206793213,
+      0.9527945583822073
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 100,
+     "logs": 2000,
+     "rate": 0.05,
+     "unavailable": 0,
+     "wilson95": [
+      0.04128123361873174,
+      0.0604441089343959
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 97,
+     "logs": 2000,
+     "rate": 0.0485,
+     "unavailable": 0,
+     "wilson95": [
+      0.03992009344287708,
+      0.05881100025209431
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 100,
+     "logs": 2000,
+     "rate": 0.05,
+     "unavailable": 0,
+     "wilson95": [
+      0.04128123361873174,
+      0.0604441089343959
+     ]
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "iid_normal/400": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 93,
+     "logs": 2000,
+     "rate": 0.0465,
+     "unavailable": 0,
+     "wilson95": [
+      0.03810906851120825,
+      0.056629693372888146
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 198,
+     "logs": 2000,
+     "rate": 0.099,
+     "unavailable": 0,
+     "wilson95": [
+      0.08666951249362448,
+      0.11286795942594038
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 217,
+     "logs": 2000,
+     "rate": 0.1085,
+     "unavailable": 0,
+     "wilson95": [
+      0.09561252722040278,
+      0.12288852080081825
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 73,
+     "logs": 2000,
+     "rate": 0.0365,
+     "unavailable": 0,
+     "wilson95": [
+      0.02912975228047479,
+      0.045647350549246665
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 1424,
+     "logs": 2000,
+     "rate": 0.712,
+     "unavailable": 0,
+     "wilson95": [
+      0.6917626197955953,
+      0.7314245521571534
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 105,
+     "logs": 2000,
+     "rate": 0.0525,
+     "unavailable": 0,
+     "wilson95": [
+      0.04355496702511128,
+      0.06316079029161008
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 80,
+     "logs": 2000,
+     "rate": 0.04,
+     "unavailable": 0,
+     "wilson95": [
+      0.032256746939981165,
+      0.04950693655877153
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 99,
+     "logs": 2000,
+     "rate": 0.0495,
+     "unavailable": 0,
+     "wilson95": [
+      0.040827254610808245,
+      0.059900004989600644
+     ]
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "iid_normal/4000": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 107,
+     "logs": 2000,
+     "rate": 0.0535,
+     "unavailable": 0,
+     "wilson95": [
+      0.04446618753651597,
+      0.06424573568564287
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 136,
+     "logs": 2000,
+     "rate": 0.068,
+     "unavailable": 0,
+     "wilson95": [
+      0.05777462902670909,
+      0.07988169982429345
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 166,
+     "logs": 2000,
+     "rate": 0.083,
+     "unavailable": 0,
+     "wilson95": [
+      0.07169373071300192,
+      0.09590508671956302
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 71,
+     "logs": 2000,
+     "rate": 0.0355,
+     "unavailable": 0,
+     "wilson95": [
+      0.028239876230264,
+      0.04454106069401996
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 2000,
+     "logs": 2000,
+     "rate": 1.0,
+     "unavailable": 0,
+     "wilson95": [
+      0.9980829527187469,
+      0.9999999999999998
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 87,
+     "logs": 2000,
+     "rate": 0.0435,
+     "unavailable": 0,
+     "wilson95": [
+      0.03540128785854411,
+      0.0533489763092398
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 117,
+     "logs": 2000,
+     "rate": 0.0585,
+     "unavailable": 0,
+     "wilson95": [
+      0.049036041566208714,
+      0.06965671118313761
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 101,
+     "logs": 2000,
+     "rate": 0.0505,
+     "unavailable": 0,
+     "wilson95": [
+      0.04173547326167801,
+      0.06098795224416838
+     ]
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "student_t3/100": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 140,
+     "logs": 1959,
+     "rate": 0.07146503318019398,
+     "unavailable": 14,
+     "wilson95": [
+      0.060876922460973676,
+      0.08373050752026923
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 316,
+     "logs": 1973,
+     "rate": 0.16016218955904712,
+     "unavailable": 0,
+     "wilson95": [
+      0.14464170245895544,
+      0.17700344312596775
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 220,
+     "logs": 1973,
+     "rate": 0.11150532184490623,
+     "unavailable": 0,
+     "wilson95": [
+      0.09836459376499522,
+      0.12615591942045393
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 35,
+     "logs": 1973,
+     "rate": 0.017739483020780537,
+     "unavailable": 0,
+     "wilson95": [
+      0.012782677804209188,
+      0.02457057502808675
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 914,
+     "logs": 1973,
+     "rate": 0.46325392802838317,
+     "unavailable": 0,
+     "wilson95": [
+      0.44134377693495985,
+      0.4853068913050208
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 127,
+     "logs": 1959,
+     "rate": 0.06482899438489025,
+     "unavailable": 14,
+     "wilson95": [
+      0.054754717059511675,
+      0.07660660999112506
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 258,
+     "logs": 1959,
+     "rate": 0.13169984686064318,
+     "unavailable": 14,
+     "wilson95": [
+      0.11744323893291757,
+      0.14739804841844248
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 147,
+     "logs": 1973,
+     "rate": 0.07450582868727826,
+     "unavailable": 0,
+     "wilson95": [
+      0.06372755291964809,
+      0.08693777104536764
+     ]
+    }
+   },
+   "detectors_not_run": 27,
+   "detectors_run": 1973,
+   "logs": 2000
+  },
+  "student_t3/1000": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 200,
+     "logs": 2000,
+     "rate": 0.1,
+     "unavailable": 0,
+     "wilson95": [
+      0.08760922541834984,
+      0.11392441240665252
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 305,
+     "logs": 2000,
+     "rate": 0.1525,
+     "unavailable": 0,
+     "wilson95": [
+      0.13741148677809684,
+      0.16892086108237392
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 231,
+     "logs": 2000,
+     "rate": 0.1155,
+     "unavailable": 0,
+     "wilson95": [
+      0.10222324031966848,
+      0.13025096903961503
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 90,
+     "logs": 2000,
+     "rate": 0.045,
+     "unavailable": 0,
+     "wilson95": [
+      0.03675381704471326,
+      0.05499069598122689
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 1842,
+     "logs": 2000,
+     "rate": 0.921,
+     "unavailable": 0,
+     "wilson95": [
+      0.9083551101095888,
+      0.9320307360795963
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 140,
+     "logs": 2000,
+     "rate": 0.07,
+     "unavailable": 0,
+     "wilson95": [
+      0.059622576070820776,
+      0.08202608459105676
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 289,
+     "logs": 2000,
+     "rate": 0.1445,
+     "unavailable": 0,
+     "wilson95": [
+      0.12977211830402138,
+      0.1605909023129494
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 236,
+     "logs": 2000,
+     "rate": 0.118,
+     "unavailable": 0,
+     "wilson95": [
+      0.10458823578198477,
+      0.13287638834089244
+     ]
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "student_t3/400": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 157,
+     "logs": 1996,
+     "rate": 0.07865731462925851,
+     "unavailable": 2,
+     "wilson95": [
+      0.0676403376030591,
+      0.09129299054592582
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 288,
+     "logs": 1998,
+     "rate": 0.14414414414414414,
+     "unavailable": 0,
+     "wilson95": [
+      0.12942564739193754,
+      0.16022838902825173
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 209,
+     "logs": 1998,
+     "rate": 0.1046046046046046,
+     "unavailable": 0,
+     "wilson95": [
+      0.09193537920893761,
+      0.11879132792460602
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 65,
+     "logs": 1998,
+     "rate": 0.032532532532532535,
+     "unavailable": 0,
+     "wilson95": [
+      0.025606385547529753,
+      0.041252784658457275
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 1356,
+     "logs": 1998,
+     "rate": 0.6786786786786787,
+     "unavailable": 0,
+     "wilson95": [
+      0.657876248867008,
+      0.6987953530992261
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 128,
+     "logs": 1996,
+     "rate": 0.06412825651302605,
+     "unavailable": 2,
+     "wilson95": [
+      0.05419591399271184,
+      0.07573511512692774
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 215,
+     "logs": 1996,
+     "rate": 0.10771543086172344,
+     "unavailable": 2,
+     "wilson95": [
+      0.0948605407172094,
+      0.12207738549046623
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 168,
+     "logs": 1998,
+     "rate": 0.08408408408408409,
+     "unavailable": 0,
+     "wilson95": [
+      0.07269927655288716,
+      0.09706514576100495
+     ]
+    }
+   },
+   "detectors_not_run": 2,
+   "detectors_run": 1998,
+   "logs": 2000
+  },
+  "student_t3/4000": {
+   "detectors": {
+    "cusum": {
+     "false_alarms": 314,
+     "logs": 2000,
+     "rate": 0.157,
+     "unavailable": 0,
+     "wilson95": [
+      0.14171529226202792,
+      0.17359980217291157
+     ]
+    },
+    "formula_cusum_siegmund": {
+     "false_alarms": 375,
+     "logs": 2000,
+     "rate": 0.1875,
+     "unavailable": 0,
+     "wilson95": [
+      0.1709991046047915,
+      0.20519904994599153
+     ]
+    },
+    "formula_mixture_sprt_ville": {
+     "false_alarms": 196,
+     "logs": 2000,
+     "rate": 0.098,
+     "unavailable": 0,
+     "wilson95": [
+      0.0857302075571977,
+      0.11181109845692967
+     ]
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "false_alarms": 86,
+     "logs": 2000,
+     "rate": 0.043,
+     "unavailable": 0,
+     "wilson95": [
+      0.03495107254461269,
+      0.05280110867045247
+     ]
+    },
+    "formula_rolling_per_window_5pct": {
+     "false_alarms": 1993,
+     "logs": 2000,
+     "rate": 0.9965,
+     "unavailable": 0,
+     "wilson95": [
+      0.9927928037467583,
+      0.9983035683029576
+     ]
+    },
+    "mixture_sprt": {
+     "false_alarms": 119,
+     "logs": 2000,
+     "rate": 0.0595,
+     "unavailable": 0,
+     "wilson95": [
+      0.04995260683841223,
+      0.07073631181637158
+     ]
+    },
+    "page_hinkley": {
+     "false_alarms": 354,
+     "logs": 2000,
+     "rate": 0.177,
+     "unavailable": 0,
+     "wilson95": [
+      0.16089671809231565,
+      0.19434169445137367
+     ]
+    },
+    "rolling_expectancy": {
+     "false_alarms": 417,
+     "logs": 2000,
+     "rate": 0.2085,
+     "unavailable": 0,
+     "wilson95": [
+      0.191263362602218,
+      0.22685427596275237
+     ]
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "to_zero/100": {
+   "detectors": {
+    "cusum": {
+     "alarm_before_change": 7,
+     "alarm_before_change_rate": 0.003575076608784474,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 760,
+     "detected_rate_among_no_early_alarm": 0.389543823680164,
+     "logs": 1958,
+     "post_change_trades": 75,
+     "unavailable": 16
+    },
+    "formula_cusum_siegmund": {
+     "alarm_before_change": 37,
+     "alarm_before_change_rate": 0.018743667679837893,
+     "delay_median": 65.0,
+     "delay_p90": null,
+     "detected_after_change": 1089,
+     "detected_rate_among_no_early_alarm": 0.5622096024780588,
+     "logs": 1974,
+     "post_change_trades": 75,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville": {
+     "alarm_before_change": 62,
+     "alarm_before_change_rate": 0.031408308004052685,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 774,
+     "detected_rate_among_no_early_alarm": 0.40481171548117156,
+     "logs": 1974,
+     "post_change_trades": 75,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "alarm_before_change": 7,
+     "alarm_before_change_rate": 0.0035460992907801418,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 751,
+     "detected_rate_among_no_early_alarm": 0.38179969496695476,
+     "logs": 1974,
+     "post_change_trades": 75,
+     "unavailable": 0
+    },
+    "formula_rolling_per_window_5pct": {
+     "alarm_before_change": 0,
+     "alarm_before_change_rate": 0.0,
+     "delay_median": 24.0,
+     "delay_p90": null,
+     "detected_after_change": 1767,
+     "detected_rate_among_no_early_alarm": 0.8951367781155015,
+     "logs": 1974,
+     "post_change_trades": 75,
+     "unavailable": 0
+    },
+    "mixture_sprt": {
+     "alarm_before_change": 25,
+     "alarm_before_change_rate": 0.012768130745658836,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 574,
+     "detected_rate_among_no_early_alarm": 0.29694774961200204,
+     "logs": 1958,
+     "post_change_trades": 75,
+     "unavailable": 16
+    },
+    "page_hinkley": {
+     "alarm_before_change": 3,
+     "alarm_before_change_rate": 0.0015321756894790602,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 450,
+     "detected_rate_among_no_early_alarm": 0.23017902813299232,
+     "logs": 1958,
+     "post_change_trades": 75,
+     "unavailable": 16
+    },
+    "rolling_expectancy": {
+     "alarm_before_change": 0,
+     "alarm_before_change_rate": 0.0,
+     "delay_median": null,
+     "delay_p90": null,
+     "detected_after_change": 709,
+     "detected_rate_among_no_early_alarm": 0.35916919959473154,
+     "logs": 1974,
+     "post_change_trades": 75,
+     "unavailable": 0
+    }
+   },
+   "detectors_not_run": 26,
+   "detectors_run": 1974,
+   "logs": 2000
+  },
+  "to_zero/1000": {
+   "detectors": {
+    "cusum": {
+     "alarm_before_change": 13,
+     "alarm_before_change_rate": 0.0065,
+     "delay_median": 127.0,
+     "delay_p90": 276.0,
+     "detected_after_change": 1984,
+     "detected_rate_among_no_early_alarm": 0.9984901862103673,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "formula_cusum_siegmund": {
+     "alarm_before_change": 31,
+     "alarm_before_change_rate": 0.0155,
+     "delay_median": 106.0,
+     "delay_p90": 235.0,
+     "detected_after_change": 1969,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville": {
+     "alarm_before_change": 80,
+     "alarm_before_change_rate": 0.04,
+     "delay_median": 208.0,
+     "delay_p90": 414.0,
+     "detected_after_change": 1904,
+     "detected_rate_among_no_early_alarm": 0.9916666666666667,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "alarm_before_change": 45,
+     "alarm_before_change_rate": 0.0225,
+     "delay_median": 207.0,
+     "delay_p90": 335.0,
+     "detected_after_change": 1955,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "formula_rolling_per_window_5pct": {
+     "alarm_before_change": 1133,
+     "alarm_before_change_rate": 0.5665,
+     "delay_median": 37.0,
+     "delay_p90": 80.0,
+     "detected_after_change": 867,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "mixture_sprt": {
+     "alarm_before_change": 22,
+     "alarm_before_change_rate": 0.011,
+     "delay_median": 245.0,
+     "delay_p90": 469.0,
+     "detected_after_change": 1950,
+     "detected_rate_among_no_early_alarm": 0.9858442871587462,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "page_hinkley": {
+     "alarm_before_change": 21,
+     "alarm_before_change_rate": 0.0105,
+     "delay_median": 154.0,
+     "delay_p90": null,
+     "detected_after_change": 1623,
+     "detected_rate_among_no_early_alarm": 0.82011116725619,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    },
+    "rolling_expectancy": {
+     "alarm_before_change": 23,
+     "alarm_before_change_rate": 0.0115,
+     "delay_median": 163.0,
+     "delay_p90": 576.0,
+     "detected_after_change": 1881,
+     "detected_rate_among_no_early_alarm": 0.9514415781487102,
+     "logs": 2000,
+     "post_change_trades": 750,
+     "unavailable": 0
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "to_zero/400": {
+   "detectors": {
+    "cusum": {
+     "alarm_before_change": 14,
+     "alarm_before_change_rate": 0.007,
+     "delay_median": 123.0,
+     "delay_p90": 299.0,
+     "detected_after_change": 1790,
+     "detected_rate_among_no_early_alarm": 0.9013091641490433,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "formula_cusum_siegmund": {
+     "alarm_before_change": 30,
+     "alarm_before_change_rate": 0.015,
+     "delay_median": 91.0,
+     "delay_p90": 225.0,
+     "detected_after_change": 1868,
+     "detected_rate_among_no_early_alarm": 0.9482233502538071,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville": {
+     "alarm_before_change": 74,
+     "alarm_before_change_rate": 0.037,
+     "delay_median": 151.0,
+     "delay_p90": null,
+     "detected_after_change": 1638,
+     "detected_rate_among_no_early_alarm": 0.8504672897196262,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "alarm_before_change": 37,
+     "alarm_before_change_rate": 0.0185,
+     "delay_median": 141.0,
+     "delay_p90": 251.0,
+     "detected_after_change": 1887,
+     "detected_rate_among_no_early_alarm": 0.9612837493632196,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "formula_rolling_per_window_5pct": {
+     "alarm_before_change": 517,
+     "alarm_before_change_rate": 0.2585,
+     "delay_median": 35.0,
+     "delay_p90": 84.0,
+     "detected_after_change": 1482,
+     "detected_rate_among_no_early_alarm": 0.9993256911665542,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "mixture_sprt": {
+     "alarm_before_change": 24,
+     "alarm_before_change_rate": 0.012,
+     "delay_median": 184.0,
+     "delay_p90": null,
+     "detected_after_change": 1521,
+     "detected_rate_among_no_early_alarm": 0.7697368421052632,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "page_hinkley": {
+     "alarm_before_change": 10,
+     "alarm_before_change_rate": 0.005,
+     "delay_median": 237.0,
+     "delay_p90": null,
+     "detected_after_change": 1078,
+     "detected_rate_among_no_early_alarm": 0.5417085427135678,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    },
+    "rolling_expectancy": {
+     "alarm_before_change": 17,
+     "alarm_before_change_rate": 0.0085,
+     "delay_median": 131.0,
+     "delay_p90": null,
+     "detected_after_change": 1521,
+     "detected_rate_among_no_early_alarm": 0.7670196671709532,
+     "logs": 2000,
+     "post_change_trades": 300,
+     "unavailable": 0
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  },
+  "to_zero/4000": {
+   "detectors": {
+    "cusum": {
+     "alarm_before_change": 22,
+     "alarm_before_change_rate": 0.011,
+     "delay_median": 142.0,
+     "delay_p90": 268.0,
+     "detected_after_change": 1978,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "formula_cusum_siegmund": {
+     "alarm_before_change": 31,
+     "alarm_before_change_rate": 0.0155,
+     "delay_median": 133.0,
+     "delay_p90": 249.0,
+     "detected_after_change": 1969,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville": {
+     "alarm_before_change": 93,
+     "alarm_before_change_rate": 0.0465,
+     "delay_median": 386.0,
+     "delay_p90": 662.0,
+     "detected_after_change": 1907,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "formula_mixture_sprt_ville_known_parameters": {
+     "alarm_before_change": 76,
+     "alarm_before_change_rate": 0.038,
+     "delay_median": 379.0,
+     "delay_p90": 569.0,
+     "detected_after_change": 1924,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "formula_rolling_per_window_5pct": {
+     "alarm_before_change": 1926,
+     "alarm_before_change_rate": 0.963,
+     "delay_median": 36.0,
+     "delay_p90": 81.0,
+     "detected_after_change": 74,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "mixture_sprt": {
+     "alarm_before_change": 41,
+     "alarm_before_change_rate": 0.0205,
+     "delay_median": 433.0,
+     "delay_p90": 717.0,
+     "detected_after_change": 1959,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "page_hinkley": {
+     "alarm_before_change": 18,
+     "alarm_before_change_rate": 0.009,
+     "delay_median": 149.0,
+     "delay_p90": 325.0,
+     "detected_after_change": 1979,
+     "detected_rate_among_no_early_alarm": 0.9984863773965691,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    },
+    "rolling_expectancy": {
+     "alarm_before_change": 24,
+     "alarm_before_change_rate": 0.012,
+     "delay_median": 237.0,
+     "delay_p90": 764.0,
+     "detected_after_change": 1976,
+     "detected_rate_among_no_early_alarm": 1.0,
+     "logs": 2000,
+     "post_change_trades": 3000,
+     "unavailable": 0
+    }
+   },
+   "detectors_not_run": 0,
+   "detectors_run": 2000,
+   "logs": 2000
+  }
+ },
+ "seconds": 211.7,
+ "seeds_per_scenario": 2000,
+ "sharpe_per_trade": 0.3,
+ "which": "after"
+}

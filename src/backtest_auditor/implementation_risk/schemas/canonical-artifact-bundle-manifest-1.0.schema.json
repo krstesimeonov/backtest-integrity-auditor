@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://backtest-integrity-auditor.local/schemas/implementation-risk/canonical-artifact-bundle-manifest-1.0.schema.json",
+  "title": "Canonical implementation-risk artifact bundle manifest 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_schema_version",
+    "bundle_content_sha256",
+    "bundle_schema_version",
+    "files",
+    "levels",
+    "run"
+  ],
+  "properties": {
+    "artifact_schema_version": {"const": "1.0"},
+    "bundle_content_sha256": {"$ref": "#/$defs/sha256"},
+    "bundle_schema_version": {"const": "1.0"},
+    "files": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {"$ref": "#/$defs/file"}
+    },
+    "levels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cash",
+        "cost",
+        "equity",
+        "fill",
+        "market_data",
+        "order",
+        "position",
+        "return",
+        "signal",
+        "strategy_specification",
+        "trade"
+      ],
+      "properties": {
+        "strategy_specification": {"$ref": "#/$defs/specificationLevel"},
+        "market_data": {"$ref": "#/$defs/marketDataLevel"},
+        "signal": {"$ref": "#/$defs/signalLevel"},
+        "order": {"$ref": "#/$defs/orderLevel"},
+        "fill": {"$ref": "#/$defs/fillLevel"},
+        "trade": {"$ref": "#/$defs/tradeLevel"},
+        "position": {"$ref": "#/$defs/positionLevel"},
+        "cash": {"$ref": "#/$defs/cashLevel"},
+        "cost": {"$ref": "#/$defs/costLevel"},
+        "equity": {"$ref": "#/$defs/equityLevel"},
+        "return": {"$ref": "#/$defs/returnLevel"}
+      }
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["engine_name", "engine_version", "run_id", "source_sha256"],
+      "properties": {
+        "engine_name": {"$ref": "#/$defs/nonEmptyString"},
+        "engine_version": {
+          "oneOf": [{"$ref": "#/$defs/nonEmptyString"}, {"type": "null"}]
+        },
+        "run_id": {"$ref": "#/$defs/nonEmptyString"},
+        "source_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nonEmptyString": {"type": "string", "minLength": 1},
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["media_type", "path", "record_count", "sha256", "size_bytes"],
+      "properties": {
+        "media_type": {
+          "enum": ["application/json", "text/csv; charset=utf-8"]
+        },
+        "path": {
+          "enum": [
+            "cash_balances.csv",
+            "cash_movements.csv",
+            "costs.csv",
+            "equity.csv",
+            "fills.csv",
+            "market_data.csv",
+            "orders.csv",
+            "positions.csv",
+            "returns.csv",
+            "signals.csv",
+            "specification.json",
+            "trade_fills.csv",
+            "trades.csv"
+          ]
+        },
+        "record_count": {"type": "integer", "minimum": 0},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "size_bytes": {"type": "integer", "minimum": 0, "maximum": 512000000}
+      }
+    },
+    "unavailableLevel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files", "status"],
+      "properties": {
+        "files": {"type": "array", "maxItems": 0},
+        "status": {"const": "unavailable"}
+      }
+    },
+    "specificationLevel": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {"$ref": "#/$defs/availableSpecification"}
+      ]
+    },
+    "availableSpecification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files", "status"],
+      "properties": {
+        "files": {"const": ["specification.json"]},
+        "status": {"const": "available"}
+      }
+    },
+    "marketDataLevel": {"$ref": "#/$defs/marketDataChoices"},
+    "marketDataChoices": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {"$ref": "#/$defs/availableMarketData"}
+      ]
+    },
+    "availableMarketData": {"$ref": "#/$defs/availableMarketDataShape"},
+    "availableMarketDataShape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files", "status"],
+      "properties": {
+        "files": {"const": ["market_data.csv"]},
+        "status": {"const": "available"}
+      }
+    },
+    "signalLevel": {"$ref": "#/$defs/signalChoices"},
+    "signalChoices": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {"$ref": "#/$defs/availableSignal"}
+      ]
+    },
+    "availableSignal": {"$ref": "#/$defs/availableSignalShape"},
+    "availableSignalShape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files", "status"],
+      "properties": {
+        "files": {"const": ["signals.csv"]},
+        "status": {"const": "available"}
+      }
+    },
+    "orderLevel": {"$ref": "#/$defs/orderChoices"},
+    "orderChoices": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {"$ref": "#/$defs/availableOrder"}
+      ]
+    },
+    "availableOrder": {"$ref": "#/$defs/availableOrderShape"},
+    "availableOrderShape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files", "status"],
+      "properties": {
+        "files": {"const": ["orders.csv"]},
+        "status": {"const": "available"}
+      }
+    },
+    "fillLevel": {"$ref": "#/$defs/fillChoices"},
+    "fillChoices": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {"$ref": "#/$defs/availableFill"}
+      ]
+    },
+    "availableFill": {"$ref": "#/$defs/availableFillShape"},
+    "availableFillShape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files", "status"],
+      "properties": {
+        "files": {"const": ["fills.csv"]},
+        "status": {"const": "available"}
+      }
+    },
+    "tradeLevel": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["files", "status"],
+          "properties": {
+            "files": {"const": ["trade_fills.csv", "trades.csv"]},
+            "status": {"const": "available"}
+          }
+        }
+      ]
+    },
+    "positionLevel": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["files", "status"],
+          "properties": {
+            "files": {"const": ["positions.csv"]},
+            "status": {"const": "available"}
+          }
+        }
+      ]
+    },
+    "cashLevel": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["files", "status"],
+          "properties": {
+            "files": {
+              "enum": [
+                ["cash_balances.csv"],
+                ["cash_movements.csv"],
+                ["cash_balances.csv", "cash_movements.csv"]
+              ]
+            },
+            "status": {"const": "available"}
+          }
+        }
+      ]
+    },
+    "costLevel": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["files", "status"],
+          "properties": {
+            "files": {"const": ["costs.csv"]},
+            "status": {"const": "available"}
+          }
+        }
+      ]
+    },
+    "equityLevel": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["files", "status"],
+          "properties": {
+            "files": {"const": ["equity.csv"]},
+            "status": {"const": "available"}
+          }
+        }
+      ]
+    },
+    "returnLevel": {
+      "oneOf": [
+        {"$ref": "#/$defs/unavailableLevel"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["files", "status"],
+          "properties": {
+            "files": {"const": ["returns.csv"]},
+            "status": {"const": "available"}
+          }
+        }
+      ]
+    }
+  }
+}

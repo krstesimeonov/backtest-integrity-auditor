@@ -1,0 +1,11 @@
+| Dimension | Status |
+| --- | --- |
+| input_integrity | supported_under_stated_assumptions |
+| return_methodology | insufficient_evidence |
+| sampling_eligibility | supported_under_stated_assumptions |
+| statistical_evidence | fragile |
+| serial_robustness | insufficient_evidence |
+| resampling_robustness | insufficient_evidence |
+| benchmark_evidence | insufficient_evidence |
+| temporal_robustness | insufficient_evidence |
+| reproducibility | insufficient_evidence |

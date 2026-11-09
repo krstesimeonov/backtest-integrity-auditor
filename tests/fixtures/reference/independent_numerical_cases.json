@@ -1,0 +1,40 @@
+{
+  "single_run_closed_form": {
+    "description": "A four-observation hand-calculable path used as an implementation-independent regression anchor.",
+    "expected": {
+      "annualized_arithmetic_mean_return": 0.25,
+      "annualized_sample_volatility": 0.4112987559751022,
+      "annualized_sharpe_ratio": 0.6078306738548309,
+      "cagr": 0.2012,
+      "cumulative_simple_return": 0.2012,
+      "ending_wealth": 1.2012,
+      "longest_time_underwater_observations": 2,
+      "maximum_drawdown": -0.2,
+      "maximum_drawdown_duration_observations": 3,
+      "mean_return": 0.0625,
+      "probabilistic_sharpe_ratio": 0.6857323816422193,
+      "sample_excess_kurtosis": 1.282147103788012,
+      "sample_pearson_kurtosis": 4.282147103788012,
+      "sample_skewness": -0.3557156849948472,
+      "sample_volatility": 0.2056493779875511
+    },
+    "inputs": {
+      "annual_risk_free_rate": 0.0,
+      "benchmark_annualized_sharpe_ratio": 0.0,
+      "periods_per_year": 4,
+      "returns": [0.1, -0.2, 0.05, 0.3],
+      "timestamps": [
+        "2026-01-01",
+        "2026-01-02",
+        "2026-01-03",
+        "2026-01-04"
+      ]
+    },
+    "provenance": {
+      "annualization": "Arithmetic mean multiplied by four; sample volatility multiplied by sqrt(4).",
+      "path": "Wealth path is 1.1, 0.88, 0.924, 1.2012; the peak-to-trough loss is exactly 20%.",
+      "psr": "Normal CDF applied to the higher-moment-adjusted period-Sharpe statistic.",
+      "statistics": "Sample variance, adjusted Fisher-Pearson skewness, and unbiased excess kurtosis closed forms."
+    }
+  }
+}

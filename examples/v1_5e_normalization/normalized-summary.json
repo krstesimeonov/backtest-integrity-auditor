@@ -1,0 +1,113 @@
+{
+  "plan_sha256": "544d35eb60ea3cb612ccf675de5decb4e9eb0d359d9203d4b906f29fd3f4d840",
+  "reconciliation_id": "v1-5e-example",
+  "runs": [
+    {
+      "canonical_bundle_sha256": "03d37efa832eb1ac80e054a0f21a35cf2326c3516821be5259f03e5e9ff10274",
+      "canonical_frequency": "PT1M",
+      "changes": [
+        {
+          "dimension": "currency",
+          "level": null,
+          "normalized_value": "USD",
+          "rationale": "denomination identifier cross-reference; no FX conversion",
+          "source_value": "USD"
+        },
+        {
+          "dimension": "frequency",
+          "level": null,
+          "normalized_value": "PT1M",
+          "rationale": "explicit one-minute source contracts",
+          "source_value": "one minute"
+        },
+        {
+          "dimension": "instrument_identity",
+          "level": null,
+          "normalized_value": "AAPL.CANONICAL",
+          "rationale": "venue and vendor instrument cross-reference",
+          "source_value": "AAPL.XNAS"
+        },
+        {
+          "dimension": "strategy_identity",
+          "level": null,
+          "normalized_value": "momentum-canonical",
+          "rationale": "identical reviewed strategy source",
+          "source_value": "engine-a:momentum"
+        },
+        {
+          "dimension": "symbol",
+          "level": null,
+          "normalized_value": "AAPL",
+          "rationale": "venue and vendor instrument cross-reference",
+          "source_value": "AAPL"
+        }
+      ],
+      "normalized_total_equity": "100500",
+      "run_id": "engine-a-run"
+    },
+    {
+      "canonical_bundle_sha256": "51cffdb423a66c623a86b964f2237d41920ea9abf9e9c15641de24256fe8c75a",
+      "canonical_frequency": "PT1M",
+      "changes": [
+        {
+          "dimension": "currency",
+          "level": null,
+          "normalized_value": "USD",
+          "rationale": "denomination identifier cross-reference; no FX conversion",
+          "source_value": "USX"
+        },
+        {
+          "dimension": "frequency",
+          "level": null,
+          "normalized_value": "PT1M",
+          "rationale": "explicit one-minute source contracts",
+          "source_value": "1-MINUTE"
+        },
+        {
+          "dimension": "instrument_identity",
+          "level": null,
+          "normalized_value": "AAPL.CANONICAL",
+          "rationale": "venue and vendor instrument cross-reference",
+          "source_value": "XNAS:AAPL"
+        },
+        {
+          "dimension": "strategy_identity",
+          "level": null,
+          "normalized_value": "momentum-canonical",
+          "rationale": "identical reviewed strategy source",
+          "source_value": "engine-b/momentum"
+        },
+        {
+          "dimension": "symbol",
+          "level": null,
+          "normalized_value": "AAPL",
+          "rationale": "venue and vendor instrument cross-reference",
+          "source_value": "AAPL.XNAS"
+        },
+        {
+          "dimension": "timestamp",
+          "level": "equity",
+          "normalized_value": "equity:UTC-30000000us",
+          "rationale": "producer clock comparison against the same UTC event",
+          "source_value": "equity:UTC"
+        },
+        {
+          "dimension": "timestamp",
+          "level": "market_data",
+          "normalized_value": "market_data:UTC-30000000us",
+          "rationale": "producer clock comparison against the same UTC event",
+          "source_value": "market_data:UTC"
+        },
+        {
+          "dimension": "timestamp",
+          "level": "return",
+          "normalized_value": "return:UTC-30000000us",
+          "rationale": "producer clock comparison against the same UTC event",
+          "source_value": "return:UTC"
+        }
+      ],
+      "normalized_total_equity": "100500",
+      "run_id": "engine-b-run"
+    }
+  ]
+}

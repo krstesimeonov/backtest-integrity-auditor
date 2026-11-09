@@ -1,0 +1,20 @@
+Diagnosis of the first scenario-(a) failure (run 08:59-09:05 CET, before the verdict changed).
+First run (docs/edge_audit/job/scenarios_first_run.txt): verdict = V1 DSR with plug-in SE,
+41/500 evidence on noise_log seeds 0..499 (band 13..38) -> FAILED.
+
+Re-run command (reproduces every number below; output in fpr_diagnosis_output.txt):
+  .venv/bin/python docs/edge_audit/job/evidence/fpr_diagnosis.py
+Held-out confirmation after the change: tests/edge_audit/test_edge_audit_scenarios.py::
+  test_a_extended_verdict_calibration_on_4000_held_out_seeds (seeds 1000000..1003999).
+
+Fat-tailed noise_log (t5 moves, log-normal sizes), seeds 10000..13999, one-sided 5 %:
+  V1 plug-in DSR/PSR: 249/4000 = 0.0622  (SE 0.0034)
+  Student t:          212/4000 = 0.0530  (SE 0.0034)
+  null-SE z:          215/4000 = 0.0537  (SE 0.0034)
+Seeds 0..499: plug-in 0.082, Student t 0.072, null-SE 0.072; corr(SR, sample skew) = 0.45.
+Normal moves, seeds 0..499: plug-in 0.048, Student t 0.050, null-SE 0.050; corr(SR, skew) = 0.39.
+
+Reading: the plug-in SE sqrt((1 - g3*SR + (g4-1)/4*SR^2)/(T-1)) uses the sample skewness g3,
+which co-moves with the sample SR under fat tails; when SR is high by luck, g3 is high, the SE
+shrinks and the test fires too often. The null distribution of SR under H0 (SR = 0) has variance
+1/(T-1) whatever g3 and g4 are, so the verdict now uses SE0 = 1/sqrt(T-1).
